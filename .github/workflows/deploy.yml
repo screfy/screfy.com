@@ -1,0 +1,31 @@
+name: Surge Deployment
+
+on:
+  release:
+    types: [published]
+    branches: [master]
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Node.js setup
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Install surge
+        run: yarn global add surge
+
+      - name: Build application
+        run: yarn build
+
+      - name: Deploy application
+        run: surge ./dist --domain ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
