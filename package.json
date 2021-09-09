@@ -1,5 +1,6 @@
 {
   "name": "@screfy/website",
+  "description": "My personal website.",
   "version": "0.1.0",
   "author": "screfy <me@screfy.com> (https://screfy.com)",
   "private": true,
