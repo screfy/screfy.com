@@ -1,10 +1,17 @@
+// eslint-disable-next-line
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 /** @type {import('tailwindcss/tailwind-config').TailwindConfig} */
 module.exports = {
   mode: 'jit',
   purge: ['./src/**/*.{ts,tsx}'],
   darkMode: false,
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Ubuntu Mono', ...defaultTheme.fontFamily.sans],
+      },
+    },
   },
   variants: {
     extend: {},
