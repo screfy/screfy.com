@@ -1,0 +1,59 @@
+# Dependencies
+node_modules/
+jspm_packages/
+
+# Testing
+coverage/
+
+# GraphQL Schema
+schema.gql
+
+# NPM cache directory
+.npm/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# ESLint cache
+.eslintcache
+
+# NextJS & Vite
+.next/
+out/
+dist/
+
+# Misc
+.DS_Store
+*.pem
+
+# Serverless directory
+.serverless/
+
+# Generated files
+__generated__/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Vercel
+.vercel
+
+# Yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
