@@ -1,0 +1,33 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches: [canary]
+
+jobs:
+  build:
+    name: Build on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Node.js setup
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Lint source code
+        run: yarn lint
+
+      - name: Check types
+        run: yarn typecheck
+
+      - name: Build application
+        run: yarn build
