@@ -8,6 +8,12 @@ module.exports = {
   darkMode: false,
   theme: {
     extend: {
+      colors: {
+        primary: {
+          DEFAULT: '#2BBC8A',
+          light: '#EEEEEE',
+        },
+      },
       fontFamily: {
         sans: ['Ubuntu Mono', ...defaultTheme.fontFamily.sans],
       },
