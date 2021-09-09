@@ -13,6 +13,10 @@ module.exports = {
           DEFAULT: '#2BBC8A',
           light: '#EEEEEE',
         },
+        secondary: {
+          DEFAULT: '#1D1F21',
+          light: '#555555',
+        },
       },
       fontFamily: {
         sans: ['Ubuntu Mono', ...defaultTheme.fontFamily.sans],
