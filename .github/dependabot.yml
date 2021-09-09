@@ -1,0 +1,12 @@
+# https://git.io/JCUAY
+
+version: 2
+
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: daily
+    pull-request-branch-name:
+      separator: /
+    open-pull-requests-limit: 10
