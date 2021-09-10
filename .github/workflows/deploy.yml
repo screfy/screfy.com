@@ -3,7 +3,7 @@ name: Surge Deployment
 on:
   release:
     types: [published]
-    branches: [master]
+    branches: [main]
 
 jobs:
   deploy:
