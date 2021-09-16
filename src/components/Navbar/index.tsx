@@ -3,7 +3,7 @@ import NavbarItem from './NavbarItem'
 
 export default function Navbar(): JSX.Element {
   return (
-    <nav className="flex items-center space-x-6">
+    <nav className="flex items-center space-x-6 mb-10">
       <Link href="/" passHref>
         <a className="font-semibold">
           screfy<span className="text-info">.</span>com
