@@ -3,7 +3,7 @@
     "moduleResolution": "Node",
     "target": "ES2021",
     "module": "ESNext",
-    "jsx": "react-jsx",
+    "jsx": "preserve",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "noImplicitAny": true,
     "alwaysStrict": true,
@@ -16,6 +16,6 @@
     "isolatedModules": true,
     "noEmit": true
   },
-  "include": ["vite-env.d.ts", "./src/**/*.ts", "./src/**/*.tsx"],
+  "include": ["next-env.d.ts", "./**/*.{ts,tsx}"],
   "exclude": ["node_modules"]
 }
