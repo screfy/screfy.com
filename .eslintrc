@@ -23,6 +23,7 @@
   "plugins": ["@typescript-eslint"],
   "rules": {
     "no-loss-of-precision": "error",
-    "@typescript-eslint/no-empty-function": "off"
+    "@typescript-eslint/no-empty-function": "off",
+    "import/no-anonymous-default-export": [2, { "allowAnonymousFunction": true }]
   }
 }
