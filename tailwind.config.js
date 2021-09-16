@@ -8,6 +8,12 @@ module.exports = {
   darkMode: false,
   theme: {
     extend: {
+      colors: {
+        primary: '#EEEEEE',
+        secondary: '#101010',
+        info: '#0076FF',
+        danger: '#FFAC33',
+      },
       fontFamily: {
         sans: [...defaultTheme.fontFamily.sans],
       },
