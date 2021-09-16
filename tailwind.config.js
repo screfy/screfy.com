@@ -15,7 +15,7 @@ module.exports = {
         danger: '#FFAC33',
       },
       fontFamily: {
-        sans: [...defaultTheme.fontFamily.sans],
+        sans: ['Inter', ...defaultTheme.fontFamily.sans],
       },
     },
   },
