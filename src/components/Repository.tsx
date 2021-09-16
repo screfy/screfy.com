@@ -5,7 +5,7 @@ import Heading from './Heading'
 
 interface Props {
   name: string
-  description: string
+  description?: string
   stars: number
   url: string
 }
@@ -30,7 +30,7 @@ export default function Repository({ name, description, stars, url }: Props): JS
         {isOpen && (
           <motion.div className="h-full flex" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
             <div className="w-full flex flex-col space-y-3 px-4 py-2">
-              <p className="text-sm flex-1">{description}</p>
+              <p className="text-sm flex-1">{description ?? 'Not provided.'}</p>
               <div className="flex justify-between">
                 <div className="flex items-center space-x-1">
                   <Star className="text-danger" size="14" />
