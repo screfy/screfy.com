@@ -24,6 +24,7 @@
   "rules": {
     "no-loss-of-precision": "error",
     "@typescript-eslint/no-empty-function": "off",
+    "react-hooks/exhaustive-deps": "off",
     "import/no-anonymous-default-export": [2, { "allowAnonymousFunction": true }]
   }
 }
