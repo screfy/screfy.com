@@ -1,3 +1,4 @@
+import { NextSeo } from 'next-seo'
 import Docker from '../components/icons/Docker'
 import NodeJS from '../components/icons/NodeJS'
 import PostgreSQL from '../components/icons/PostgreSQL'
@@ -51,6 +52,8 @@ const TECHNOLOGIES: TechnologyProps[] = [
 export default function Technologies(): JSX.Element {
   return (
     <Page>
+      <NextSeo title="Technologies" />
+
       <Section heading={{ as: 'h1', text: 'Technologies' }}>
         <p>
           I use a wide range of technologies to create a something new. You can find a list of my most-used technologies
