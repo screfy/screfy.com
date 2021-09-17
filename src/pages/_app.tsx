@@ -5,6 +5,7 @@ import Footer from '../components/Footer'
 import 'tailwindcss/tailwind.css'
 
 const URL = process.env.NEXT_PUBLIC_URL
+
 export default function App({ Component, pageProps }: AppProps): JSX.Element {
   return (
     <div className="flex min-h-screen bg-black text-primary">
@@ -19,6 +20,7 @@ export default function App({ Component, pageProps }: AppProps): JSX.Element {
           { name: 'author', content: 'screfy (https://screfy.com)' },
           { name: 'url', content: URL },
         ]}
+        additionalLinkTags={[{ rel: 'shortcut icon', href: '/favicon.ico', type: 'image/x-icon' }]}
       />
 
         <Navbar />
