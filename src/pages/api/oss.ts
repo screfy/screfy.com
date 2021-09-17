@@ -60,6 +60,10 @@ export default async function (req: NextApiRequest, res: NextApiResponse<Respons
   const fromCache = !!repositories
 
   res.setHeader('Cache-Control', 'public, max-age=0, must-revalidate')
+  res.setHeader('Access-Control-Allow-Origin', '*')
+  res.setHeader('Access-Control-Request-Method', '*')
+  res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS')
+  res.setHeader('Access-Control-Allow-Headers', '*')
 
   if (!repositories) {
     repositories = await getRepositories()
