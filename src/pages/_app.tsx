@@ -9,7 +9,11 @@ export default function App({ Component, pageProps }: AppProps): JSX.Element {
   return (
     <div className="flex min-h-screen bg-black text-primary">
       <div className="flex flex-col max-w-3xl mx-auto py-8">
-      <NextSeo titleTemplate="%s | screfy" title="Home" />
+      <NextSeo
+        titleTemplate="%s | screfy"
+        title="Home"
+        description="I am a fullstack web developer and open-source enthusiast."
+      />
 
         <Navbar />
         <div className="flex-1">
