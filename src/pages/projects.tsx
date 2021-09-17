@@ -30,7 +30,7 @@ export default function Projects(): JSX.Element {
       <NextSeo title="Projects" />
 
       <Section heading={{ as: 'h1', text: 'Projects' }}>
-        <div className="grid grid-cols-2 gap-2 auto-cols-max">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 auto-cols-max">
           {PROJECTS.map((project) => (
             <Project key={project.name} {...project} />
           ))}
@@ -46,7 +46,7 @@ export default function Projects(): JSX.Element {
         <div>
           {data !== undefined ? (
             <motion.div
-              className="grid grid-cols-2 gap-2 auto-cols-max"
+              className="grid grid-cols-1 lg:grid-cols-2 gap-2 auto-cols-max"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -57,7 +57,7 @@ export default function Projects(): JSX.Element {
               ))}
             </motion.div>
           ) : (
-            <div className="grid grid-cols-2 gap-2 auto-cols-max">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 auto-cols-max">
               <ProjectSkeleton />
               <ProjectSkeleton />
             </div>

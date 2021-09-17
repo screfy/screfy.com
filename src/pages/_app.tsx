@@ -8,8 +8,7 @@ const URL = process.env.NEXT_PUBLIC_URL
 
 export default function App({ Component, pageProps }: AppProps): JSX.Element {
   return (
-    <div className="flex min-h-screen bg-black text-primary">
-      <div className="flex flex-col max-w-3xl mx-auto py-8">
+    <div className="flex justify-center min-h-screen bg-black text-primary">
       <NextSeo
         titleTemplate="%s | screfy"
         title="Home"
@@ -25,6 +24,7 @@ export default function App({ Component, pageProps }: AppProps): JSX.Element {
         twitter={{ handle: '@screfy_', cardType: 'summary_large_image' }}
       />
 
+      <div className="flex flex-col w-[36rem] mx-4 my-8">
         <Navbar />
         <div className="flex-1">
           <Component {...pageProps} />
