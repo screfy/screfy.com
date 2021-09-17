@@ -21,6 +21,7 @@ export default function App({ Component, pageProps }: AppProps): JSX.Element {
           { name: 'url', content: URL },
         ]}
         additionalLinkTags={[{ rel: 'shortcut icon', href: '/favicon.ico', type: 'image/x-icon' }]}
+        openGraph={{ type: 'website', images: [{ url: `${URL}/logo_social-media.png` }] }}
       />
 
         <Navbar />
