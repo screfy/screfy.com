@@ -9,7 +9,7 @@
 
 ### Prerequisites
 
-- [Node.js][node] (recommended version: 16+)
+- [Node.js][node]
 - Package Manager (this project is using [Yarn][yarn])
 
 ### Setting Up a Project
@@ -36,7 +36,7 @@
 
 ## Deployment
 
-This project is deployed on [Surge][surge] using my [Deploy Workflow][deploy].
+This project is deployed on [Vercel][vercel].
 
 ## Continuous Integration
 
@@ -49,7 +49,6 @@ This project is licensed under the [MIT license](LICENSE).
 [node]: https://nodejs.org
 [yarn]: https://yarnpkg.com
 [cloning-a-repo]: https://help.github.com/en/articles/cloning-a-repository
-[surge]: https://surge.sh
-[deploy]: https://github.com/screfy/screfy.com/actions/workflows/deploy.yml
+[vercel]: https://vercel.com
 [gh-actions]: https://github.com/features/actions
 [workflows]: https://github.com/screfy/screfy.com/actions
