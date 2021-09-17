@@ -14,6 +14,11 @@ export default function App({ Component, pageProps }: AppProps): JSX.Element {
         title="Home"
         description="I am a fullstack web developer and open-source enthusiast."
         canonical={URL}
+        additionalMetaTags={[
+          { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
+          { name: 'author', content: 'screfy (https://screfy.com)' },
+          { name: 'url', content: URL },
+        ]}
       />
 
         <Navbar />
