@@ -1,6 +1,6 @@
 import { ChevronDown } from 'react-feather'
 
-export default function ProjectSkeleton(): JSX.Element {
+export default function RepositorySkeleton(): JSX.Element {
   return (
     <div className="animate-pulse bg-secondary h-[42px] w-full rounded-lg">
       <div className="h-full flex items-center justify-between px-4 py-2">

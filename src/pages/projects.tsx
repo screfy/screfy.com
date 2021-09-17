@@ -8,7 +8,7 @@ import Repository from '../components/Repository'
 import Section from '../components/Section'
 import zenvers from '../../public/projects/zenvers.webp'
 import { Response } from './api/oss'
-import ProjectSkeleton from '../components/Project/ProjectSkeleton'
+import RepositorySkeleton from '../components/Repository/RepositorySkeleton'
 
 const PROJECTS: ProjectProps[] = [
   {
@@ -58,8 +58,8 @@ export default function Projects(): JSX.Element {
             </motion.div>
           ) : (
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 auto-cols-max">
-              <ProjectSkeleton />
-              <ProjectSkeleton />
+              <RepositorySkeleton />
+              <RepositorySkeleton />
             </div>
           )}
         </div>

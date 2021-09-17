@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { useState } from 'react'
 import { ChevronDown, ExternalLink, Star } from 'react-feather'
-import Heading from './Heading'
+import Heading from '../Heading'
 
 interface Props {
   name: string

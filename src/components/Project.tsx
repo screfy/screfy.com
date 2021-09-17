@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import Heading from '../Heading'
+import Heading from './Heading'
 
 export interface ProjectProps {
   name: string
