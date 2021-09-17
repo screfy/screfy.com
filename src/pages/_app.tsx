@@ -22,6 +22,7 @@ export default function App({ Component, pageProps }: AppProps): JSX.Element {
         ]}
         additionalLinkTags={[{ rel: 'shortcut icon', href: '/favicon.ico', type: 'image/x-icon' }]}
         openGraph={{ type: 'website', images: [{ url: `${URL}/logo_social-media.png` }] }}
+        twitter={{ handle: '@screfy_', cardType: 'summary_large_image' }}
       />
 
         <Navbar />
