@@ -15,7 +15,7 @@ export interface Response {
   cache: boolean
 }
 
-const DEFAULT_USERNAME = process.env.GITHUB_USERNAME || 'screfy'
+const DEFAULT_USERNAME = process.env.GITHUB_USERNAME
 const GITHUB_URL = 'https://github.com'
 
 // Cache repositories for 24 hours:
@@ -43,7 +43,7 @@ async function getRepositories(): Promise<RepositoryData[] | undefined> {
   pinned.each((i, e) => {
     const $ = cheerio.load(e)
     const author = $('.owner').text().trim() || DEFAULT_USERNAME
-    const name = $('.repo').text()
+    const name = $('.repo').text().trim()
     const url = `${GITHUB_URL}/${author}/${name}`
     const description = $('.pinned-item-desc').text().trim() || undefined
     const parsedStars = parseInt($('a[href$="/stargazers"]').text().trim())
