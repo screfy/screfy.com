@@ -13,6 +13,7 @@ export default function App({ Component, pageProps }: AppProps): JSX.Element {
         titleTemplate="%s | screfy"
         title="Home"
         description="I am a fullstack web developer and open-source enthusiast."
+        canonical={URL}
       />
 
         <Navbar />
