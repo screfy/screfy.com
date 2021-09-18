@@ -2,7 +2,7 @@
   "name": "@screfy/website",
   "description": "My personal website.",
   "license": "MIT",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "author": "screfy <me@screfy.com> (https://screfy.com)",
   "private": true,
   "scripts": {

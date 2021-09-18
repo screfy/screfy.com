@@ -1,3 +1,17 @@
+# v2.0.1 (2021-09-19)
+
+### Misc Changes
+
+| Commit | Description |
+| --- | --- |
+| [`a9afe75`](https://github.com/screfy/screfy.com/commit/a9afe75440c50f50671a5ce7980343d801c997e7) | update whoami text |
+
+### Dependencies
+
+| Commit | Description |
+| --- | --- |
+| [`1788ba6`](https://github.com/screfy/screfy.com/commit/1788ba6f77ab03064f0387b170f5f44a1e2e7880) | bump @types/node from 16.9.1 to 16.9.2 |
+
 # v2.0.0 (2021-09-17)
 
 ### New Features
