@@ -7,8 +7,8 @@ export default function Home(): JSX.Element {
     <Page>
       <Section heading={{ as: 'h1', text: `Hello, I'm screfy!` }}>
         <p>
-          I am a fullstack web developer and open-source enthusiast. I’m most interested in, such as web and serverless
-          technologies, DevOps practices, or performant and responsive server-side code.
+          I am a fullstack web developer and open-source enthusiast. I’m most interested in web and serverless
+          technologies, DevOps practices, and performant, responsive code.
         </p>
       </Section>
 
