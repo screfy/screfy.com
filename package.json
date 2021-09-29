@@ -29,7 +29,7 @@
     "use-sound": "^4.0.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "^13.1.0",
+    "@commitlint/cli": "^13.2.0",
     "@commitlint/config-conventional": "^13.1.0",
     "@types/lru-cache": "^5.1.1",
     "@types/node": "^16.10.1",
