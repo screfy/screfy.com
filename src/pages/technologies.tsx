@@ -5,6 +5,7 @@ import PostgreSQL from '../components/icons/PostgreSQL'
 import React from '../components/icons/React'
 import TailwindCSS from '../components/icons/TailwindCSS'
 import TypeScript from '../components/icons/TypeScript'
+import GraphQL from '../components/icons/GraphQL'
 import Page from '../components/Page'
 import Section from '../components/Section'
 import Technology, { TechnologyProps } from '../components/Technology'
@@ -22,6 +23,12 @@ const TECHNOLOGIES: TechnologyProps[] = [
     description: 'A JavaScript library for building user interfaces.',
     icon: <React />,
     color: '#232340',
+  },
+  {
+    name: 'GraphQL',
+    description: 'A query language for APIs and a runtime for fulfilling those queries with your existing data.',
+    icon: <GraphQL />,
+    color: '#e10098',
   },
   {
     name: 'Node.js',
