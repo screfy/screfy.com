@@ -6,6 +6,7 @@ import React from '../components/icons/React'
 import TailwindCSS from '../components/icons/TailwindCSS'
 import TypeScript from '../components/icons/TypeScript'
 import GraphQL from '../components/icons/GraphQL'
+import NextJS from '../components/icons/NextJS'
 import Page from '../components/Page'
 import Section from '../components/Section'
 import Technology, { TechnologyProps } from '../components/Technology'
@@ -23,6 +24,12 @@ const TECHNOLOGIES: TechnologyProps[] = [
     description: 'A JavaScript library for building user interfaces.',
     icon: <React />,
     color: '#232340',
+  },
+  {
+    name: 'Next.js',
+    description: 'Next.js gives you the best developer experience with all the features you need for production.',
+    icon: <NextJS />,
+    color: '#0070f3',
   },
   {
     name: 'GraphQL',
