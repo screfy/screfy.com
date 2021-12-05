@@ -14,7 +14,8 @@
     "allowJs": false,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true
+    "noEmit": true,
+    "incremental": true
   },
   "include": ["next-env.d.ts", "env.d.ts", "./**/*.ts", "./**/*.tsx"],
   "exclude": ["node_modules"]
