@@ -3,6 +3,8 @@ name: Continuous Integration
 on:
   push:
     branches: [canary]
+  pull_request:
+    branches: [canary]
 
 jobs:
   build:
@@ -10,7 +12,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, macos-latest]
+        os: [ubuntu-latest]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -20,14 +22,27 @@ jobs:
         with:
           node-version: 16
 
+      - name: Cache pnpm modules
+        uses: actions/cache@v2
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-
+
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 6.24.0
+          run_install: |
+            - recursive: true
+              args: [--frozen-lockfile, --strict-peer-dependencies]
 
       - name: Lint source code
-        run: yarn lint
+        run: pnpm lint
 
       - name: Check types
-        run: yarn typecheck
+        run: pnpm typecheck
 
       - name: Build application
-        run: yarn build
+        run: pnpm build
