@@ -3,9 +3,7 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 
 /** @type {import('tailwindcss/tailwind-config').TailwindConfig} */
 module.exports = {
-  mode: 'jit',
-  purge: ['./**/*.{ts,tsx}'],
-  darkMode: false,
+  content: ['./**/*.{ts,tsx}'],
   theme: {
     extend: {
       colors: {
@@ -18,9 +16,6 @@ module.exports = {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
       },
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [],
 }
