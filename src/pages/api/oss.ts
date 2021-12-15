@@ -55,7 +55,10 @@ async function getRepositories(): Promise<RepositoryData[] | undefined> {
   return repositories
 }
 
-export default async function (req: NextApiRequest, res: NextApiResponse<Response | { error: string }>): Promise<void> {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse<Response | { error: string }>
+): Promise<void> {
   let repositories = cache.get('repositories')
   const fromCache = !!repositories
 
