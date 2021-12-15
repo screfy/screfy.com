@@ -1,3 +1,63 @@
+# v3.0.0 (2021-12-15)
+
+### New Features
+
+| Commit | Description |
+| --- | --- |
+| [`b4cc7c9`](https://github.com/screfy/screfy.com/commit/b4cc7c9ed68412aa8b97a5b92fbe8ee951121092) | switch to tailwind v3 |
+| [`4c7d67c`](https://github.com/screfy/screfy.com/commit/4c7d67cfb614ed9cbd7cbbfaf4f96e15290fb67a) | add NextJS technology |
+| [`eff3fcc`](https://github.com/screfy/screfy.com/commit/eff3fccc3f12db77cc6211ab2c3525fac366927a) | add GraphQL technology |
+
+### Fixes
+
+| Commit | Description |
+| --- | --- |
+| [`a0c54a8`](https://github.com/screfy/screfy.com/commit/a0c54a8bc6d981ba88807fe155405d5041b734fd) | fix issue with `@next/next/no-page-custom-font` rule |
+
+### Docs Changes
+
+| Commit | Description |
+| --- | --- |
+| [`5948339`](https://github.com/screfy/screfy.com/commit/5948339143a4e3de3f8b494ecc97c5914b0c1c76) | change package manager to pnpm |
+
+### Misc Changes
+
+| Commit | Description |
+| --- | --- |
+| [`9739a13`](https://github.com/screfy/screfy.com/commit/9739a132be9b50ab3c0d2dcce5a923fedd529151) | remove dependabot config |
+| [`486fab4`](https://github.com/screfy/screfy.com/commit/486fab465f3f7c35e129d3bdbd3b4e24f905e6cb) | enable incremental |
+| [`27e4bc5`](https://github.com/screfy/screfy.com/commit/27e4bc5e990957ee216c3e87230f325d7249ee51) | bump outdated dependencies |
+| [`b540d03`](https://github.com/screfy/screfy.com/commit/b540d03bd660fd308e621f53e92fa6625d4e5a36) | switch to pnpm |
+
+### CI Changes
+
+| Commit | Description |
+| --- | --- |
+| [`b117cf8`](https://github.com/screfy/screfy.com/commit/b117cf897866cd53e7174f7ab7cb97f24582ae1f) | switch to pnpm |
+
+### Dependencies
+
+| Commit | Description |
+| --- | --- |
+| [`27b4a04`](https://github.com/screfy/screfy.com/commit/27b4a04b860087ee4d2560928ff89e28dd17b754) | bump outdated dependencies |
+| [`d0381ce`](https://github.com/screfy/screfy.com/commit/d0381ce04afc44edc8146db7c1ca0fc5b1fc72ea) | bump @typescript-eslint/parser from 4.31.2 to 4.32.0 |
+| [`2e094c2`](https://github.com/screfy/screfy.com/commit/2e094c2ec3943ff8b4b3b24a11e8865534bade05) | bump @commitlint/cli from 13.1.0 to 13.2.0 |
+| [`e1a8de7`](https://github.com/screfy/screfy.com/commit/e1a8de740c313cacf96db6597cd21edd53a52e08) | bump @typescript-eslint/eslint-plugin |
+| [`ab295b7`](https://github.com/screfy/screfy.com/commit/ab295b7c38ddfc3bf9abf2fffba24e8ecc5d1b19) | bump autoprefixer from 10.3.5 to 10.3.6 |
+| [`912cd40`](https://github.com/screfy/screfy.com/commit/912cd4026780320135152d34038204991d229178) | bump @types/node from 16.9.6 to 16.10.1 |
+| [`582ff94`](https://github.com/screfy/screfy.com/commit/582ff9489535da5993583aa82ec76d61d9faef9b) | bump postcss from 8.3.7 to 8.3.8 |
+| [`5f59fdb`](https://github.com/screfy/screfy.com/commit/5f59fdb8a9561819b406d9c07ebd4165f9f127c4) | bump tailwindcss from 2.2.15 to 2.2.16 |
+| [`f9633a2`](https://github.com/screfy/screfy.com/commit/f9633a2a80c10b64b750638be4ad8a14c3016061) | bump autoprefixer from 10.3.4 to 10.3.5 |
+| [`04c568d`](https://github.com/screfy/screfy.com/commit/04c568d61b3b8e211c001ad738c1ce07344e1adf) | bump @types/react from 17.0.22 to 17.0.24 |
+| [`742c649`](https://github.com/screfy/screfy.com/commit/742c649e7bb99a091f324e3c4060aea1f5d3590c) | bump @types/node from 16.9.4 to 16.9.6 |
+| [`637fdc6`](https://github.com/screfy/screfy.com/commit/637fdc6aff761653f6331527f8baeb21a6a155bc) | bump postcss from 8.3.6 to 8.3.7 |
+| [`296b032`](https://github.com/screfy/screfy.com/commit/296b0325b3f3b0f0986c3217c369beea9cb20d3a) | bump next-seo from 4.28.0 to 4.28.1 |
+| [`459ed65`](https://github.com/screfy/screfy.com/commit/459ed6536968236c91be029582c59d529c579dbd) | bump @typescript-eslint/parser from 4.31.1 to 4.31.2 |
+| [`114c2e3`](https://github.com/screfy/screfy.com/commit/114c2e3568c38806ccb6e66ad2406e397214e540) | bump @typescript-eslint/eslint-plugin |
+| [`d72d362`](https://github.com/screfy/screfy.com/commit/d72d362fa7314c8d38bf1bfa854011719ef667f5) | bump next-seo from 4.27.0 to 4.28.0 |
+| [`6747d3e`](https://github.com/screfy/screfy.com/commit/6747d3e139e26ef9b991020e5f5d791bfd035984) | bump @types/react from 17.0.21 to 17.0.22 |
+| [`ccabf73`](https://github.com/screfy/screfy.com/commit/ccabf73891647ee06f01185d47f7c06b3c344cb6) | bump @types/node from 16.9.2 to 16.9.4 |
+
 # v2.0.1 (2021-09-19)
 
 ### Misc Changes
