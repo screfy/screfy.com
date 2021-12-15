@@ -10,7 +10,7 @@
 ### Prerequisites
 
 - [Node.js][node]
-- Package Manager (this project is using [Yarn][yarn])
+- Package Manager (this project is using [pnpm][pnpm])
 
 ### Setting Up a Project
 
@@ -23,13 +23,13 @@
 2. Install dependencies:
 
    ```bash
-   yarn
+   pnpm install
    ```
 
 3. Start the development server:
 
    ```bash
-   yarn dev
+   pnpm dev
    ```
 
 4. Open development site: [`http://localhost:3000`](http://localhost:3000).
@@ -47,7 +47,7 @@ I use [GitHub Actions][gh-actions] for Continuous Integration. Check out my [Wor
 This project is licensed under the [MIT license](LICENSE).
 
 [node]: https://nodejs.org
-[yarn]: https://yarnpkg.com
+[pnpm]: https://pnpm.io
 [cloning-a-repo]: https://help.github.com/en/articles/cloning-a-repository
 [vercel]: https://vercel.com
 [gh-actions]: https://github.com/features/actions
