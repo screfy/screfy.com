@@ -7,7 +7,12 @@ interface Props {
 
 export default function Link({ href, children }: Props): JSX.Element {
   return (
-    <a className="text-info hover:underline" href={href} target="_blank" rel="noreferrer">
+    <a
+      className="font-medium text-gray-50 hover:text-white transition-colors"
+      href={href}
+      target="_blank"
+      rel="noreferrer"
+    >
       {children}
     </a>
   );
