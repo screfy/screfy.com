@@ -24,7 +24,7 @@ export default function App({ Component, pageProps }: AppProps): JSX.Element {
         twitter={{ handle: '@screfy_', cardType: 'summary_large_image' }}
       />
 
-      <div className="flex flex-col w-[36rem] mx-4 my-8">
+      <div className="flex flex-col w-[40rem] my-8">
         <Navbar />
         <div className="flex-1">
           <Component {...pageProps} />
