@@ -1,5 +1,5 @@
 // eslint-disable-next-line
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 /** @type {import('tailwindcss/tailwind-config').TailwindConfig} */
 module.exports = {
@@ -18,4 +18,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
+};

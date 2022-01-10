@@ -1,6 +1,6 @@
-import Link from '../components/Link'
-import Page from '../components/Page'
-import Section from '../components/Section'
+import Link from '../components/Link';
+import Page from '../components/Page';
+import Section from '../components/Section';
 
 export default function Home(): JSX.Element {
   return (
@@ -21,5 +21,5 @@ export default function Home(): JSX.Element {
         </p>
       </Section>
     </Page>
-  )
+  );
 }

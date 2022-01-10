@@ -1,8 +1,8 @@
-import clsx from 'clsx'
+import clsx from 'clsx';
 
 export interface HeadingProps {
-  as: `h${1 | 2 | 3 | 4}`
-  text: string
+  as: `h${1 | 2 | 3 | 4}`;
+  text: string;
 }
 
 enum FONT_SIZE {
@@ -13,7 +13,7 @@ enum FONT_SIZE {
 }
 
 export default function Heading({ as, text }: HeadingProps): JSX.Element {
-  const Component = as
+  const Component = as;
 
-  return <Component className={clsx('text-white font-semibold', FONT_SIZE[as])}>{text}</Component>
+  return <Component className={clsx('text-white font-semibold', FONT_SIZE[as])}>{text}</Component>;
 }

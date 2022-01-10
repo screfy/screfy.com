@@ -1,16 +1,16 @@
-import Image from 'next/image'
-import Heading from './Heading'
+import Image from 'next/image';
+import Heading from './Heading';
 
 export interface ProjectProps {
-  name: string
-  role: string
-  description: string
+  name: string;
+  role: string;
+  description: string;
   image: {
-    src: string
-    height: number
-    width: number
-  }
-  url: string
+    src: string;
+    height: number;
+    width: number;
+  };
+  url: string;
 }
 
 export default function Project({ name, role, description, image, url }: ProjectProps): JSX.Element {
@@ -35,5 +35,5 @@ export default function Project({ name, role, description, image, url }: Project
         <p className="text-sm">{description}</p>
       </div>
     </a>
-  )
+  );
 }

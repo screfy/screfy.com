@@ -1,15 +1,15 @@
-import { NextSeo } from 'next-seo'
-import Docker from '../components/icons/Docker'
-import NodeJS from '../components/icons/NodeJS'
-import PostgreSQL from '../components/icons/PostgreSQL'
-import React from '../components/icons/React'
-import TailwindCSS from '../components/icons/TailwindCSS'
-import TypeScript from '../components/icons/TypeScript'
-import GraphQL from '../components/icons/GraphQL'
-import NextJS from '../components/icons/NextJS'
-import Page from '../components/Page'
-import Section from '../components/Section'
-import Technology, { TechnologyProps } from '../components/Technology'
+import { NextSeo } from 'next-seo';
+import Docker from '../components/icons/Docker';
+import NodeJS from '../components/icons/NodeJS';
+import PostgreSQL from '../components/icons/PostgreSQL';
+import React from '../components/icons/React';
+import TailwindCSS from '../components/icons/TailwindCSS';
+import TypeScript from '../components/icons/TypeScript';
+import GraphQL from '../components/icons/GraphQL';
+import NextJS from '../components/icons/NextJS';
+import Page from '../components/Page';
+import Section from '../components/Section';
+import Technology, { TechnologyProps } from '../components/Technology';
 
 const TECHNOLOGIES: TechnologyProps[] = [
   {
@@ -61,7 +61,7 @@ const TECHNOLOGIES: TechnologyProps[] = [
     icon: <PostgreSQL />,
     color: '#336791',
   },
-]
+];
 
 export default function Technologies(): JSX.Element {
   return (
@@ -81,5 +81,5 @@ export default function Technologies(): JSX.Element {
         </div>
       </Section>
     </Page>
-  )
+  );
 }

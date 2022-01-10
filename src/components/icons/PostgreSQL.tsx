@@ -14,5 +14,5 @@ export default function PostgreSQL(): JSX.Element {
         fill="#FFF"
       />
     </svg>
-  )
+  );
 }

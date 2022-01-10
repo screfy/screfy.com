@@ -1,11 +1,11 @@
-import { ReactChild } from 'react'
-import Heading from './Heading'
+import { ReactChild } from 'react';
+import Heading from './Heading';
 
 export interface TechnologyProps {
-  name: string
-  description: string
-  icon: ReactChild
-  color: string
+  name: string;
+  description: string;
+  icon: ReactChild;
+  color: string;
 }
 
 export default function Technology({ name, description, icon, color }: TechnologyProps): JSX.Element {
@@ -23,5 +23,5 @@ export default function Technology({ name, description, icon, color }: Technolog
         <p className="text-sm">{description}</p>
       </div>
     </div>
-  )
+  );
 }

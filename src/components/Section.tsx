@@ -1,9 +1,9 @@
-import Heading, { HeadingProps } from './Heading'
-import { ReactChild } from 'react'
+import Heading, { HeadingProps } from './Heading';
+import { ReactChild } from 'react';
 
 interface Props {
-  heading: HeadingProps
-  children: ReactChild | ReactChild[]
+  heading: HeadingProps;
+  children: ReactChild | ReactChild[];
 }
 
 export default function Section({ heading, children }: Props): JSX.Element {
@@ -12,5 +12,5 @@ export default function Section({ heading, children }: Props): JSX.Element {
       <Heading {...heading} />
       {children}
     </section>
-  )
+  );
 }

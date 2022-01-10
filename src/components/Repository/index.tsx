@@ -1,18 +1,18 @@
-import { AnimatePresence, motion } from 'framer-motion'
-import { useState } from 'react'
-import { ChevronDown, ExternalLink, Star } from 'react-feather'
-import Heading from '../Heading'
+import { AnimatePresence, motion } from 'framer-motion';
+import { useState } from 'react';
+import { ChevronDown, ExternalLink, Star } from 'react-feather';
+import Heading from '../Heading';
 
 interface Props {
-  name: string
-  description?: string
-  stars: number
-  url: string
+  name: string;
+  description?: string;
+  stars: number;
+  url: string;
 }
 
 export default function Repository({ name, description, stars, url }: Props): JSX.Element {
-  const [isOpen, toggle] = useState(false)
-  const siStars = Math.abs(stars) > 999 ? `${(Math.abs(stars) / 1000).toFixed(1)}k` : Math.abs(stars)
+  const [isOpen, toggle] = useState(false);
+  const siStars = Math.abs(stars) > 999 ? `${(Math.abs(stars) / 1000).toFixed(1)}k` : Math.abs(stars);
 
   return (
     <motion.div
@@ -52,5 +52,5 @@ export default function Repository({ name, description, stars, url }: Props): JS
         )}
       </AnimatePresence>
     </motion.div>
-  )
+  );
 }

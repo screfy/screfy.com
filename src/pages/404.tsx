@@ -1,4 +1,4 @@
-import ErrorPage from '../components/Page/ErrorPage'
+import ErrorPage from '../components/Page/ErrorPage';
 
 export default function Error404(): JSX.Element {
   return (
@@ -7,5 +7,5 @@ export default function Error404(): JSX.Element {
 
       <p className="text-sm">That&apos;s all I know.</p>
     </ErrorPage>
-  )
+  );
 }

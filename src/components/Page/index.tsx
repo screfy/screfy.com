@@ -1,8 +1,8 @@
-import { motion } from 'framer-motion'
-import { ReactChild } from 'react'
+import { motion } from 'framer-motion';
+import { ReactChild } from 'react';
 
 interface Props {
-  children: ReactChild | ReactChild[]
+  children: ReactChild | ReactChild[];
 }
 
 export default function Page({ children }: Props): JSX.Element {
@@ -16,5 +16,5 @@ export default function Page({ children }: Props): JSX.Element {
     >
       {children}
     </motion.div>
-  )
+  );
 }

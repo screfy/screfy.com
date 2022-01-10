@@ -1,8 +1,8 @@
-import { ReactChild } from 'react'
+import { ReactChild } from 'react';
 
 interface Props {
-  href: string
-  children: ReactChild
+  href: string;
+  children: ReactChild;
 }
 
 export default function FooterItem({ href, children }: Props): JSX.Element {
@@ -10,5 +10,5 @@ export default function FooterItem({ href, children }: Props): JSX.Element {
     <a className="hover:text-white transition-colors" href={href} target="_blank" rel="noreferrer">
       {children}
     </a>
-  )
+  );
 }

@@ -1,14 +1,14 @@
-import { motion } from 'framer-motion'
-import { NextSeo } from 'next-seo'
-import useSWR from 'swr'
-import Link from '../components/Link'
-import Page from '../components/Page'
-import Project, { ProjectProps } from '../components/Project'
-import Repository from '../components/Repository'
-import Section from '../components/Section'
-import zenvers from '../../public/projects/zenvers.webp'
-import { Response } from './api/oss'
-import RepositorySkeleton from '../components/Repository/RepositorySkeleton'
+import { motion } from 'framer-motion';
+import { NextSeo } from 'next-seo';
+import useSWR from 'swr';
+import Link from '../components/Link';
+import Page from '../components/Page';
+import Project, { ProjectProps } from '../components/Project';
+import Repository from '../components/Repository';
+import Section from '../components/Section';
+import zenvers from '../../public/projects/zenvers.webp';
+import { Response } from './api/oss';
+import RepositorySkeleton from '../components/Repository/RepositorySkeleton';
 
 const PROJECTS: ProjectProps[] = [
   {
@@ -18,12 +18,12 @@ const PROJECTS: ProjectProps[] = [
     image: zenvers,
     url: 'https://zenvers.com',
   },
-]
+];
 
 export default function Projects(): JSX.Element {
   const { data } = useSWR<Response>(`${process.env.NEXT_PUBLIC_URL}/api/oss`, (url) =>
     fetch(url).then((res) => res.json())
-  )
+  );
 
   return (
     <Page>
@@ -65,5 +65,5 @@ export default function Projects(): JSX.Element {
         </div>
       </Section>
     </Page>
-  )
+  );
 }

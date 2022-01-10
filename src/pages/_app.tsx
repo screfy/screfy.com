@@ -1,10 +1,10 @@
-import { AppProps } from 'next/app'
-import { NextSeo } from 'next-seo'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
-import 'tailwindcss/tailwind.css'
+import { AppProps } from 'next/app';
+import { NextSeo } from 'next-seo';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import 'tailwindcss/tailwind.css';
 
-const URL = process.env.NEXT_PUBLIC_URL
+const URL = process.env.NEXT_PUBLIC_URL;
 
 export default function App({ Component, pageProps }: AppProps): JSX.Element {
   return (
@@ -32,5 +32,5 @@ export default function App({ Component, pageProps }: AppProps): JSX.Element {
         <Footer />
       </div>
     </div>
-  )
+  );
 }

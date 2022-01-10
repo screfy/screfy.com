@@ -1,5 +1,5 @@
-import { GitHub, Twitter, Key } from 'react-feather'
-import FooterItem from './FooterItem'
+import { GitHub, Twitter, Key } from 'react-feather';
+import FooterItem from './FooterItem';
 
 export default function Footer(): JSX.Element {
   return (
@@ -16,5 +16,5 @@ export default function Footer(): JSX.Element {
         <Key size="20" />
       </FooterItem>
     </footer>
-  )
+  );
 }

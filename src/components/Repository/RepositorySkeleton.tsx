@@ -1,4 +1,4 @@
-import { ChevronDown } from 'react-feather'
+import { ChevronDown } from 'react-feather';
 
 export default function RepositorySkeleton(): JSX.Element {
   return (
@@ -8,5 +8,5 @@ export default function RepositorySkeleton(): JSX.Element {
         <ChevronDown className="text-[#5e5e5e]" size="18" />
       </div>
     </div>
-  )
+  );
 }
