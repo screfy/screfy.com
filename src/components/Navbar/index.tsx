@@ -10,7 +10,7 @@ export default function Navbar(): JSX.Element {
   useEffect(() => play(), [asPath]);
 
   return (
-    <nav className="flex items-center space-x-7 mb-24 ml-[-0.60rem]">
+    <nav className="flex items-center space-x-4 mb-24 ml-[-0.60rem]">
       <NavbarItem href="/">Home</NavbarItem>
       <NavbarItem href="/technologies">Technologies</NavbarItem>
     </nav>
