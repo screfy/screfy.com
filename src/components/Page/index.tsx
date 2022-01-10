@@ -8,7 +8,7 @@ interface Props {
 export default function Page({ children }: Props): JSX.Element {
   return (
     <motion.div
-      className="flex flex-col space-y-8"
+      className="flex flex-col space-y-9"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
