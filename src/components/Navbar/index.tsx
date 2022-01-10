@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import useSound from 'use-sound';
@@ -11,14 +10,8 @@ export default function Navbar(): JSX.Element {
   useEffect(() => play(), [asPath]);
 
   return (
-    <nav className="flex items-center space-x-6 mb-10">
-      <Link href="/" passHref>
-        <a className="font-semibold">
-          screfy<span className="text-info">.</span>com
-        </a>
-      </Link>
-
-      <NavbarItem href="/projects">Projects</NavbarItem>
+    <nav className="flex items-center space-x-7 mb-24 ml-[-0.60rem]">
+      <NavbarItem href="/">Home</NavbarItem>
       <NavbarItem href="/technologies">Technologies</NavbarItem>
     </nav>
   );

@@ -13,7 +13,14 @@ export default function NavbarItem({ href, children }: Props): JSX.Element {
 
   return (
     <Link href={href} passHref>
-      <a className={clsx('hover:text-white transition-colors', asPath === href && 'underline')}>{children}</a>
+      <a
+        className={clsx(
+          'px-2.5 py-[3px] hover:bg-gray-200 hover:text-white rounded-lg transition',
+          asPath === href && 'text-gray-50 font-semibold'
+        )}
+      >
+        {children}
+      </a>
     </Link>
   );
 }
