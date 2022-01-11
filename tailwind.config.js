@@ -15,6 +15,7 @@ module.exports = {
         300: '#0C0E10',
       },
       orange: '#FFAC33',
+      green: '#1ED760',
     },
     extend: {
       fontFamily: {
