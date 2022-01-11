@@ -8,7 +8,7 @@ const URL = process.env.NEXT_PUBLIC_URL;
 
 export default function App({ Component, pageProps }: AppProps): JSX.Element {
   return (
-    <div className="flex justify-center min-h-screen bg-gray-300 text-gray-100">
+    <div className="flex justify-center min-h-screen bg-gray-400 text-gray-100">
       <NextSeo
         titleTemplate="%s – screfy"
         title="Home"
