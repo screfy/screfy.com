@@ -1,5 +1,7 @@
 import { GitHub, Twitter, Key } from 'react-feather';
+import Divider from '../Divider';
 import FooterIcon from './FooterIcon';
+import NowPlaying from './NowPlaying';
 
 export default function Footer(): JSX.Element {
   return (
@@ -16,6 +18,12 @@ export default function Footer(): JSX.Element {
         <FooterIcon href="https://keybase.io/screfy">
           <Key size="20" />
         </FooterIcon>
+      </div>
+
+      <Divider />
+
+      <div className="flex items-center justify-between">
+        <NowPlaying />
       </div>
     </footer>
   );
