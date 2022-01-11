@@ -20,6 +20,18 @@ const TECHNOLOGIES: TechnologyProps[] = [
     color: '#007ACC',
   },
   {
+    name: 'Node.js',
+    description: `Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine.`,
+    icon: <NodeJS />,
+    color: '#026E00',
+  },
+  {
+    name: 'GraphQL',
+    description: 'A query language for APIs and a runtime for fulfilling those queries with your existing data.',
+    icon: <GraphQL />,
+    color: '#e10098',
+  },
+  {
     name: 'React',
     description: 'A JavaScript library for building user interfaces.',
     icon: <React />,
@@ -30,18 +42,6 @@ const TECHNOLOGIES: TechnologyProps[] = [
     description: 'Next.js gives you the best developer experience with all the features you need for production.',
     icon: <NextJS />,
     color: '#0070f3',
-  },
-  {
-    name: 'GraphQL',
-    description: 'A query language for APIs and a runtime for fulfilling those queries with your existing data.',
-    icon: <GraphQL />,
-    color: '#e10098',
-  },
-  {
-    name: 'Node.js',
-    description: `Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine.`,
-    icon: <NodeJS />,
-    color: '#026E00',
   },
   {
     name: 'TailwindCSS',
