@@ -12,6 +12,7 @@ export default function Navbar(): JSX.Element {
   return (
     <nav className="flex items-center space-x-4 mb-24 ml-[-0.60rem]">
       <NavbarItem href="/">Home</NavbarItem>
+      <NavbarItem href="/about">About</NavbarItem>
       <NavbarItem href="/technologies">Technologies</NavbarItem>
     </nav>
   );
