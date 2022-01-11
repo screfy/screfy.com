@@ -70,8 +70,9 @@ export default function Technologies(): JSX.Element {
 
       <Section heading={{ as: 'h1', text: 'Technologies' }}>
         <p>
-          I use a wide range of technologies to create a something new. You can find a list of my most-used technologies
-          below.
+          I highly leverage new bleeding-edge technologies and languages to stay on top of the game. I really love
+          working with containersation, especially Docker - the most powerful tool for development and production
+          environments.
         </p>
 
         <div className="flex flex-col space-y-4">
