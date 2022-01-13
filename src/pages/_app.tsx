@@ -12,8 +12,8 @@ export default function App({ Component, pageProps }: AppProps): JSX.Element {
       <NextSeo
         titleTemplate="%s – screfy"
         title="Home"
-        description="I am a fullstack web developer and open-source enthusiast."
         canonical={URL}
+        description="Hey, I’m screfy, a fullstack web developer and open-source enthusiast."
         additionalMetaTags={[
           { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
           { name: 'author', content: 'screfy (https://screfy.com)' },
