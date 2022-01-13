@@ -12,7 +12,7 @@ export interface ProjectProps {
   url: string;
 }
 
-export default function Project({ name, role, description, image, url }: ProjectProps): JSX.Element {
+export default function Project({ name, role, description, image, url }: ProjectProps) {
   return (
     <a
       className="flex flex-col space-y-3 p-4 hover:bg-gray-300 border border-gray-200 rounded-lg transition-all"

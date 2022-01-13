@@ -1,4 +1,4 @@
-export default function TrackSkeleton(): JSX.Element {
+export default function TrackSkeleton() {
   return (
     <div className="animate-pulse flex items-center space-x-3 py-3 first:pt-0 last:pb-0">
       <div>

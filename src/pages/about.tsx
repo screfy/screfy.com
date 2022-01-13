@@ -4,7 +4,7 @@ import Section from '../components/Section';
 import Link from '../components/Link';
 import Tracks from '../components/Tracks';
 
-export default function About(): JSX.Element {
+export default function About() {
   return (
     <Page>
       <NextSeo title="About" />

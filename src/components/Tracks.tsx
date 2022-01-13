@@ -4,7 +4,7 @@ import { fetcher } from '../utils/fetcher';
 import Track from './Spotify/Track';
 import TrackSkeleton from './Spotify/Track/TrackSkeleton';
 
-export default function Tracks(): JSX.Element {
+export default function Tracks() {
   const { data } = useSWR<TracksResponse>('/api/tracks', fetcher);
 
   return (

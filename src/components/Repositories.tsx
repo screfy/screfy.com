@@ -4,7 +4,7 @@ import { fetcher } from '../utils/fetcher';
 import Repository from './Repository';
 import RepositorySkeleton from './Repository/RepositorySkeleton';
 
-export default function Repositories(): JSX.Element {
+export default function Repositories() {
   const { data } = useSWR<RepositoriesResponse>('/api/repositories', fetcher);
 
   return (

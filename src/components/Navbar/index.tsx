@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import useSound from 'use-sound';
 import NavbarItem from './NavbarItem';
 
-export default function Navbar(): JSX.Element {
+export default function Navbar() {
   const { asPath } = useRouter();
   const [play] = useSound('/beep.mp3');
 

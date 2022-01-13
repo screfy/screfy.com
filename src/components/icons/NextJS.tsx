@@ -1,4 +1,4 @@
-export default function NextJS(): JSX.Element {
+export default function NextJS() {
   return (
     <svg viewBox="0 0 128 128" fill="currentColor" height="24" width="24">
       <path

@@ -1,3 +1,3 @@
-export default function Divider(): JSX.Element {
+export default function Divider() {
   return <hr className="w-full border-gray-200" />;
 }

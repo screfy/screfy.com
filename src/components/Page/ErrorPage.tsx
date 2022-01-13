@@ -8,7 +8,7 @@ interface Props {
   children?: ReactChild | ReactChild[];
 }
 
-export default function ErrorPage({ statusCode, children }: Props): JSX.Element {
+export default function ErrorPage({ statusCode, children }: Props) {
   return (
     <Page>
       <NextSeo title={`Error ${statusCode}`} noindex nofollow />

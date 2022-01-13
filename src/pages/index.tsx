@@ -4,7 +4,7 @@ import Link from '../components/Link';
 import Repositories from '../components/Repositories';
 import Projects from '../components/Projects';
 
-export default function Home(): JSX.Element {
+export default function Home() {
   return (
     <Page>
       <Section heading={{ as: 'h1', text: 'Hey, I’m screfy' }}>

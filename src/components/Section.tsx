@@ -6,7 +6,7 @@ interface Props {
   children: ReactChild | ReactChild[];
 }
 
-export default function Section({ heading, children }: Props): JSX.Element {
+export default function Section({ heading, children }: Props) {
   return (
     <section className="flex flex-col space-y-4">
       <Heading {...heading} />

@@ -7,7 +7,7 @@ import 'tailwindcss/tailwind.css';
 
 const BASE_URL = 'https://screfy.com';
 
-export default function App({ Component, pageProps }: AppProps): JSX.Element {
+export default function App({ Component, pageProps }: AppProps) {
   const { pathname } = useRouter();
 
   return (

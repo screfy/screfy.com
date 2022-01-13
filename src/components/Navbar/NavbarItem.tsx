@@ -8,7 +8,7 @@ interface Props {
   children: ReactChild;
 }
 
-export default function NavbarItem({ href, children }: Props): JSX.Element {
+export default function NavbarItem({ href, children }: Props) {
   const { asPath } = useRouter();
 
   return (

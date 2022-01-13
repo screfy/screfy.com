@@ -7,7 +7,7 @@ export interface TechnologyProps {
   color: string;
 }
 
-export default function Technology({ name, description, icon, color }: TechnologyProps): JSX.Element {
+export default function Technology({ name, description, icon, color }: TechnologyProps) {
   return (
     <div className="h-[120px] lg:h-[100px] w-full flex items-center p-4 space-x-4 hover:bg-gray-300 hover:scale-[1.02] border border-gray-200 rounded-lg transition-all">
       <div

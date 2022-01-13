@@ -1,4 +1,4 @@
-export default function Docker(): JSX.Element {
+export default function Docker() {
   return (
     <svg viewBox="0 0 512 512" fill="currentColor" height="24" width="24">
       <g fill="currentColor">

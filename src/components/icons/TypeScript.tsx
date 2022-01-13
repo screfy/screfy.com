@@ -1,4 +1,4 @@
-export default function TypeScript(): JSX.Element {
+export default function TypeScript() {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="24" height="24">
       <path fill="#007ACC" d="M0 200V0h400v400H0"></path>

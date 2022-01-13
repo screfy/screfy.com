@@ -3,7 +3,7 @@ import Divider from '../Divider';
 import FooterIcon from './FooterIcon';
 import NowPlaying from './NowPlaying';
 
-export default function Footer(): JSX.Element {
+export default function Footer() {
   return (
     <footer className="flex flex-col space-y-3 mt-24">
       <div className="flex space-x-3">

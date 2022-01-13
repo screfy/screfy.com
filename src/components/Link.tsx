@@ -5,7 +5,7 @@ interface Props {
   children: ReactChild;
 }
 
-export default function Link({ href, children }: Props): JSX.Element {
+export default function Link({ href, children }: Props) {
   return (
     <a
       className="font-medium text-gray-50 hover:text-white transition-colors"

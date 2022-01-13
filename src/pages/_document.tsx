@@ -7,7 +7,7 @@ export default class AppDocument extends Document {
     return initialProps;
   }
 
-  render(): JSX.Element {
+  render() {
     return (
       <Html>
         <Head lang="en">

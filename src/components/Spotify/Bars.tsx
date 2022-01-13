@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
 
-function Bar({ height, scale, delay }: { height: string; scale: number; delay?: number }): JSX.Element {
+function Bar({ height, scale, delay }: { height: string; scale: number; delay?: number }) {
   return (
     <motion.span
       className={clsx(height, 'w-0.5 bg-green')}
@@ -11,7 +11,7 @@ function Bar({ height, scale, delay }: { height: string; scale: number; delay?: 
   );
 }
 
-export default function Bars(): JSX.Element {
+export default function Bars() {
   return (
     <div className="flex items-end space-x-0.5">
       <Bar height="h-3" scale={0.2} />

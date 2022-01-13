@@ -2,7 +2,7 @@ import { useLanyard } from 'react-use-lanyard';
 import Spotify from '../icons/Spotify';
 import Bars from '../Spotify/Bars';
 
-export default function NowPlaying(): JSX.Element {
+export default function NowPlaying() {
   const { status } = useLanyard({ userId: '363406775925604352', socket: true });
 
   return (

@@ -1,4 +1,4 @@
-export default function GraphQL(): JSX.Element {
+export default function GraphQL() {
   return (
     <svg viewBox="0 0 128 128" fill="currentColor" height="24" width="24">
       <g fill="currentColor">

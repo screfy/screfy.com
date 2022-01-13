@@ -63,7 +63,7 @@ const TECHNOLOGIES: TechnologyProps[] = [
   },
 ];
 
-export default function Technologies(): JSX.Element {
+export default function Technologies() {
   return (
     <Page>
       <NextSeo title="Technologies" />

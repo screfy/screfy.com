@@ -1,4 +1,4 @@
-export default function Spotify({ size = '24' }: { size?: string }): JSX.Element {
+export default function Spotify({ size = '24' }: { size?: string }) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" width={size} height={size}>
       <path

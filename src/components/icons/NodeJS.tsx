@@ -1,4 +1,4 @@
-export default function NodeJS(): JSX.Element {
+export default function NodeJS() {
   return (
     <svg viewBox="0 0 32 32" fill="currentColor" height="24" width="24">
       <path

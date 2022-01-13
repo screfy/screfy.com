@@ -1,4 +1,4 @@
-export default function PostgreSQL(): JSX.Element {
+export default function PostgreSQL() {
   return (
     <svg width="24" height="24" viewBox="-4 0 264 264" xmlns="http://www.w3.org/2000/svg">
       <path

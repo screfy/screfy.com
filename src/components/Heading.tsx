@@ -17,7 +17,7 @@ const FONT_STYLES: { [key: string]: FontStyle } = {
   h3: { size: 'text-2xl', weight: 'font-semibold', color: 'text-gray-50' },
 };
 
-export default function Heading({ as, text }: HeadingProps): JSX.Element {
+export default function Heading({ as, text }: HeadingProps) {
   const Component = as;
   const { size, weight, color } = FONT_STYLES[as];
 

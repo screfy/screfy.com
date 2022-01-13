@@ -5,7 +5,7 @@ interface Props {
   children: ReactChild | ReactChild[];
 }
 
-export default function Page({ children }: Props): JSX.Element {
+export default function Page({ children }: Props) {
   return (
     <motion.div
       className="flex flex-col space-y-9"
