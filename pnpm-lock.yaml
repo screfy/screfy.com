@@ -24,6 +24,7 @@ specifiers:
   next: ^12.0.7
   next-seo: ^4.28.1
   postcss: ^8.4.5
+  preact: ^10.6.4
   prettier: ^2.5.1
   react: ^17.0.2
   react-dom: ^17.0.2
@@ -42,6 +43,7 @@ dependencies:
   lru-cache: 6.0.0
   next: 12.0.7_dfc0b93d99fba272c9564d3139a2581a
   next-seo: 4.28.1_d837ce8f3acb2f60f8b7454672a9bcea
+  preact: 10.6.4
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
   react-feather: 2.0.9_react@17.0.2
@@ -3813,6 +3815,10 @@ packages:
       picocolors: 1.0.0
       source-map-js: 1.0.1
     dev: true
+
+  /preact/10.6.4:
+    resolution: {integrity: sha512-WyosM7pxGcndU8hY0OQlLd54tOU+qmG45QXj2dAYrL11HoyU/EzOSTlpJsirbBr1QW7lICxSsVJJmcmUglovHQ==}
+    dev: false
 
   /prebuild-install/7.0.0:
     resolution: {integrity: sha512-IvSenf33K7JcgddNz2D5w521EgO+4aMMjFt73Uk9FRzQ7P+QZPKrp7qPsDydsSwjGt3T5xRNnM1bj1zMTD5fTA==}
