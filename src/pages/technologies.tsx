@@ -71,7 +71,7 @@ export default function Technologies() {
       <Section heading={{ as: 'h1', text: 'Technologies' }}>
         <p>
           I highly leverage new bleeding-edge technologies and languages to stay on top of the game. I really love
-          working with containersation, especially Docker - the most powerful tool for development and production
+          working with containerstation, especially Docker - the most powerful tool for development and production
           environments.
         </p>
 
