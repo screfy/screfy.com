@@ -23,7 +23,7 @@ export default function Repository({ name, description, stars, url }: Repository
         {isOpen && (
           <motion.div className="h-full flex" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
             <div className="w-full flex flex-col space-y-3 px-4 py-2">
-              <p className="text-sm flex-1">{description ?? 'Not provided.'}</p>
+              <p className="text-sm flex-1">{description ?? 'Description not provided.'}</p>
               <div className="flex justify-between">
                 <div className="flex items-center space-x-1">
                   <Star className="text-orange" size="14" />
@@ -31,13 +31,13 @@ export default function Repository({ name, description, stars, url }: Repository
                 </div>
 
                 <a
-                  className="px-2 py-1 flex items-center space-x-1 bg-gray-200 text-gray-50 rounded-lg hover:ring-2 ring-gray-100 transition-all"
+                  className="px-2 py-1 flex items-center space-x-1.5 bg-gray-200 text-gray-50 rounded-lg hover:ring-2 ring-gray-100 transition-all"
                   href={url}
                   target="_blank"
                   rel="noreferrer"
                 >
                   <ExternalLink size="12" />
-                  <span className="text-xs">Open</span>
+                  <span className="text-xs">View</span>
                 </a>
               </div>
             </div>
