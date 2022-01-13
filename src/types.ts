@@ -8,3 +8,16 @@ export interface RepositoryData {
 export interface RepositoriesResponse {
   data: RepositoryData[];
 }
+
+export interface TrackData {
+  name: string;
+  url: string;
+  album: string;
+  artist: string;
+  duration: string;
+  image: string;
+}
+
+export interface TracksResponse {
+  data: TrackData[];
+}

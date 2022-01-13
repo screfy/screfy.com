@@ -1,6 +1,7 @@
 declare namespace NodeJS {
   interface ProcessEnv {
-    GITHUB_USERNAME: string;
-    NEXT_PUBLIC_URL: string;
+    SPOTIFY_CLIENT_ID: string;
+    SPOTIFY_CLIENT_SECRET: string;
+    SPOTIFY_REFRESH_TOKEN: string;
   }
 }
