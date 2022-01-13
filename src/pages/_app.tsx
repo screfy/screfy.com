@@ -29,9 +29,9 @@ export default function App({ Component, pageProps }: AppProps) {
 
       <div className="flex flex-col w-[40rem] my-8">
         <Navbar />
-        <div className="flex-1">
+        <main className="flex-1">
           <Component {...pageProps} />
-        </div>
+        </main>
         <Footer />
       </div>
     </div>
