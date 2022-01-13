@@ -1,15 +1,9 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
 import { ChevronDown, ExternalLink, Star } from 'react-feather';
+import { RepositoryData } from '../../types';
 
-interface Props {
-  name: string;
-  description?: string;
-  stars: number;
-  url: string;
-}
-
-export default function Repository({ name, description, stars, url }: Props): JSX.Element {
+export default function Repository({ name, description, stars, url }: RepositoryData): JSX.Element {
   const [isOpen, setOpen] = useState(false);
   const siStars = Math.abs(stars) > 999 ? `${(Math.abs(stars) / 1000).toFixed(1)}k` : Math.abs(stars);
 
