@@ -4,6 +4,9 @@ module.exports = {
   reactStrictMode: true,
   poweredByHeader: false,
   images: {
-    domains: ['i.scdn.co'],
+    domains: [
+      // Spotify CDN:
+      'i.scdn.co',
+    ],
   },
 };
