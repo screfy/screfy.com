@@ -19,6 +19,7 @@ specifiers:
   eslint-config-prettier: ^8.3.0
   eslint-plugin-prettier: ^4.0.0
   framer-motion: ^5.6.0
+  hamburger-react: ^2.4.1
   husky: ^7.0.4
   lru-cache: ^6.0.0
   next: ^12.0.8
@@ -40,6 +41,7 @@ dependencies:
   cheerio: 1.0.0-rc.10
   clsx: 1.1.1
   framer-motion: 5.6.0_react-dom@17.0.2+react@17.0.2
+  hamburger-react: 2.4.1_react@17.0.2
   lru-cache: 6.0.0
   next: 12.0.8_dfc0b93d99fba272c9564d3139a2581a
   next-seo: 4.28.1_227e7fb4dbd28186517209bc65f02635
@@ -2237,6 +2239,14 @@ packages:
   /graceful-fs/4.2.9:
     resolution: {integrity: sha512-NtNxqUcXgpW2iMrfqSfR73Glt39K+BLwWsPs94yR63v45T0Wbej7eRmL5cWfwEgqXnmjQp3zaJTshdRW/qC2ZQ==}
     dev: true
+
+  /hamburger-react/2.4.1_react@17.0.2:
+    resolution: {integrity: sha512-oqG9CrTVi8wM/dyQQh3JJOOfEiol9ChLOqwtjx+hFyRu0nYfe2ymNmzi2wtfQTDyExUdqETdyACZV9KZ9wpApA==}
+    peerDependencies:
+      react: ^16.8 || ^17
+    dependencies:
+      react: 17.0.2
+    dev: false
 
   /hard-rejection/2.1.0:
     resolution: {integrity: sha512-VIZB+ibDhx7ObhAe7OVtoEbuP4h/MuOTHJ+J8h/eBXotJYl0fBgR72xDFCKgIh22OJZIOVNxBMWuhAr10r8HdA==}
