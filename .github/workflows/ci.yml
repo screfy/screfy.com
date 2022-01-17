@@ -2,9 +2,9 @@ name: Continuous Integration
 
 on:
   push:
-    branches: [canary]
+    branches: [main]
   pull_request:
-    branches: [canary]
+    branches: [main]
 
 jobs:
   build:
