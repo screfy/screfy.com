@@ -11,7 +11,7 @@ export default function Track({ name, url, album, artist, duration, image }: Tra
           <Link href={url}>{name}</Link>
           <p>{artist}</p>
         </div>
-        <p>{duration}</p>
+        <p className="hidden sm:block">{duration}</p>
       </div>
     </div>
   );

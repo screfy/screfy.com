@@ -15,7 +15,7 @@ export default function NavbarItem({ href, children }: Props) {
     <Link href={href} passHref>
       <a
         className={clsx(
-          'px-2.5 py-[3px] hover:bg-gray-200 hover:text-gray-50 rounded-lg transition',
+          'sm:px-2.5 sm:py-[3px] sm:hover:bg-gray-200 hover:text-gray-50 sm:rounded-lg transition',
           asPath === href && 'text-gray-50 font-semibold'
         )}
       >

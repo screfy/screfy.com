@@ -14,8 +14,7 @@ import Technology, { TechnologyProps } from '../components/Technology';
 const TECHNOLOGIES: TechnologyProps[] = [
   {
     name: 'TypeScript',
-    description:
-      'TypeScript is a strongly typed programming language which builds on JavaScript giving you better tooling at any scale.',
+    description: 'TypeScript is a strongly typed programming language that builds on JavaScript.',
     icon: <TypeScript />,
     color: '#007ACC',
   },
@@ -51,7 +50,7 @@ const TECHNOLOGIES: TechnologyProps[] = [
   },
   {
     name: 'Docker',
-    description: 'Docker helps developers bring their ideas to life by conquering the complexity of app development.',
+    description: 'Docker takes away repetitive and mundane configuration tasks.',
     icon: <Docker />,
     color: '#2496ED',
   },
