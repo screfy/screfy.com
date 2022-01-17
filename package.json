@@ -28,8 +28,7 @@
     "react-feather": "^2.0.9",
     "react-use-lanyard": "^0.1.0",
     "sharp": "^0.29.3",
-    "swr": "^1.1.2",
-    "use-sound": "^4.0.1"
+    "swr": "^1.1.2"
   },
   "devDependencies": {
     "@babel/core": ">=7.0.0 <8.0.0",

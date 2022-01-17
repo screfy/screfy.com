@@ -2,7 +2,6 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { Cross as Hamburger } from 'hamburger-react';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-import useSound from 'use-sound';
 import NavbarItem from './NavbarItem';
 
 function NavbarItems() {
@@ -17,7 +16,6 @@ function NavbarItems() {
 
 export default function Navbar() {
   const { asPath } = useRouter();
-  const [play] = useSound('/beep.mp3');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   function openMenu() {
@@ -27,8 +25,6 @@ export default function Navbar() {
   }
 
   useEffect(() => {
-    play();
-
     // Close menu, when path change:
     return () => {
       setIsMenuOpen(false);
