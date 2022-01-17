@@ -10,7 +10,6 @@ function NavbarItems() {
     <>
       <NavbarItem href="/">Home</NavbarItem>
       <NavbarItem href="/about">About</NavbarItem>
-      <NavbarItem href="/blog">Blog</NavbarItem>
       <NavbarItem href="/technologies">Technologies</NavbarItem>
     </>
   );
