@@ -23,7 +23,7 @@ export default function App({ Component, pageProps }: AppProps) {
           { name: 'url', content: BASE_URL + pathname },
         ]}
         additionalLinkTags={[{ rel: 'shortcut icon', href: '/favicon.ico', type: 'image/x-icon' }]}
-        openGraph={{ type: 'website', images: [{ url: `${BASE_URL}/logo_social-media.png` }] }}
+        openGraph={{ type: 'website', images: [{ url: `${BASE_URL}/banner.png` }] }}
         twitter={{ handle: '@screfy_', cardType: 'summary_large_image' }}
       />
 
