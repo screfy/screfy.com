@@ -1,5 +1,6 @@
 import { GitHub, Twitter, Key } from 'react-feather';
 import Divider from '../Divider';
+import ThemeChanger from '../ThemeChanger';
 import FooterIcon from './FooterIcon';
 import NowPlaying from './NowPlaying';
 
@@ -22,7 +23,11 @@ export default function Footer() {
 
       <Divider />
 
-      <NowPlaying />
+      <div className="flex flex-col sm:flex-row sm:justify-between space-y-2 sm:space-y-0">
+        <NowPlaying />
+
+        <ThemeChanger />
+      </div>
     </footer>
   );
 }
