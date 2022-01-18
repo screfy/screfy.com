@@ -36,7 +36,7 @@ export default function Navbar() {
   return (
     <nav className="mb-16 sm:mb-24">
       <div className="flex sm:hidden flex-col space-y-6">
-        <button className="w-fit -ml-3.5" onClick={openMenu}>
+        <button className="w-fit -ml-3.5" aria-label="Open menu" onClick={openMenu}>
           <Hamburger size={20} toggled={isMenuOpen} />
         </button>
 
