@@ -24,6 +24,7 @@ specifiers:
   lru-cache: ^6.0.0
   next: ^12.0.8
   next-seo: ^4.28.1
+  next-themes: ^0.0.15
   postcss: ^8.4.5
   preact: ^10.6.4
   prettier: ^2.5.1
@@ -44,6 +45,7 @@ dependencies:
   lru-cache: 6.0.0
   next: 12.0.8_dfc0b93d99fba272c9564d3139a2581a
   next-seo: 4.28.1_227e7fb4dbd28186517209bc65f02635
+  next-themes: 0.0.15_227e7fb4dbd28186517209bc65f02635
   preact: 10.6.4
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
@@ -2804,6 +2806,18 @@ packages:
       next: ^8.1.1-canary.54 || >=9.0.0
       react: '>=16.0.0'
       react-dom: '>=16.0.0'
+    dependencies:
+      next: 12.0.8_dfc0b93d99fba272c9564d3139a2581a
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+    dev: false
+
+  /next-themes/0.0.15_227e7fb4dbd28186517209bc65f02635:
+    resolution: {integrity: sha512-LTmtqYi03c4gMTJmWwVK9XkHL7h0/+XrtR970Ujvtu3s0kZNeJN24aJsi4rkZOI8i19+qq6f8j+8Duwy5jqcrQ==}
+    peerDependencies:
+      next: '*'
+      react: '*'
+      react-dom: '*'
     dependencies:
       next: 12.0.8_dfc0b93d99fba272c9564d3139a2581a
       react: 17.0.2
