@@ -8,6 +8,7 @@ module.exports = {
   theme: {
     // Remove all unnecessary Tailwind colors:
     colors: {
+      black: '#000000',
       white: '#FFFFFF',
       gray: {
         50: '#FBFBFB',
