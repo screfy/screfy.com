@@ -8,7 +8,7 @@ export default function Tracks() {
   const { data } = useSWR<TracksResponse>('/api/tracks', fetcher);
 
   return (
-    <div className="flex flex-col divide-y divide-gray-200">
+    <div className="flex flex-col divide-y divide-gray-200 dark:divide-gray-600">
       {data?.data ? (
         data.data.map((track) => <Track key={track.name} {...track} />)
       ) : (

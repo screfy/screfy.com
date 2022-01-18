@@ -15,7 +15,7 @@ export interface ProjectProps {
 export default function Project({ name, role, description, image, url }: ProjectProps) {
   return (
     <a
-      className="flex flex-col space-y-3 p-4 hover:bg-gray-300 border border-gray-200 rounded-lg transition-all"
+      className="flex flex-col space-y-3 p-4 bg-white dark:bg-gray-800 hover:scale-[1.02] border border-gray-200 dark:border-gray-600 rounded-lg transition-transform"
       href={url}
       target="_blank"
       rel="noreferrer"
@@ -24,13 +24,13 @@ export default function Project({ name, role, description, image, url }: Project
         <Image src={image} height="64px" width="64px" className="rounded-lg" alt={`${name} Logo`} />
 
         <div className="flex flex-col">
-          <h4 className="font-semibold text-white">{name}</h4>
-          <p className="text-sm text-gray-50">{role}</p>
+          <h4 className="font-semibold text-black dark:text-white">{name}</h4>
+          <p className="text-sm text-gray-600 dark:text-gray-100">{role}</p>
         </div>
       </div>
 
       <div className="flex flex-col">
-        <h5 className="font-semibold text-sm text-gray-50">About</h5>
+        <h5 className="font-semibold text-sm text-gray-700 dark:text-gray-100">About</h5>
         <p className="text-sm">{description}</p>
       </div>
     </a>

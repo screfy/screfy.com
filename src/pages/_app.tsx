@@ -13,7 +13,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <ThemeProvider defaultTheme="system" attribute="class">
-      <div className="flex justify-center min-h-screen bg-gray-400 text-gray-100">
+      <div className="flex justify-center min-h-screen bg-gray-50 dark:bg-gray-800 text-gray-400 dark:text-gray-300">
         <NextSeo
           titleTemplate="%s – screfy"
           title="Home"

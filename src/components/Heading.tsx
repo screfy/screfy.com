@@ -12,9 +12,9 @@ interface FontStyle {
 }
 
 const FONT_STYLES: { [key: string]: FontStyle } = {
-  h1: { size: 'text-4xl', weight: 'font-bold', color: 'text-white' },
-  h2: { size: 'text-3xl', weight: 'font-semibold', color: 'text-gray-50' },
-  h3: { size: 'text-2xl', weight: 'font-semibold', color: 'text-gray-50' },
+  h1: { size: 'text-4xl', weight: 'font-bold', color: 'text-black dark:text-white' },
+  h2: { size: 'text-3xl', weight: 'font-semibold', color: 'text-gray-700 dark:text-gray-100' },
+  h3: { size: 'text-2xl', weight: 'font-semibold', color: 'text-gray-700 dark:text-gray-100' },
 };
 
 export default function Heading({ as, text }: HeadingProps) {

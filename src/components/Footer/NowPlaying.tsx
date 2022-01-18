@@ -12,7 +12,7 @@ export default function NowPlaying() {
       <div className="inline-flex flex-col sm:flex-row sm:space-x-2 max-w-[15rem] sm:max-w-md">
         {status?.spotify ? (
           <a
-            className="font-medium text-white truncate"
+            className="font-medium text-gray-600 dark:text-white truncate"
             href={`https://open.spotify.com/track/${status.spotify.track_id}`}
             target="_blank"
             rel="noreferrer"
@@ -20,7 +20,7 @@ export default function NowPlaying() {
             {status.spotify.song}
           </a>
         ) : (
-          <p className="font-medium text-white">Not Playing</p>
+          <p className="font-medium text-gray-600 dark:text-white">Not Playing</p>
         )}
         <span className="hidden sm:block">–</span>
         <p className="truncate">{status?.spotify ? status.spotify.artist : 'Spotify'}</p>
