@@ -25,6 +25,7 @@ specifiers:
   husky: ^7.0.4
   lru-cache: ^6.0.0
   next: ^12.0.8
+  next-contentlayer: ^0.0.34
   next-seo: ^4.28.1
   next-themes: ^0.0.15
   postcss: ^8.4.5
@@ -48,6 +49,7 @@ dependencies:
   hamburger-react: 2.4.1_react@17.0.2
   lru-cache: 6.0.0
   next: 12.0.8_dfc0b93d99fba272c9564d3139a2581a
+  next-contentlayer: 0.0.34_227e7fb4dbd28186517209bc65f02635
   next-seo: 4.28.1_227e7fb4dbd28186517209bc65f02635
   next-themes: 0.0.15_227e7fb4dbd28186517209bc65f02635
   preact: 10.6.4
@@ -4270,6 +4272,25 @@ packages:
     resolution: {integrity: sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=}
     dev: true
 
+  /next-contentlayer/0.0.34_227e7fb4dbd28186517209bc65f02635:
+    resolution: {integrity: sha512-QZjhCQwYNcGfYMmUss3ON5qZnzosrXwLwtZjA+AvDibdXZMJG9QpNbcZyK4IFyntnlSdb639nvEfNIjjIdILAw==}
+    peerDependencies:
+      next: ^12
+      react: '*'
+      react-dom: '*'
+    dependencies:
+      '@contentlayer/core': 0.0.34
+      '@contentlayer/utils': 0.0.34
+      next: 12.0.8_dfc0b93d99fba272c9564d3139a2581a
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+      rxjs: 7.5.2
+    transitivePeerDependencies:
+      - '@effect-ts/otel-node'
+      - markdown-wasm
+      - supports-color
+    dev: false
+
   /next-seo/4.28.1_227e7fb4dbd28186517209bc65f02635:
     resolution: {integrity: sha512-WZgwdM+UhpNF3A37zFllzmPhnOVJ9vYeYlc0n3Z/kYfz/QQgy8NEdncNNggS9dU4JD8xriaCcyknhy5OsrFsJw==}
     peerDependencies:
@@ -5121,6 +5142,12 @@ packages:
     dependencies:
       queue-microtask: 1.2.3
     dev: true
+
+  /rxjs/7.5.2:
+    resolution: {integrity: sha512-PwDt186XaL3QN5qXj/H9DGyHhP3/RYYgZZwqBv9Tv8rsAaiwFH1IsJJlcgD37J7UW5a6O67qX0KWKS3/pu0m4w==}
+    dependencies:
+      tslib: 2.3.1
+    dev: false
 
   /sade/1.8.1:
     resolution: {integrity: sha512-xal3CZX1Xlo/k4ApwCFrHVACi9fBqJ7V+mwhBsuf/1IOKbBy098Fex+Wa/5QMubw09pSZ/u8EY8PWgevJsXp1A==}
