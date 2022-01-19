@@ -36,6 +36,7 @@ specifiers:
   react-dom: ^17.0.2
   react-feather: ^2.0.9
   react-use-lanyard: ^0.1.0
+  reading-time: ^1.5.0
   sharp: ^0.29.3
   swr: ^1.1.2
   tailwindcss: ^3.0.15
@@ -81,6 +82,7 @@ devDependencies:
   husky: 7.0.4
   postcss: 8.4.5
   prettier: 2.5.1
+  reading-time: 1.5.0
   tailwindcss: 3.0.15_ef48b3b8837f8a23677bffe8f9cd866d
   typescript: 4.5.4
 
@@ -5025,6 +5027,10 @@ packages:
     engines: {node: '>=8.10.0'}
     dependencies:
       picomatch: 2.3.1
+
+  /reading-time/1.5.0:
+    resolution: {integrity: sha512-onYyVhBNr4CmAxFsKS7bz+uTLRakypIe4R+5A824vBSkQy/hB3fZepoVEf8OVAxzLvK+H/jm9TzpI3ETSm64Kg==}
+    dev: true
 
   /redent/3.0.0:
     resolution: {integrity: sha512-6tDA8g98We0zd0GvVeMT9arEOnTw9qM03L9cJXaCjrip1OO764RDBLBfrB4cwzNGDj5OA5ioymC9GkizgWJDUg==}
