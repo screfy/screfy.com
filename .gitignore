@@ -1,6 +1,7 @@
 node_modules
 .next
 .DS_Store
+.contentlayer
 
 .env*.local
 .pnpm-debug.log*
