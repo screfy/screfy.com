@@ -1,6 +1,7 @@
 import { defineDocumentType, makeSource } from 'contentlayer/source-files';
 import { format } from 'date-fns';
 import readingTime from 'reading-time';
+import rehypeSlug from 'rehype-slug';
 import remarkGfm from 'remark-gfm';
 
 const DATE_FORMAT = 'MMMM do, yyyy';
@@ -48,5 +49,6 @@ export default makeSource({
   documentTypes: [Article],
   mdx: {
     remarkPlugins: [remarkGfm],
+    rehypePlugins: [rehypeSlug],
   },
 });
