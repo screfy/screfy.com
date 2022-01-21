@@ -1,5 +1,8 @@
 import { defineDocumentType, makeSource } from 'contentlayer/source-files';
+import { format } from 'date-fns';
 import readingTime from 'reading-time';
+
+const DATE_FORMAT = 'MMMM do, yyyy';
 
 const Article = defineDocumentType(() => ({
   name: 'Article',
@@ -31,6 +34,10 @@ const Article = defineDocumentType(() => ({
     wordCount: {
       type: 'number',
       resolve: async (doc) => doc.body.raw.split(/\s+/gu).filter(Boolean).length,
+    },
+    humanReadableDate: {
+      type: 'string',
+      resolve: async (doc) => format(new Date(doc.publishedAt), DATE_FORMAT),
     },
   },
 }));
