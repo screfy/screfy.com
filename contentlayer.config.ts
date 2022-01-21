@@ -1,6 +1,7 @@
 import { defineDocumentType, makeSource } from 'contentlayer/source-files';
 import { format } from 'date-fns';
 import readingTime from 'reading-time';
+import remarkGfm from 'remark-gfm';
 
 const DATE_FORMAT = 'MMMM do, yyyy';
 
@@ -45,4 +46,7 @@ const Article = defineDocumentType(() => ({
 export default makeSource({
   contentDirPath: 'data',
   documentTypes: [Article],
+  mdx: {
+    remarkPlugins: [remarkGfm],
+  },
 });
