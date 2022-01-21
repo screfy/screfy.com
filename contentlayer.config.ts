@@ -1,6 +1,7 @@
 import { defineDocumentType, makeSource } from 'contentlayer/source-files';
 import { format } from 'date-fns';
 import readingTime from 'reading-time';
+import rehypePrism from 'rehype-prism-plus';
 import rehypeSlug from 'rehype-slug';
 import remarkGfm from 'remark-gfm';
 
@@ -49,6 +50,6 @@ export default makeSource({
   documentTypes: [Article],
   mdx: {
     remarkPlugins: [remarkGfm],
-    rehypePlugins: [rehypeSlug],
+    rehypePlugins: [rehypePrism, rehypeSlug],
   },
 });
