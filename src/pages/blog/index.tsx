@@ -3,7 +3,7 @@ import { InferGetStaticPropsType } from 'next';
 import { NextSeo } from 'next-seo';
 import { allArticles } from '../../../.contentlayer/data';
 import Page from '../../components/Page';
-import Posts from '../../components/Posts';
+import Posts from '../../components/Blog/Posts';
 import Section from '../../components/Section';
 
 export default function Blog({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {

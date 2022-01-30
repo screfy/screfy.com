@@ -7,6 +7,7 @@ import { Article } from '../../../.contentlayer/types';
 import { Calendar } from 'react-feather';
 import { NextSeo } from 'next-seo';
 import { format } from 'date-fns';
+import { CenteredImage, RoundedImage } from '../../components/Blog/components';
 
 export default function BlogPost({
   post: { title, body, summary, publishedAt, readingTime, wordCount },
@@ -30,7 +31,7 @@ export default function BlogPost({
         </div>
 
         <div className="w-full max-w-none prose dark:prose-dark">
-          <Component />
+          <Component components={{ CenteredImage, RoundedImage }} />
         </div>
       </Section>
     </Page>

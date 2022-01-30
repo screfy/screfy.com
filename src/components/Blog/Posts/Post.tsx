@@ -1,7 +1,7 @@
 import { format } from 'date-fns';
 import Link from 'next/link';
-import { Article } from '../../../.contentlayer/types';
-import Heading from '../Heading';
+import { Article } from '../../../../.contentlayer/types';
+import Heading from '../../Heading';
 
 export default function Post({ title, slug, publishedAt, readingTime }: Article) {
   return (

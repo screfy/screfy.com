@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
-import { Article } from '../../../.contentlayer/types';
-import Heading from '../Heading';
+import { Article } from '../../../../.contentlayer/types';
+import Heading from '../../Heading';
 import Post from './Post';
 
 export default function Posts({ posts }: { posts: Article[] }) {
