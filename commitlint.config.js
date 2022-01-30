@@ -6,6 +6,6 @@ module.exports = {
       'always',
       ['chore', 'feat', 'fix', 'test', 'docs', 'ci', 'perf', 'deps', 'style', 'refactor', 'release'],
     ],
-    'scope-enum': [2, 'always', []],
+    'scope-enum': [2, 'always', ['blog']],
   },
 };

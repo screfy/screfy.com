@@ -38,6 +38,10 @@ jobs:
             - recursive: true
               args: [--frozen-lockfile, --strict-peer-dependencies]
 
+      # NOTE: Data must be built before running `typecheck` command.
+      - name: Contentlayer build
+        run: pnpm contentlayer:build
+
       - name: Lint source code
         run: pnpm lint
 

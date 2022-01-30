@@ -1,5 +1,8 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const { withContentlayer } = require('next-contentlayer');
+
 /** @type {import('next').NextConfig} */
-module.exports = {
+module.exports = withContentlayer()({
   swcMinify: true,
   reactStrictMode: true,
   poweredByHeader: false,
@@ -26,6 +29,8 @@ module.exports = {
     // Replace React with Preact only in client production build:
     if (!dev && !isServer) {
       Object.assign(config.resolve.alias, {
+        // NOTE: `react/jsx-runtime.js` has to be first in the list:
+        'react/jsx-runtime.js': 'preact/compat/jsx-runtime',
         react: 'preact/compat',
         'react-dom/test-utils': 'preact/test-utils',
         'react-dom': 'preact/compat',
@@ -34,4 +39,4 @@ module.exports = {
 
     return config;
   },
-};
+});

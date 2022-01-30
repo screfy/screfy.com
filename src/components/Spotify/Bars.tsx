@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 function Bar({ height, scale, delay }: { height: string; scale: number; delay?: number }) {
   return (
     <motion.span
-      className={clsx(height, 'w-0.5 bg-green')}
+      className={clsx(height, 'w-0.5 bg-spotify')}
       animate={{ scaleY: [1.0, scale, 1.0], transformOrigin: 'bottom' }}
       transition={{ duration: 0.5, delay, ease: 'easeInOut', repeat: Infinity }}
     />
