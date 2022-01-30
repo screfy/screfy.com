@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .prose > :first-child {
+    @apply mt-6;
+  }
+
+  .prose .rehype-code-title {
+    @apply px-5 py-3 font-bold bg-gray-50 dark:bg-gray-800 text-sm text-gray-500 dark:text-gray-100 border border-b-0 border-gray-200 dark:border-gray-600 rounded-t-lg;
+  }
+
+  .prose .rehype-code-title + pre {
+    @apply mt-0 rounded-t-none;
+  }
+
+  .prose pre {
+    @apply mt-0 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-b-lg;
+  }
+
+  .prose code[class*='language-'],
+  .prose pre[class*='language-'] {
+    @apply text-gray-600 dark:text-gray-100;
+  }
+
+  /* Headings anchor styles: */
+  .prose .anchor {
+    @apply absolute invisible w-1/2 -ml-5 sm:-ml-6 cursor-pointer;
+  }
+
+  .prose .anchor:hover {
+    @apply visible no-underline;
+  }
+
+  .prose .anchor:after {
+    @apply text-gray-300 content-['#'];
+  }
+
+  .prose *:hover > .anchor {
+    @apply visible no-underline;
+  }
+
+  /* Remove scrollbar from code cards: */
+  .prose pre::-webkit-scrollbar {
+    @apply hidden;
+  }
+
+  .prose pre {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /**
+   * Theme for prism.js inspired by:
+   * https://github.com/atom/atom/tree/master/packages/one-dark-syntax
+   */
+  .token.comment,
+  .token.prolog,
+  .token.cdata {
+    @apply text-slate-700 dark:text-slate-500;
+  }
+
+  .token.doctype,
+  .token.punctuation,
+  .token.entity {
+    @apply text-gray-400 dark:text-gray-300;
+  }
+
+  .token.attr-name,
+  .token.class-name,
+  .token.boolean,
+  .token.constant,
+  .token.number,
+  .token.atrule {
+    @apply text-amber-600 dark:text-amber-400;
+  }
+
+  .token.keyword {
+    @apply text-pink-500 dark:text-pink-400;
+  }
+
+  .token.property,
+  .token.tag,
+  .token.symbol,
+  .token.deleted,
+  .token.important {
+    @apply text-red-500 dark:text-red-400;
+  }
+
+  .token.selector,
+  .token.string,
+  .token.char,
+  .token.builtin,
+  .token.inserted,
+  .token.regex,
+  .token.attr-value,
+  .token.attr-value > .token.punctuation {
+    @apply text-green-500 dark:text-green-400;
+  }
+
+  .token.variable,
+  .token.operator,
+  .token.function {
+    @apply text-blue-500 dark:text-blue-400;
+  }
+
+  .token.url,
+  .token.attr-value > .token.punctuation.attr-equals,
+  .token.special-attr > .token.attr-value > .token.value.css {
+    @apply text-stone-400 dark:text-stone-300;
+  }
+
+  /* CSS overrides */
+  .language-css .token.selector {
+    @apply text-red-500 dark:text-red-400;
+  }
+
+  .language-css .token.property {
+    @apply text-slate-500 dark:text-slate-300;
+  }
+
+  .language-css .token.function,
+  .language-css .token.url > .token.function {
+    @apply text-slate-700 dark:text-slate-400;
+  }
+
+  .language-css .token.url > .token.string.url {
+    @apply text-green-500 dark:text-green-400;
+  }
+
+  .language-css .token.important,
+  .language-css .token.atrule .token.rule {
+    @apply text-pink-500 dark:text-pink-400;
+  }
+
+  /* JS/TS overrides */
+  .language-typescript .token.operator,
+  .language-ts .token.operator,
+  .language-javascript .token.operator,
+  .language-js .token.operator {
+    @apply text-gray-400 dark:text-gray-300;
+  }
+
+  .language-typescript .token.template-string > .token.interpolation > .token.interpolation-punctuation.punctuation,
+  .language-ts .token.template-string > .token.interpolation > .token.interpolation-punctuation.punctuation,
+  .language-javascript .token.template-string > .token.interpolation > .token.interpolation-punctuation.punctuation,
+  .language-js .token.template-string > .token.interpolation > .token.interpolation-punctuation.punctuation {
+    @apply text-pink-500 dark:text-pink-400;
+  }
+
+  /* JSON overrides */
+  .language-json .token.operator {
+    @apply text-gray-400 dark:text-gray-300;
+  }
+
+  .language-json .token.null.keyword {
+    @apply text-amber-700 dark:text-amber-600;
+  }
+}

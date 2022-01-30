@@ -1,9 +1,9 @@
+import '../styles/global.css';
 import { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import 'tailwindcss/tailwind.css';
 import { ThemeProvider } from 'next-themes';
 
 const BASE_URL = 'https://screfy.com';
