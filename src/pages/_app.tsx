@@ -1,4 +1,5 @@
 import '../styles/global.css';
+
 import { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
@@ -29,7 +30,7 @@ export default function App({ Component, pageProps }: AppProps) {
           twitter={{ handle: '@screfy_', cardType: 'summary_large_image' }}
         />
 
-        <div className="flex flex-col sm:w-[40rem] mx-6 sm:mx-0 my-8">
+        <div className="flex flex-col w-full sm:w-[40rem] px-6 sm:px-0 py-8">
           <Navbar />
           <main className="flex-1">
             <Component {...pageProps} />
