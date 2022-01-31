@@ -14,7 +14,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <ThemeProvider defaultTheme="system" attribute="class">
-      <div className="flex justify-center min-h-screen bg-gray-50 dark:bg-gray-800 text-gray-400 dark:text-gray-300">
+      <div className="flex min-h-screen justify-center bg-gray-50 text-gray-400 dark:bg-gray-800 dark:text-gray-300">
         <NextSeo
           titleTemplate="%s – screfy"
           title="Home"
@@ -30,7 +30,7 @@ export default function App({ Component, pageProps }: AppProps) {
           twitter={{ handle: '@screfy_', cardType: 'summary_large_image' }}
         />
 
-        <div className="flex flex-col w-full sm:w-[40rem] px-6 sm:px-0 py-8">
+        <div className="flex w-full flex-col px-6 py-8 sm:w-[40rem] sm:px-0">
           <Navbar />
           <main className="flex-1">
             <Component {...pageProps} />

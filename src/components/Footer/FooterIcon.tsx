@@ -9,7 +9,7 @@ interface Props {
 export default function FooterIcon({ href, label, children }: Props) {
   return (
     <a
-      className="hover:text-gray-600 dark:hover:text-gray-200 transition-colors"
+      className="transition-colors hover:text-gray-600 dark:hover:text-gray-200"
       href={href}
       aria-label={label}
       target="_blank"

@@ -36,8 +36,8 @@ export default function Navbar() {
 
   return (
     <nav className="mb-16 sm:mb-24">
-      <div className="flex sm:hidden flex-col space-y-6">
-        <button className="w-fit -ml-3.5" aria-label="Open menu" onClick={openMenu}>
+      <div className="flex flex-col space-y-6 sm:hidden">
+        <button className="-ml-3.5 w-fit" aria-label="Open menu" onClick={openMenu}>
           <Hamburger size={20} toggled={isMenuOpen} />
         </button>
 
@@ -48,7 +48,7 @@ export default function Navbar() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0 }}
               transition={{ ease: 'anticipate' }}
-              className="h-screen flex flex-col space-y-4"
+              className="flex h-screen flex-col space-y-4"
             >
               <NavbarItems />
             </motion.div>
@@ -56,7 +56,7 @@ export default function Navbar() {
         </AnimatePresence>
       </div>
 
-      <div className="hidden sm:flex items-center space-x-4 ml-[-0.60rem]">
+      <div className="ml-[-0.60rem] hidden items-center space-x-4 sm:flex">
         <NavbarItems />
       </div>
     </nav>

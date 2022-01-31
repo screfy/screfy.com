@@ -6,7 +6,7 @@ import NowPlaying from './NowPlaying';
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col space-y-3 mt-16 sm:mt-24">
+    <footer className="mt-16 flex flex-col space-y-3 sm:mt-24">
       <div className="flex space-x-3">
         <FooterIcon href="https://github.com/screfy" label="GitHub">
           <GitHub size="20" />
@@ -23,7 +23,7 @@ export default function Footer() {
 
       <Divider />
 
-      <div className="flex flex-col sm:flex-row sm:justify-between space-y-2 sm:space-y-0">
+      <div className="flex flex-col space-y-2 sm:flex-row sm:justify-between sm:space-y-0">
         <NowPlaying />
 
         <ThemeChanger />

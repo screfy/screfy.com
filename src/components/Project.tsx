@@ -15,7 +15,7 @@ export interface ProjectProps {
 export default function Project({ name, role, description, image, url }: ProjectProps) {
   return (
     <a
-      className="flex flex-col space-y-3 p-4 bg-white dark:bg-gray-800 hover:scale-[1.02] border border-gray-200 dark:border-gray-600 rounded-lg transition-transform"
+      className="flex flex-col space-y-3 rounded-lg border border-gray-200 bg-white p-4 transition-transform hover:scale-[1.02] dark:border-gray-600 dark:bg-gray-800"
       href={url}
       target="_blank"
       rel="noreferrer"
@@ -30,7 +30,7 @@ export default function Project({ name, role, description, image, url }: Project
       </div>
 
       <div className="flex flex-col">
-        <h5 className="font-semibold text-sm text-gray-700 dark:text-gray-100">About</h5>
+        <h5 className="text-sm font-semibold text-gray-700 dark:text-gray-100">About</h5>
         <p className="text-sm">{description}</p>
       </div>
     </a>

@@ -9,9 +9,9 @@ export interface TechnologyProps {
 
 export default function Technology({ name, description, icon, color }: TechnologyProps) {
   return (
-    <div className="h-32 md:h-22 lg:h-24 w-full flex items-center p-4 space-x-4 bg-white dark:bg-gray-800 hover:scale-[1.02] border border-gray-200 dark:border-gray-600 rounded-lg transition-transform">
+    <div className="md:h-22 flex h-32 w-full items-center space-x-4 rounded-lg border border-gray-200 bg-white p-4 transition-transform hover:scale-[1.02] dark:border-gray-600 dark:bg-gray-800 lg:h-24">
       <div
-        className="h-[64px] w-[64px] flex flex-shrink-0 items-center justify-center text-white rounded-lg"
+        className="flex h-[64px] w-[64px] flex-shrink-0 items-center justify-center rounded-lg text-white"
         style={{ backgroundColor: color }}
       >
         {icon}

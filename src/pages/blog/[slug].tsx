@@ -19,7 +19,7 @@ export default function BlogPost({
       <NextSeo title={title} description={summary} />
 
       <Section heading={{ as: 'h1', text: title }}>
-        <div className="flex flex-col space-y-2 sm:flex-row sm:justify-between text-sm">
+        <div className="flex flex-col space-y-2 text-sm sm:flex-row sm:justify-between">
           <time className="flex items-center space-x-2" dateTime={publishedAt}>
             <Calendar size="16" />
             <span>{format(new Date(publishedAt), 'MMMM do, yyyy')}</span>
@@ -30,7 +30,7 @@ export default function BlogPost({
           </p>
         </div>
 
-        <div className="w-full max-w-none prose dark:prose-dark">
+        <div className="prose w-full max-w-none dark:prose-dark">
           <Component components={{ CenteredImage, RoundedImage }} />
         </div>
       </Section>

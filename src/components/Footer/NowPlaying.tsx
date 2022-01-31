@@ -6,13 +6,13 @@ export default function NowPlaying() {
   const { status } = useLanyard({ userId: '363406775925604352', socket: true });
 
   return (
-    <div className="flex flex-row-reverse sm:flex-row items-center justify-between sm:justify-start sm:space-x-2">
+    <div className="flex flex-row-reverse items-center justify-between sm:flex-row sm:justify-start sm:space-x-2">
       {status?.spotify ? <Bars /> : <Spotify size="16" />}
 
-      <div className="inline-flex flex-col sm:flex-row sm:space-x-2 max-w-[15rem] sm:max-w-md">
+      <div className="inline-flex max-w-[15rem] flex-col sm:max-w-md sm:flex-row sm:space-x-2">
         {status?.spotify ? (
           <a
-            className="font-medium text-gray-600 dark:text-white truncate"
+            className="truncate font-medium text-gray-600 dark:text-white"
             href={`https://open.spotify.com/track/${status.spotify.track_id}`}
             target="_blank"
             rel="noreferrer"

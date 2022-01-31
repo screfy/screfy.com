@@ -8,7 +8,7 @@ export default function Repositories() {
   const { data } = useSWR<RepositoriesResponse>('/api/repositories', fetcher);
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 auto-cols-max">
+    <div className="grid auto-cols-max grid-cols-1 gap-3 lg:grid-cols-2">
       {data?.data ? (
         data.data.map((repository) => <Repository key={repository.name} {...repository} />)
       ) : (

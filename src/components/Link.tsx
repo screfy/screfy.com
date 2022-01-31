@@ -8,7 +8,7 @@ interface Props {
 export default function Link({ href, children }: Props) {
   return (
     <a
-      className="font-medium text-gray-500 dark:text-gray-100 hover:text-gray-800 dark:hover:text-white transition-colors"
+      className="font-medium text-gray-500 transition-colors hover:text-gray-800 dark:text-gray-100 dark:hover:text-white"
       href={href}
       target="_blank"
       rel="noreferrer"

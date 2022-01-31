@@ -16,7 +16,7 @@ export default function ThemeChanger() {
   return (
     <button
       aria-label="Change theme"
-      className="w-9 h-9 p-2 ml-auto sm:ml-0 bg-gray-100 dark:bg-gray-600 text-gray-800 dark:text-gray-100 rounded-lg hover:ring-2 ring-gray-200 dark:ring-gray-300 transition-all"
+      className="ml-auto h-9 w-9 rounded-lg bg-gray-100 p-2 text-gray-800 ring-gray-200 transition-all hover:ring-2 dark:bg-gray-600 dark:text-gray-100 dark:ring-gray-300 sm:ml-0"
       onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
     >
       {resolvedTheme === 'dark' ? <Sun size="20" /> : <Moon size="20" />}

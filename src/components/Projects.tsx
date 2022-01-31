@@ -13,7 +13,7 @@ const PROJECTS: ProjectProps[] = [
 
 export default function Projects() {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 auto-cols-max">
+    <div className="grid auto-cols-max grid-cols-1 gap-3 lg:grid-cols-2">
       {PROJECTS.map((project) => (
         <Project key={project.name} {...project} />
       ))}

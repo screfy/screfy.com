@@ -10,7 +10,7 @@ export default function Repository({ name, description, stars, url }: Repository
   return (
     <motion.div
       animate={{ height: isOpen ? 'auto' : '42px' }}
-      className="relative overflow-hidden flex flex-col bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-lg"
+      className="relative flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white dark:border-gray-600 dark:bg-gray-800"
     >
       <button
         className="flex items-center justify-between px-3.5 py-2 text-gray-600 dark:text-gray-100"
@@ -24,17 +24,17 @@ export default function Repository({ name, description, stars, url }: Repository
 
       <AnimatePresence>
         {isOpen && (
-          <motion.div className="h-full flex" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-            <div className="w-full flex flex-col space-y-3 px-4 py-2">
-              <p className="text-sm flex-1">{description ?? 'Description not provided.'}</p>
+          <motion.div className="flex h-full" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+            <div className="flex w-full flex-col space-y-3 px-4 py-2">
+              <p className="flex-1 text-sm">{description ?? 'Description not provided.'}</p>
               <div className="flex justify-between">
                 <div className="flex items-center space-x-1">
                   <Star className="text-orange" size="14" />
-                  <span className="font-medium text-xs text-gray-500 dark:text-gray-100">{siStars}</span>
+                  <span className="text-xs font-medium text-gray-500 dark:text-gray-100">{siStars}</span>
                 </div>
 
                 <a
-                  className="px-2 py-1 flex items-center space-x-1.5 bg-gray-100 dark:bg-gray-600 text-gray-800 dark:text-gray-100 rounded-lg hover:ring-2 ring-gray-200 dark:ring-gray-300 transition-all"
+                  className="flex items-center space-x-1.5 rounded-lg bg-gray-100 px-2 py-1 text-gray-800 ring-gray-200 transition-all hover:ring-2 dark:bg-gray-600 dark:text-gray-100 dark:ring-gray-300"
                   href={url}
                   target="_blank"
                   rel="noreferrer"
