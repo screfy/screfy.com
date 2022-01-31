@@ -11,8 +11,8 @@ export default function About() {
 
       <Section heading={{ as: 'h1', text: 'About' }}>
         <p>
-          Hey again! I’m a huge fan of open-source projects and new bleeding-edge technologies and languages. I’ve
-          learned a lot about web technologies and core programming.
+          Hey again! As I said, I’m a huge fan of open-source projects and new bleeding-edge technologies and languages.
+          I’ve learned a lot about web technologies and core programming.
         </p>
         <p>
           The source code of this website is available at{' '}
