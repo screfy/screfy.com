@@ -1,9 +1,9 @@
 import { format } from 'date-fns';
 import Link from 'next/link';
-import { Article } from '../../../../.contentlayer/types';
+import { PickedPostProps } from '../../../pages/blog';
 import Heading from '../../Heading';
 
-export default function Post({ title, slug, publishedAt, readingTime }: Article) {
+export default function Post({ title, slug, publishedAt, readingTime }: PickedPostProps) {
   return (
     <Link key={slug} href={`/blog/${slug}`} passHref>
       <a className="flex items-center justify-between transition-transform hover:scale-[1.01]">

@@ -1,9 +1,9 @@
 import { Fragment } from 'react';
-import { Article } from '../../../../.contentlayer/types';
+import { PickedPostProps } from '../../../pages/blog';
 import Heading from '../../Heading';
 import Post from './Post';
 
-export default function Posts({ posts }: { posts: Article[] }) {
+export default function Posts({ posts }: { posts: PickedPostProps[] }) {
   let year = 0;
 
   return (

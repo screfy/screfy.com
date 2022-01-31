@@ -1,3 +1,4 @@
+import { pick } from 'contentlayer/client';
 import { compareDesc } from 'date-fns';
 import { InferGetStaticPropsType } from 'next';
 import { NextSeo } from 'next-seo';
@@ -6,7 +7,11 @@ import Page from '../../components/Page';
 import Posts from '../../components/Blog/Posts';
 import Section from '../../components/Section';
 
-export default function Blog({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
+type Props = InferGetStaticPropsType<typeof getStaticProps>;
+
+export type PickedPostProps = Props['posts'][number];
+
+export default function Blog({ posts }: Props) {
   return (
     <Page>
       <NextSeo title="Blog" />
@@ -24,8 +29,10 @@ export default function Blog({ posts }: InferGetStaticPropsType<typeof getStatic
 }
 
 export const getStaticProps = async () => {
-  // Sort posts by published at:
-  const posts = allArticles.sort((a, b) => compareDesc(new Date(a.publishedAt), new Date(b.publishedAt)));
+  // Reduce JSON payload size by picking only needed props, and sort posts by published date:
+  const posts = allArticles
+    .map((post) => pick(post, ['title', 'slug', 'publishedAt', 'readingTime']))
+    .sort((a, b) => compareDesc(new Date(a.publishedAt), new Date(b.publishedAt)));
 
   return {
     props: {
