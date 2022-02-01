@@ -18,6 +18,6 @@ module.exports = {
         'release',
       ],
     ],
-    'scope-enum': [2, 'always', ['blog']],
+    'scope-enum': [2, 'always', ['blog', 'projects']],
   },
 };
