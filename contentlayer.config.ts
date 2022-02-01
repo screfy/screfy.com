@@ -6,10 +6,10 @@ import rehypePrism from 'rehype-prism-plus';
 import rehypeSlug from 'rehype-slug';
 import remarkGfm from 'remark-gfm';
 
-const Article = defineDocumentType(() => ({
-  name: 'Article',
+const PostDocument = defineDocumentType(() => ({
+  name: 'PostDocument',
   bodyType: 'mdx',
-  filePathPattern: 'articles/*.mdx',
+  filePathPattern: 'posts/*.mdx',
   fields: {
     title: {
       type: 'string',
@@ -43,7 +43,7 @@ const Article = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: 'data',
-  documentTypes: [Article],
+  documentTypes: [PostDocument],
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [

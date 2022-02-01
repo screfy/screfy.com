@@ -6,11 +6,11 @@ import {
 import { useMDXComponent } from 'next-contentlayer/hooks';
 import Page from '../../components/Page';
 import Section from '../../components/Section';
-import { allArticles } from '../../../.contentlayer/data';
-import { Article } from '../../../.contentlayer/types';
 import { Calendar } from 'react-feather';
 import { format } from 'date-fns';
 import { CenteredImage, RoundedImage } from '../../components/Blog/components';
+import { allPostDocuments } from '../../../.contentlayer/data';
+import { PostDocument } from '../../../.contentlayer/types';
 
 export default function BlogPost({
   post: { title, body, summary, publishedAt, readingTime, wordCount },
@@ -41,17 +41,17 @@ export default function BlogPost({
 
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
-    paths: allArticles.map(({ slug }) => ({ params: { slug } })),
+    paths: allPostDocuments.map(({ slug }) => ({ params: { slug } })),
     fallback: false,
   };
 };
 
 export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
-  const post = allArticles.find(({ slug }) => slug === params?.slug);
+  const post = allPostDocuments.find(({ slug }) => slug === params?.slug);
 
   return {
     props: {
-      post: post as Article,
+      post: post as PostDocument,
     },
   };
 };

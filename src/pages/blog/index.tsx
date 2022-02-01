@@ -1,11 +1,11 @@
 import { pick } from 'contentlayer/client';
 import { compareDesc } from 'date-fns';
 import { InferGetStaticPropsType } from 'next';
-import { allArticles } from '../../../.contentlayer/data';
 import Page from '../../components/Page';
 import Section from '../../components/Section';
 import PostsGroup from '../../components/Blog/PostsGroup';
 import { groupBy } from '../../utils/groupBy';
+import { allPostDocuments } from '../../../.contentlayer/data';
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
@@ -33,7 +33,7 @@ export default function Blog({ groups }: Props) {
 }
 
 export const getStaticProps = async () => {
-  const groupedPosts = groupBy(allArticles, ({ publishedAt }) =>
+  const groupedPosts = groupBy(allPostDocuments, ({ publishedAt }) =>
     new Date(publishedAt).getFullYear()
   );
 
