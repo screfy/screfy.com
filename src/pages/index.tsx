@@ -4,8 +4,13 @@ import Link from '../components/Link';
 import Repositories from '../components/Repositories';
 import Projects from '../components/Projects';
 import Heading from '../components/Heading';
+import { InferGetStaticPropsType } from 'next';
+import { allProjectDocuments } from '../../.contentlayer/data';
+import { compareDesc } from 'date-fns';
 
-export default function Home() {
+export default function Home({
+  projects,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <Page title="Hey, I’m screfy" seo={{ title: 'Home' }}>
       <Section>
@@ -19,7 +24,7 @@ export default function Home() {
       <Section>
         <Heading as="h2">Projects</Heading>
 
-        <Projects />
+        <Projects projects={projects} />
       </Section>
 
       <Section>
@@ -36,3 +41,13 @@ export default function Home() {
     </Page>
   );
 }
+
+export const getStaticProps = async () => {
+  const projects = allProjectDocuments.sort((a, b) =>
+    compareDesc(new Date(a.startedAt), new Date(b.startedAt))
+  );
+
+  return {
+    props: { projects },
+  };
+};

@@ -4,7 +4,9 @@ summary: This site has been redesigned, so here is how I did it.
 publishedAt: 2022-01-30
 ---
 
-With the amount of work that went into re-building my current website but with a whole new look & a whole bunch of new features & options, I thought now this would be a good chance to show some of them off.
+With the amount of work that went into re-building my current website but with a
+whole new look & a whole bunch of new features & options, I thought now this
+would be a good chance to show some of them off.
 
 ## 🔨 Tech Stack
 
@@ -29,7 +31,8 @@ With this new re-build comes a whole host of new features & improvements.
 
 [Preact][preact] helps a lot with bundle size.
 
-In summary, my Next.js project is configured to replace [React][react] with [Preact][preact] in production builds.
+In summary, my Next.js project is configured to replace [React][react] with
+[Preact][preact] in production builds.
 
 ```ts:next.config.js
 webpack: (config, { dev, isServer }) => {
@@ -48,26 +51,33 @@ webpack: (config, { dev, isServer }) => {
 
 ### Blog
 
-As you can tell by the fact you're currently reading this, I now have a [blog](/blog)!
+As you can tell by the fact you're currently reading this, I now have a
+[blog](/blog)!
 
-This means that I finally have a place to create articles that can go more in-depth on topics I care deeply about.
+This means that I finally have a place to create articles that can go more
+in-depth on topics I care deeply about.
 
 ### Projects
 
-My list of open-source projects is rendered dynamically based on repositories I have pinned on my GitHub.
-Every request made for the page (that isn't already cached) will return a new list of pinned repositories.
+My list of open-source projects is rendered dynamically based on repositories
+I have pinned on my GitHub.
+Every request made for the page (that isn't already cached) will return a new
+list of pinned repositories.
 
 With this, I can update my list of repositories by using GitHub as a form of CMS.
 
 ### Spotify
 
-This next feature I am super happy with how it turned out. Using [Lanyard][lanyard], a service to expose your Discord
-presence via a REST API or WebSocket, I was able to display my Spotify status in real-time on my website.
+This next feature I am super happy with how it turned out. Using
+[Lanyard][lanyard], a service to expose your Discord
+presence via a REST API or WebSocket, I was able to display my Spotify status
+in real-time on my website.
 
-Also, I added cool animation using [Framer Motion][framer-motion] when I'm listening to something on Spotify.
+Also, I added cool animation using [Framer Motion][framer-motion] when I'm
+listening to something on Spotify.
 
 <CenteredImage
-  src="/static/images/hello-world/spotify.gif"
+  src="/static/images/posts/hello-world/spotify.gif"
   alt="Spotify animation in action"
   width={162}
   height={21}
@@ -76,9 +86,11 @@ Also, I added cool animation using [Framer Motion][framer-motion] when I'm liste
 
 ### Theme
 
-A very common feature nowadays is offering multiple themes for an application, so I added it!
+A very common feature nowadays is offering multiple themes for an application,
+so I added it!
 
-I’m using a really good library, called [next-themes][next-themes], for this feature, and it offers:
+I’m using a really good library, called [next-themes][next-themes], for this
+feature, and it offers:
 
 - perfect dark mode in 2 lines of code,
 - themed browser UI with color-scheme,

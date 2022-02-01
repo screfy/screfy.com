@@ -6,6 +6,41 @@ import rehypePrism from 'rehype-prism-plus';
 import rehypeSlug from 'rehype-slug';
 import remarkGfm from 'remark-gfm';
 
+const ProjectDocument = defineDocumentType(() => ({
+  name: 'ProjectDocument',
+  bodyType: 'none',
+  filePathPattern: 'projects/*.md',
+  fields: {
+    name: {
+      type: 'string',
+      required: true,
+    },
+    description: {
+      type: 'string',
+      required: true,
+    },
+    role: {
+      type: 'string',
+      required: true,
+    },
+    url: {
+      type: 'string',
+      required: true,
+    },
+    startedAt: {
+      type: 'date',
+      required: true,
+    },
+  },
+  computedFields: {
+    image: {
+      type: 'string',
+      resolve: async ({ name }) =>
+        `/static/images/projects/${name.toLowerCase()}.webp`,
+    },
+  },
+}));
+
 const PostDocument = defineDocumentType(() => ({
   name: 'PostDocument',
   bodyType: 'mdx',
@@ -43,7 +78,7 @@ const PostDocument = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: 'data',
-  documentTypes: [PostDocument],
+  documentTypes: [PostDocument, ProjectDocument],
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [
