@@ -3,10 +3,29 @@
 @tailwind utilities;
 
 @layer components {
+  /* Scrollbar styles: */
+  ::-webkit-scrollbar {
+    @apply w-2.5;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-50 dark:bg-gray-800;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-lg bg-gray-200 dark:bg-gray-600;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-200/70 dark:bg-gray-600/80;
+  }
+
+  /* Custom spacing between heading and content: */
   .prose > :first-child {
     @apply mt-6;
   }
 
+  /* Code styles: */
   .prose .rehype-code-title {
     @apply rounded-t-lg border border-b-0 border-gray-200 bg-gray-50 px-5 py-3 text-sm font-bold text-gray-500 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-100;
   }
@@ -111,7 +130,7 @@
     @apply text-stone-400 dark:text-stone-300;
   }
 
-  /* CSS overrides */
+  /* CSS overrides: */
   .language-css .token.selector {
     @apply text-red-500 dark:text-red-400;
   }
@@ -134,7 +153,7 @@
     @apply text-pink-500 dark:text-pink-400;
   }
 
-  /* JS/TS overrides */
+  /* JS/TS overrides: */
   .language-typescript .token.operator,
   .language-ts .token.operator,
   .language-javascript .token.operator,
@@ -161,7 +180,7 @@
     @apply text-pink-500 dark:text-pink-400;
   }
 
-  /* JSON overrides */
+  /* JSON overrides: */
   .language-json .token.operator {
     @apply text-gray-400 dark:text-gray-300;
   }
