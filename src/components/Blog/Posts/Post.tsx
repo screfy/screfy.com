@@ -3,7 +3,12 @@ import Link from 'next/link';
 import { PickedPostProps } from '../../../pages/blog';
 import Heading from '../../Heading';
 
-export default function Post({ title, slug, publishedAt, readingTime }: PickedPostProps) {
+export default function Post({
+  title,
+  slug,
+  publishedAt,
+  readingTime,
+}: PickedPostProps) {
   return (
     <Link key={slug} href={`/blog/${slug}`} passHref>
       <a className="flex items-center justify-between transition-transform hover:scale-[1.01]">

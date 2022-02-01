@@ -7,7 +7,12 @@ export interface TechnologyProps {
   color: string;
 }
 
-export default function Technology({ name, description, icon, color }: TechnologyProps) {
+export default function Technology({
+  name,
+  description,
+  icon,
+  color,
+}: TechnologyProps) {
   return (
     <div className="md:h-22 flex h-32 w-full items-center space-x-4 rounded-lg border border-gray-200 bg-white p-4 transition-transform hover:scale-[1.02] dark:border-gray-600 dark:bg-gray-800 lg:h-24">
       <div
@@ -18,7 +23,9 @@ export default function Technology({ name, description, icon, color }: Technolog
       </div>
 
       <div className="flex flex-col">
-        <h4 className="font-semibold text-gray-600 dark:text-gray-100">{name}</h4>
+        <h4 className="font-semibold text-gray-600 dark:text-gray-100">
+          {name}
+        </h4>
         <p className="text-sm">{description}</p>
       </div>
     </div>

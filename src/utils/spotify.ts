@@ -50,14 +50,16 @@ export async function getTopTracks(): Promise<TrackData[] | undefined> {
     return;
   }
 
-  const tracks = (items as SpotifyTrack[]).slice(0, 10).map(({ name, external_urls, album, artists, duration_ms }) => ({
-    name: name,
-    url: external_urls.spotify,
-    album: album.name,
-    artist: artists.map((artist) => artist.name).join(', '),
-    duration: formatDuration(duration_ms),
-    image: album.images[2].url,
-  }));
+  const tracks = (items as SpotifyTrack[])
+    .slice(0, 10)
+    .map(({ name, external_urls, album, artists, duration_ms }) => ({
+      name: name,
+      url: external_urls.spotify,
+      album: album.name,
+      artist: artists.map((artist) => artist.name).join(', '),
+      duration: formatDuration(duration_ms),
+      image: album.images[2].url,
+    }));
 
   return tracks;
 }

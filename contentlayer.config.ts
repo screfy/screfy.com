@@ -35,7 +35,8 @@ const Article = defineDocumentType(() => ({
     },
     wordCount: {
       type: 'number',
-      resolve: async (doc) => doc.body.raw.split(/\s+/gu).filter(Boolean).length,
+      resolve: async (doc) =>
+        doc.body.raw.split(/\s+/gu).filter(Boolean).length,
     },
   },
 }));

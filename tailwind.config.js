@@ -1,5 +1,10 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const { fontFamily, spacing, transitionProperty, transitionDuration } = require('tailwindcss/defaultTheme');
+/* eslint @typescript-eslint/no-var-requires: off */
+const {
+  fontFamily,
+  spacing,
+  transitionProperty,
+  transitionDuration,
+} = require('tailwindcss/defaultTheme');
 
 /** @type {import('tailwindcss/tailwind-config').TailwindConfig} */
 module.exports = {

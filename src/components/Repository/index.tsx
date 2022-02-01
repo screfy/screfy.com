@@ -3,9 +3,17 @@ import { useState } from 'react';
 import { ChevronDown, ExternalLink, Star } from 'react-feather';
 import { RepositoryData } from '../../types';
 
-export default function Repository({ name, description, stars, url }: RepositoryData) {
+export default function Repository({
+  name,
+  description,
+  stars,
+  url,
+}: RepositoryData) {
   const [isOpen, setOpen] = useState(false);
-  const siStars = Math.abs(stars) > 999 ? `${(Math.abs(stars) / 1000).toFixed(1)}k` : Math.abs(stars);
+  const siStars =
+    Math.abs(stars) > 999
+      ? `${(Math.abs(stars) / 1000).toFixed(1)}k`
+      : Math.abs(stars);
 
   return (
     <motion.div
@@ -24,13 +32,22 @@ export default function Repository({ name, description, stars, url }: Repository
 
       <AnimatePresence>
         {isOpen && (
-          <motion.div className="flex h-full" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+          <motion.div
+            className="flex h-full"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
             <div className="flex w-full flex-col space-y-3 px-4 py-2">
-              <p className="flex-1 text-sm">{description ?? 'Description not provided.'}</p>
+              <p className="flex-1 text-sm">
+                {description ?? 'Description not provided.'}
+              </p>
               <div className="flex justify-between">
                 <div className="flex items-center space-x-1">
                   <Star className="text-orange" size="14" />
-                  <span className="text-xs font-medium text-gray-500 dark:text-gray-100">{siStars}</span>
+                  <span className="text-xs font-medium text-gray-500 dark:text-gray-100">
+                    {siStars}
+                  </span>
                 </div>
 
                 <a

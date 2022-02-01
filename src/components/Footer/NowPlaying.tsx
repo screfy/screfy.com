@@ -20,10 +20,14 @@ export default function NowPlaying() {
             {status.spotify.song}
           </a>
         ) : (
-          <p className="font-medium text-gray-600 dark:text-white">Not Playing</p>
+          <p className="font-medium text-gray-600 dark:text-white">
+            Not Playing
+          </p>
         )}
         <span className="hidden sm:block">–</span>
-        <p className="truncate">{status?.spotify ? status.spotify.artist : 'Spotify'}</p>
+        <p className="truncate">
+          {status?.spotify ? status.spotify.artist : 'Spotify'}
+        </p>
       </div>
     </div>
   );

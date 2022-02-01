@@ -1,7 +1,15 @@
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
 
-function Bar({ height, scale, delay }: { height: string; scale: number; delay?: number }) {
+function Bar({
+  height,
+  scale,
+  delay,
+}: {
+  height: string;
+  scale: number;
+  delay?: number;
+}) {
   return (
     <motion.span
       className={clsx(height, 'w-0.5 bg-spotify')}

@@ -21,7 +21,12 @@ export default async function handler(
     cache.set('repositories', repositories);
   }
 
-  res.setHeader('Cache-Control', `public, s-maxage=${CACHE_MAX_AGE}, stale-while-revalidate=${CACHE_MAX_AGE / 2}`);
+  res.setHeader(
+    'Cache-Control',
+    `public, s-maxage=${CACHE_MAX_AGE}, stale-while-revalidate=${
+      CACHE_MAX_AGE / 2
+    }`
+  );
 
   res.status(200).send({ data: repositories });
 }

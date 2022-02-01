@@ -142,10 +142,22 @@
     @apply text-gray-400 dark:text-gray-300;
   }
 
-  .language-typescript .token.template-string > .token.interpolation > .token.interpolation-punctuation.punctuation,
-  .language-ts .token.template-string > .token.interpolation > .token.interpolation-punctuation.punctuation,
-  .language-javascript .token.template-string > .token.interpolation > .token.interpolation-punctuation.punctuation,
-  .language-js .token.template-string > .token.interpolation > .token.interpolation-punctuation.punctuation {
+  .language-typescript
+    .token.template-string
+    > .token.interpolation
+    > .token.interpolation-punctuation.punctuation,
+  .language-ts
+    .token.template-string
+    > .token.interpolation
+    > .token.interpolation-punctuation.punctuation,
+  .language-javascript
+    .token.template-string
+    > .token.interpolation
+    > .token.interpolation-punctuation.punctuation,
+  .language-js
+    .token.template-string
+    > .token.interpolation
+    > .token.interpolation-punctuation.punctuation {
     @apply text-pink-500 dark:text-pink-400;
   }
 

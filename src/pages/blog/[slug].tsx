@@ -1,4 +1,8 @@
-import { GetStaticPaths, GetStaticPropsContext, InferGetStaticPropsType } from 'next';
+import {
+  GetStaticPaths,
+  GetStaticPropsContext,
+  InferGetStaticPropsType,
+} from 'next';
 import { useMDXComponent } from 'next-contentlayer/hooks';
 import Page from '../../components/Page';
 import Section from '../../components/Section';
@@ -39,7 +43,10 @@ export default function BlogPost({
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  return { paths: allArticles.map(({ slug }) => ({ params: { slug } })), fallback: false };
+  return {
+    paths: allArticles.map(({ slug }) => ({ params: { slug } })),
+    fallback: false,
+  };
 };
 
 export const getStaticProps = async ({ params }: GetStaticPropsContext) => {

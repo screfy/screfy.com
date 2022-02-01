@@ -21,12 +21,24 @@ export default function App({ Component, pageProps }: AppProps) {
           description="Hey, I’m screfy, a fullstack web developer and open-source enthusiast."
           canonical={BASE_URL + pathname}
           additionalMetaTags={[
-            { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
+            {
+              name: 'viewport',
+              content: 'width=device-width, initial-scale=1.0',
+            },
             { name: 'author', content: 'screfy (https://screfy.com)' },
             { name: 'url', content: BASE_URL + pathname },
           ]}
-          additionalLinkTags={[{ rel: 'shortcut icon', href: '/favicon.ico', type: 'image/x-icon' }]}
-          openGraph={{ type: 'website', images: [{ url: `${BASE_URL}/banner.png` }] }}
+          additionalLinkTags={[
+            {
+              rel: 'shortcut icon',
+              href: '/favicon.ico',
+              type: 'image/x-icon',
+            },
+          ]}
+          openGraph={{
+            type: 'website',
+            images: [{ url: `${BASE_URL}/banner.png` }],
+          }}
           twitter={{ handle: '@screfy_', cardType: 'summary_large_image' }}
         />
 

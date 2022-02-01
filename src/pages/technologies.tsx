@@ -14,7 +14,8 @@ import Technology, { TechnologyProps } from '../components/Technology';
 const TECHNOLOGIES: TechnologyProps[] = [
   {
     name: 'TypeScript',
-    description: 'TypeScript is a strongly typed programming language that builds on JavaScript.',
+    description:
+      'TypeScript is a strongly typed programming language that builds on JavaScript.',
     icon: <TypeScript />,
     color: '#007ACC',
   },
@@ -26,7 +27,8 @@ const TECHNOLOGIES: TechnologyProps[] = [
   },
   {
     name: 'GraphQL',
-    description: 'A query language for APIs and a runtime for fulfilling those queries with your existing data.',
+    description:
+      'A query language for APIs and a runtime for fulfilling those queries with your existing data.',
     icon: <GraphQL />,
     color: '#e10098',
   },
@@ -38,19 +40,22 @@ const TECHNOLOGIES: TechnologyProps[] = [
   },
   {
     name: 'Next.js',
-    description: 'Next.js gives you the best developer experience with all the features you need for production.',
+    description:
+      'Next.js gives you the best developer experience with all the features you need for production.',
     icon: <NextJS />,
     color: '#0070f3',
   },
   {
     name: 'TailwindCSS',
-    description: 'Rapidly build modern websites without ever leaving your HTML.',
+    description:
+      'Rapidly build modern websites without ever leaving your HTML.',
     icon: <TailwindCSS />,
     color: '#06AAC6',
   },
   {
     name: 'Docker',
-    description: 'Docker takes away repetitive and mundane configuration tasks.',
+    description:
+      'Docker takes away repetitive and mundane configuration tasks.',
     icon: <Docker />,
     color: '#2496ED',
   },
@@ -69,9 +74,10 @@ export default function Technologies() {
 
       <Section heading={{ as: 'h1', text: 'Technologies' }}>
         <p>
-          I highly leverage new bleeding-edge technologies and languages to stay on top of the game. I really love
-          working with containerstation, especially Docker - the most powerful tool for development and production
-          environments.
+          I highly leverage new bleeding-edge technologies and languages to stay
+          on top of the game. I really love working with containerstation,
+          especially Docker - the most powerful tool for development and
+          production environments.
         </p>
 
         <div className="flex flex-col space-y-4">

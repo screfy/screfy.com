@@ -9,8 +9,9 @@ export default function Home() {
     <Page>
       <Section heading={{ as: 'h1', text: 'Hey, I’m screfy' }}>
         <p>
-          I’m a fullstack web developer and open-source enthusiast. I’m most interested in web and serverless
-          technologies, DevOps practices, and I care about performant, accessible code.
+          I’m a fullstack web developer and open-source enthusiast. I’m most
+          interested in web and serverless technologies, DevOps practices, and I
+          care about performant, accessible code.
         </p>
       </Section>
 
@@ -20,7 +21,8 @@ export default function Home() {
 
       <Section heading={{ as: 'h3', text: 'OSS' }}>
         <p>
-          Below are some of my open-source projects I’ve worked on. You can find most of my work on my{' '}
+          Below are some of my open-source projects I’ve worked on. You can find
+          most of my work on my{' '}
           <Link href="https://github.com/screfy">GitHub</Link>.
         </p>
 

@@ -37,7 +37,11 @@ export default function Navbar() {
   return (
     <nav className="mb-16 sm:mb-24">
       <div className="flex flex-col space-y-6 sm:hidden">
-        <button className="-ml-3.5 w-fit" aria-label="Open menu" onClick={openMenu}>
+        <button
+          className="-ml-3.5 w-fit"
+          aria-label="Open menu"
+          onClick={openMenu}
+        >
           <Hamburger size={20} toggled={isMenuOpen} />
         </button>
 
