@@ -4,14 +4,16 @@ import { InferGetStaticPropsType } from 'next';
 import { NextSeo } from 'next-seo';
 import { allArticles } from '../../../.contentlayer/data';
 import Page from '../../components/Page';
-import Posts from '../../components/Blog/Posts';
 import Section from '../../components/Section';
+import PostsGroup from '../../components/Blog/PostsGroup';
+import { groupBy } from '../../utils/groupBy';
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
-export type PickedPostProps = Props['posts'][number];
+export type PostsGroupProps = Props['groups'][number];
+export type PostProps = PostsGroupProps['posts'][number];
 
-export default function Blog({ posts }: Props) {
+export default function Blog({ groups }: Props) {
   return (
     <Page>
       <NextSeo title="Blog" />
@@ -23,23 +25,40 @@ export default function Blog({ posts }: Props) {
           practices.
         </p>
 
-        <Posts posts={posts} />
+        <>
+          {groups.map(({ year, posts }) => (
+            <PostsGroup key={year} year={year} posts={posts} />
+          ))}
+        </>
       </Section>
     </Page>
   );
 }
 
 export const getStaticProps = async () => {
-  // Reduce JSON payload size by picking only needed props, and sort posts by published date:
-  const posts = allArticles
-    .map((post) => pick(post, ['title', 'slug', 'publishedAt', 'readingTime']))
-    .sort((a, b) =>
-      compareDesc(new Date(a.publishedAt), new Date(b.publishedAt))
-    );
+  const groupedPosts = groupBy(allArticles, ({ publishedAt }) =>
+    new Date(publishedAt).getFullYear()
+  );
+
+  const groups = Object.keys(groupedPosts)
+    .map((year) => ({
+      year,
+      posts: groupedPosts[+year]
+        // Sort posts by published date:
+        .sort((a, b) =>
+          compareDesc(new Date(a.publishedAt), new Date(b.publishedAt))
+        )
+        // Reduce JSON payload size by picking only needed props:
+        .map((post) =>
+          pick(post, ['title', 'slug', 'publishedAt', 'readingTime'])
+        ),
+    }))
+    // Sort groups by years:
+    .sort((a, b) => compareDesc(new Date(a.year), new Date(b.year)));
 
   return {
     props: {
-      posts,
+      groups,
     },
   };
 };
