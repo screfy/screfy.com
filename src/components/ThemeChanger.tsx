@@ -1,18 +1,16 @@
 import { useTheme } from 'next-themes';
-import { useEffect, useState } from 'react';
 import { Moon, Sun } from 'react-feather';
+import { useMounted } from '../hooks/useMounted';
 
 export default function ThemeChanger() {
-  const [mounted, setMounted] = useState(false);
+  const mounted = useMounted();
   const { resolvedTheme, setTheme } = useTheme();
-
-  // After mounting, we have access to the theme:
-  useEffect(() => setMounted(true), []);
 
   if (!mounted) {
     return null;
   }
 
+  // After mounting, we have access to the theme:
   return (
     <button
       aria-label="Change theme"
