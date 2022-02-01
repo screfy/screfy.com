@@ -1,6 +1,6 @@
 import Image, { ImageProps } from 'next/image';
 
-export function RoundedImage(props: ImageProps) {
+function RoundedImage(props: ImageProps) {
   return (
     <Image
       className="rounded-lg"
@@ -11,10 +11,14 @@ export function RoundedImage(props: ImageProps) {
   );
 }
 
-export function CenteredImage(props: ImageProps) {
+function CenteredImage(props: ImageProps) {
   return (
     <div className="flex justify-center">
       <RoundedImage {...props} />
     </div>
   );
 }
+
+const components = { RoundedImage, CenteredImage };
+
+export default components;

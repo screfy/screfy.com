@@ -8,7 +8,7 @@ import Page from '../../components/Page';
 import Section from '../../components/Section';
 import { Calendar } from 'react-feather';
 import { format } from 'date-fns';
-import { CenteredImage, RoundedImage } from '../../components/Blog/components';
+import components from '../../components/Blog/components';
 import { allPostDocuments } from '../../../.contentlayer/data';
 import { PostDocument } from '../../../.contentlayer/types';
 
@@ -22,7 +22,7 @@ export default function BlogPost({
       <Section>
         <div className="flex flex-col space-y-2 text-sm sm:flex-row sm:justify-between">
           <time className="flex items-center space-x-2" dateTime={publishedAt}>
-            <Calendar size="16" />
+            <Calendar size={16} />
             <span>{format(new Date(publishedAt), 'MMMM do, yyyy')}</span>
           </time>
 
@@ -32,7 +32,7 @@ export default function BlogPost({
         </div>
 
         <div className="prose w-full max-w-none dark:prose-dark">
-          <Component components={{ CenteredImage, RoundedImage }} />
+          <Component components={components} />
         </div>
       </Section>
     </Page>

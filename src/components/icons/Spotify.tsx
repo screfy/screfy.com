@@ -1,4 +1,4 @@
-export default function Spotify({ size = '24' }: { size?: string }) {
+export default function Spotify({ size = 24 }: { size?: number }) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" width={size} height={size}>
       <path

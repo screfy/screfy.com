@@ -9,15 +9,15 @@ export default function Footer() {
     <footer className="mt-16 flex flex-col space-y-3 sm:mt-24">
       <div className="flex space-x-3">
         <FooterIcon href="https://github.com/screfy" label="GitHub">
-          <GitHub size="20" />
+          <GitHub size={20} />
         </FooterIcon>
 
         <FooterIcon href="https://twitter.com/screfy_" label="Twitter">
-          <Twitter size="20" />
+          <Twitter size={20} />
         </FooterIcon>
 
         <FooterIcon href="https://keybase.io/screfy" label="Keybase">
-          <Key size="20" />
+          <Key size={20} />
         </FooterIcon>
       </div>
 

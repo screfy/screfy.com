@@ -7,7 +7,7 @@ export default function NowPlaying() {
 
   return (
     <div className="flex flex-row-reverse items-center justify-between sm:flex-row sm:justify-start sm:space-x-2">
-      {status?.spotify ? <Bars /> : <Spotify size="16" />}
+      {status?.spotify ? <Bars /> : <Spotify size={16} />}
 
       <div className="inline-flex max-w-[15rem] flex-col sm:max-w-md sm:flex-row sm:space-x-2">
         {status?.spotify ? (

@@ -26,7 +26,7 @@ export default function Repository({
       >
         <h4 className="font-semibold">{name}</h4>
         <motion.div animate={{ rotate: isOpen ? 180 : 0 }}>
-          <ChevronDown size="18" />
+          <ChevronDown size={18} />
         </motion.div>
       </button>
 
@@ -44,7 +44,7 @@ export default function Repository({
               </p>
               <div className="flex justify-between">
                 <div className="flex items-center space-x-1">
-                  <Star className="text-orange" size="14" />
+                  <Star className="text-orange" size={14} />
                   <span className="text-xs font-medium text-gray-500 dark:text-gray-100">
                     {siStars}
                   </span>
@@ -56,7 +56,7 @@ export default function Repository({
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <ExternalLink size="12" />
+                  <ExternalLink size={12} />
                   <span className="text-xs">View</span>
                 </a>
               </div>

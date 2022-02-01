@@ -1,16 +1,16 @@
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function groupBy<T, K extends keyof any>(
-  list: Array<T> | T[],
+  arr: T[],
   getKey: (item: T) => K
 ) {
-  return list.reduce((previous, currentItem) => {
-    const group = getKey(currentItem);
+  return arr.reduce((previous, current) => {
+    const group = getKey(current);
 
     if (!previous[group]) {
       previous[group] = [];
     }
 
-    previous[group].push(currentItem);
+    previous[group].push(current);
 
     return previous;
   }, {} as Record<K, T[]>);
