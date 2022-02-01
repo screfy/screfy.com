@@ -5,7 +5,7 @@ import Post from './Post';
 export default function PostsGroup({ year, posts }: PostsGroupProps) {
   return (
     <section className="flex flex-col space-y-3">
-      <Heading as="h4" text={year} />
+      <Heading as="h4">{year}</Heading>
 
       <ul className="flex flex-col space-y-2">
         {posts.map((post) => (

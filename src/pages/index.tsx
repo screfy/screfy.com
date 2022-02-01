@@ -3,11 +3,12 @@ import Section from '../components/Section';
 import Link from '../components/Link';
 import Repositories from '../components/Repositories';
 import Projects from '../components/Projects';
+import Heading from '../components/Heading';
 
 export default function Home() {
   return (
-    <Page>
-      <Section heading={{ as: 'h1', text: 'Hey, I’m screfy' }}>
+    <Page title="Hey, I’m screfy" seo={{ title: 'Home' }}>
+      <Section>
         <p>
           I’m a fullstack web developer and open-source enthusiast. I’m most
           interested in web and serverless technologies, DevOps practices, and I
@@ -15,11 +16,15 @@ export default function Home() {
         </p>
       </Section>
 
-      <Section heading={{ as: 'h2', text: 'Projects' }}>
+      <Section>
+        <Heading as="h2">Projects</Heading>
+
         <Projects />
       </Section>
 
-      <Section heading={{ as: 'h3', text: 'OSS' }}>
+      <Section>
+        <Heading as="h3">OSS</Heading>
+
         <p>
           Below are some of my open-source projects I’ve worked on. You can find
           most of my work on my{' '}

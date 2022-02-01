@@ -1,8 +1,9 @@
 import clsx from 'clsx';
+import { ReactChild } from 'react';
 
-export interface HeadingProps {
+interface Props {
   as: `h${1 | 2 | 3 | 4 | 5}`;
-  text: string;
+  children: ReactChild;
 }
 
 interface FontStyle {
@@ -39,9 +40,11 @@ const FONT_STYLES: { [key: string]: FontStyle } = {
   },
 };
 
-export default function Heading({ as, text }: HeadingProps) {
+export default function Heading({ as, children }: Props) {
   const Component = as;
   const { size, weight, color } = FONT_STYLES[as];
 
-  return <Component className={clsx(size, weight, color)}>{text}</Component>;
+  return (
+    <Component className={clsx(size, weight, color)}>{children}</Component>
+  );
 }

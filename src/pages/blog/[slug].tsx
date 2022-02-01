@@ -9,7 +9,6 @@ import Section from '../../components/Section';
 import { allArticles } from '../../../.contentlayer/data';
 import { Article } from '../../../.contentlayer/types';
 import { Calendar } from 'react-feather';
-import { NextSeo } from 'next-seo';
 import { format } from 'date-fns';
 import { CenteredImage, RoundedImage } from '../../components/Blog/components';
 
@@ -19,10 +18,8 @@ export default function BlogPost({
   const Component = useMDXComponent(body.code);
 
   return (
-    <Page>
-      <NextSeo title={title} description={summary} />
-
-      <Section heading={{ as: 'h1', text: title }}>
+    <Page title={title} seo={{ description: summary }}>
+      <Section>
         <div className="flex flex-col space-y-2 text-sm sm:flex-row sm:justify-between">
           <time className="flex items-center space-x-2" dateTime={publishedAt}>
             <Calendar size="16" />

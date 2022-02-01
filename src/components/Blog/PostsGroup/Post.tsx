@@ -18,7 +18,7 @@ export default function Post({
               {format(new Date(publishedAt), 'MMM dd')}
             </time>
 
-            <Heading as="h5" text={title} />
+            <Heading as="h5">{title}</Heading>
           </div>
 
           <p className="hidden sm:block">{readingTime}</p>

@@ -1,7 +1,6 @@
 import { pick } from 'contentlayer/client';
 import { compareDesc } from 'date-fns';
 import { InferGetStaticPropsType } from 'next';
-import { NextSeo } from 'next-seo';
 import { allArticles } from '../../../.contentlayer/data';
 import Page from '../../components/Page';
 import Section from '../../components/Section';
@@ -15,10 +14,8 @@ export type PostProps = PostsGroupProps['posts'][number];
 
 export default function Blog({ groups }: Props) {
   return (
-    <Page>
-      <NextSeo title="Blog" />
-
-      <Section heading={{ as: 'h1', text: 'Blog' }}>
+    <Page title="Blog">
+      <Section>
         <p>
           A space for exploring my mind. Here, I share everything that I know
           about TypeScript, React, serverless technologies, and DevOps

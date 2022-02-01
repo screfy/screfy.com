@@ -1,4 +1,3 @@
-import { NextSeo } from 'next-seo';
 import Docker from '../components/icons/Docker';
 import NodeJS from '../components/icons/NodeJS';
 import PostgreSQL from '../components/icons/PostgreSQL';
@@ -69,10 +68,8 @@ const TECHNOLOGIES: TechnologyProps[] = [
 
 export default function Technologies() {
   return (
-    <Page>
-      <NextSeo title="Technologies" />
-
-      <Section heading={{ as: 'h1', text: 'Technologies' }}>
+    <Page title="Technologies">
+      <Section>
         <p>
           I highly leverage new bleeding-edge technologies and languages to stay
           on top of the game. I really love working with containerstation,
