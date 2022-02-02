@@ -1,5 +1,4 @@
 import { TrackData } from '../types';
-import { formatDuration } from './duration';
 
 const SPOTIFY_BASIC_TOKEN = Buffer.from(
   `${process.env.SPOTIFY_CLIENT_ID}:${process.env.SPOTIFY_CLIENT_SECRET}`
@@ -12,7 +11,6 @@ interface SpotifyTrack {
   external_urls: { spotify: string };
   album: { name: string; images: { url: string }[] };
   artists: { name: string }[];
-  duration_ms: number;
 }
 
 async function getAccessToken(): Promise<string | undefined> {
@@ -52,12 +50,11 @@ export async function getTopTracks(): Promise<TrackData[] | undefined> {
 
   const tracks = (items as SpotifyTrack[])
     .slice(0, 10)
-    .map(({ name, external_urls, album, artists, duration_ms }) => ({
+    .map(({ name, external_urls, album, artists }) => ({
       name: name,
       url: external_urls.spotify,
       album: album.name,
       artist: artists.map((artist) => artist.name).join(', '),
-      duration: formatDuration(duration_ms),
       image: album.images[2].url,
     }));
 

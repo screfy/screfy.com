@@ -1,7 +1,7 @@
 import Page from '../components/Page';
 import Section from '../components/Section';
 import Link from '../components/Link';
-import Tracks from '../components/Tracks';
+import Tracks from '../components/Spotify/Tracks';
 import Heading from '../components/Heading';
 
 export default function About() {
