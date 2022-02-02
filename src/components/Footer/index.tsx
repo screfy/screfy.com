@@ -1,6 +1,6 @@
 import { GitHub, Twitter, Key } from 'react-feather';
 import Divider from '../Divider';
-import ThemeChanger from '../ThemeChanger';
+import ThemeChanger from './ThemeChanger';
 import FooterIcon from './FooterIcon';
 import NowPlaying from './NowPlaying';
 
