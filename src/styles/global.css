@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 @layer components {
+  html,
+  body {
+    scroll-behavior: smooth;
+  }
+
   /* Scrollbar styles: */
   ::-webkit-scrollbar {
     @apply w-2.5;
