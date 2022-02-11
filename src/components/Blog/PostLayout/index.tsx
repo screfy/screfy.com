@@ -11,7 +11,7 @@ export default function PostLayout({
   publishedAt,
   slug,
   readingTime,
-  wordCount,
+  wordCount
 }: PostLayoutProps) {
   const Component = useMDXComponent(body.code);
 

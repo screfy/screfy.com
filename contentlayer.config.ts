@@ -13,32 +13,32 @@ const ProjectDocument = defineDocumentType(() => ({
   fields: {
     name: {
       type: 'string',
-      required: true,
+      required: true
     },
     description: {
       type: 'string',
-      required: true,
+      required: true
     },
     role: {
       type: 'string',
-      required: true,
+      required: true
     },
     url: {
       type: 'string',
-      required: true,
+      required: true
     },
     startedAt: {
       type: 'date',
-      required: true,
-    },
+      required: true
+    }
   },
   computedFields: {
     image: {
       type: 'string',
       resolve: async ({ name }) =>
-        `/static/images/projects/${name.toLowerCase()}.webp`,
-    },
-  },
+        `/static/images/projects/${name.toLowerCase()}.webp`
+    }
+  }
 }));
 
 const PostDocument = defineDocumentType(() => ({
@@ -48,32 +48,31 @@ const PostDocument = defineDocumentType(() => ({
   fields: {
     title: {
       type: 'string',
-      required: true,
+      required: true
     },
     summary: {
       type: 'string',
-      required: true,
+      required: true
     },
     publishedAt: {
       type: 'date',
-      required: true,
-    },
+      required: true
+    }
   },
   computedFields: {
     slug: {
       type: 'string',
-      resolve: async (doc) => doc._raw.sourceFileName.replace('.mdx', ''),
+      resolve: async (doc) => doc._raw.sourceFileName.replace('.mdx', '')
     },
     readingTime: {
       type: 'string',
-      resolve: async (doc) => readingTime(doc.body.raw).text,
+      resolve: async (doc) => readingTime(doc.body.raw).text
     },
     wordCount: {
       type: 'number',
-      resolve: async (doc) =>
-        doc.body.raw.split(/\s+/gu).filter(Boolean).length,
-    },
-  },
+      resolve: async (doc) => doc.body.raw.split(/\s+/gu).filter(Boolean).length
+    }
+  }
 }));
 
 export default makeSource({
@@ -89,10 +88,10 @@ export default makeSource({
         rehypeAutolinkHeadings,
         {
           properties: {
-            className: ['anchor'],
-          },
-        },
-      ],
-    ],
-  },
+            className: ['anchor']
+          }
+        }
+      ]
+    ]
+  }
 });

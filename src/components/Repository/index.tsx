@@ -7,7 +7,7 @@ export default function Repository({
   name,
   description,
   stars,
-  url,
+  url
 }: RepositoryData) {
   const [isOpen, setOpen] = useState(false);
   const siStars =

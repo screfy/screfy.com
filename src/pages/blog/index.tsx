@@ -48,14 +48,14 @@ export const getStaticProps = async () => {
         // Reduce JSON payload size by picking only needed props:
         .map((post) =>
           pick(post, ['title', 'slug', 'publishedAt', 'readingTime'])
-        ),
+        )
     }))
     // Sort groups by years:
     .sort((a, b) => compareDesc(new Date(a.year), new Date(b.year)));
 
   return {
     props: {
-      groups,
-    },
+      groups
+    }
   };
 };

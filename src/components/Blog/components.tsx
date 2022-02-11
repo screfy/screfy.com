@@ -105,7 +105,7 @@ const components = {
   MdxImage,
   MdxImageWithTheme,
   MdxCenter,
-  pre: MdxCode,
+  pre: MdxCode
 };
 
 export default components;

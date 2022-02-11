@@ -12,7 +12,7 @@ export default function Technology({
   name,
   description,
   icon,
-  color,
+  color
 }: TechnologyProps) {
   return (
     <div className="flex items-center space-x-4 rounded-lg border border-gray-200 bg-white p-4 transition-transform hover:scale-[1.02] dark:border-gray-600 dark:bg-gray-800">

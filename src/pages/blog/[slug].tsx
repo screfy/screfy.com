@@ -1,7 +1,7 @@
 import {
   GetStaticPaths,
   GetStaticPropsContext,
-  InferGetStaticPropsType,
+  InferGetStaticPropsType
 } from 'next';
 import Page from '../../components/Page';
 import { allPostDocuments } from '../../../.contentlayer/data';
@@ -24,7 +24,7 @@ export default function BlogPost({ post }: Props) {
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
     paths: allPostDocuments.map(({ slug }) => ({ params: { slug } })),
-    fallback: false,
+    fallback: false
   };
 };
 
@@ -38,13 +38,13 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
       'publishedAt',
       'slug',
       'readingTime',
-      'wordCount',
+      'wordCount'
     ]
   );
 
   return {
     props: {
-      post: post,
-    },
+      post: post
+    }
   };
 };

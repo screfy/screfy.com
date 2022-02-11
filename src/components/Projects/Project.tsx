@@ -7,7 +7,7 @@ export default function Project({
   role,
   description,
   image,
-  url,
+  url
 }: ProjectDocument) {
   return (
     <a

@@ -3,7 +3,7 @@ const {
   fontFamily,
   spacing,
   transitionProperty,
-  transitionDuration,
+  transitionDuration
 } = require('tailwindcss/defaultTheme');
 
 /** @type {import('tailwindcss/tailwind-config').TailwindConfig} */
@@ -22,13 +22,13 @@ module.exports = {
           500: '#3A3A3C',
           600: '#181B20',
           700: '#0F1214',
-          800: '#0C0E10',
+          800: '#0C0E10'
         },
         orange: '#FFAC33',
-        spotify: '#1ED760',
+        spotify: '#1ED760'
       },
       fontFamily: {
-        sans: ['Inter', ...fontFamily.sans],
+        sans: ['Inter', ...fontFamily.sans]
       },
       typography: (theme) => ({
         DEFAULT: {
@@ -39,7 +39,7 @@ module.exports = {
             'h2,h3,h4': {
               color: theme('colors.gray.700'),
               marginBottom: spacing[3],
-              scrollMarginTop: spacing[8],
+              scrollMarginTop: spacing[8]
             },
             a: {
               color: theme('colors.gray.500'),
@@ -47,14 +47,14 @@ module.exports = {
               'code:hover': { color: `${theme('colors.gray.800')} !important` },
               textDecoration: 'none',
               transitionProperty: transitionProperty['colors'],
-              transitionDuration: transitionDuration['DEFAULT'],
+              transitionDuration: transitionDuration['DEFAULT']
             },
             hr: {
               borderColor: theme('colors.gray.200'),
               marginTop: spacing[6],
-              marginBottom: spacing[6],
-            },
-          },
+              marginBottom: spacing[6]
+            }
+          }
         },
         dark: {
           css: {
@@ -62,20 +62,20 @@ module.exports = {
             strong: { color: theme('colors.gray.100') },
             code: { color: theme('colors.gray.100') },
             'h2,h3,h4': {
-              color: theme('colors.gray.100'),
+              color: theme('colors.gray.100')
             },
             a: {
               color: theme('colors.gray.100'),
               '&:hover': { color: `${theme('colors.white')} !important` },
-              'code:hover': { color: `${theme('colors.white')} !important` },
+              'code:hover': { color: `${theme('colors.white')} !important` }
             },
             hr: {
-              borderColor: theme('colors.gray.600'),
-            },
-          },
-        },
-      }),
-    },
+              borderColor: theme('colors.gray.600')
+            }
+          }
+        }
+      })
+    }
   },
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [require('@tailwindcss/typography')]
 };

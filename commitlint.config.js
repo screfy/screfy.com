@@ -15,9 +15,9 @@ module.exports = {
         'deps',
         'style',
         'refactor',
-        'release',
-      ],
+        'release'
+      ]
     ],
-    'scope-enum': [2, 'always', ['blog', 'projects']],
-  },
+    'scope-enum': [2, 'always', ['blog', 'projects']]
+  }
 };

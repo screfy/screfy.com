@@ -1,7 +1,7 @@
 import {
   SPOTIFY_CLIENT_ID,
   SPOTIFY_CLIENT_SECRET,
-  SPOTIFY_REFRESH_TOKEN,
+  SPOTIFY_REFRESH_TOKEN
 } from '../constants';
 import { TrackData } from '../types';
 
@@ -23,12 +23,12 @@ async function getAccessToken(): Promise<string | undefined> {
     method: 'POST',
     headers: {
       authorization: `Basic ${SPOTIFY_BASIC_TOKEN}`,
-      'content-type': 'application/x-www-form-urlencoded',
+      'content-type': 'application/x-www-form-urlencoded'
     },
     body: new URLSearchParams({
       grant_type: 'refresh_token',
-      refresh_token: SPOTIFY_REFRESH_TOKEN,
-    }),
+      refresh_token: SPOTIFY_REFRESH_TOKEN
+    })
   });
   const { access_token } = await res.json();
 
@@ -44,8 +44,8 @@ export async function getTopTracks(): Promise<TrackData[] | undefined> {
 
   const res = await fetch(SPOTIFY_TOP_TRACKS_ENDPOINT, {
     headers: {
-      authorization: `Bearer ${token}`,
-    },
+      authorization: `Bearer ${token}`
+    }
   });
   const { items } = await res.json();
 
@@ -60,7 +60,7 @@ export async function getTopTracks(): Promise<TrackData[] | undefined> {
       url: external_urls.spotify,
       album: album.name,
       artist: artists.map((artist) => artist.name).join(', '),
-      image: album.images[2].url,
+      image: album.images[2].url
     }));
 
   return tracks;

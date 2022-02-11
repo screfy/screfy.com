@@ -20,21 +20,21 @@ export default function App({ Component, pageProps }: AppProps) {
         additionalMetaTags={[
           {
             name: 'viewport',
-            content: 'width=device-width, initial-scale=1.0',
+            content: 'width=device-width, initial-scale=1.0'
           },
           { name: 'author', content: 'screfy (https://screfy.com)' },
-          { name: 'url', content: BASE_URL + pathname },
+          { name: 'url', content: BASE_URL + pathname }
         ]}
         additionalLinkTags={[
           {
             rel: 'shortcut icon',
             href: '/favicon.ico',
-            type: 'image/x-icon',
-          },
+            type: 'image/x-icon'
+          }
         ]}
         openGraph={{
           type: 'website',
-          images: [{ url: `${BASE_URL}/banner.png` }],
+          images: [{ url: `${BASE_URL}/banner.png` }]
         }}
         twitter={{ handle: '@screfy_', cardType: 'summary_large_image' }}
       />

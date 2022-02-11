@@ -2,7 +2,7 @@ import { ProjectDocument } from '../../../.contentlayer/types';
 import Project from './Project';
 
 export default function Projects({
-  projects,
+  projects
 }: {
   projects: ProjectDocument[];
 }) {

@@ -5,7 +5,7 @@ const GITHUB_URL = 'https://github.com';
 
 export async function getRepositories(): Promise<RepositoryData[] | undefined> {
   const res = await fetch(`${GITHUB_URL}/screfy`, {
-    method: 'GET',
+    method: 'GET'
   });
 
   if (!res.ok) {

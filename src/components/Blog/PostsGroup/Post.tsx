@@ -7,7 +7,7 @@ export default function Post({
   title,
   slug,
   publishedAt,
-  readingTime,
+  readingTime
 }: PostProps) {
   return (
     <li>

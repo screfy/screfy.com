@@ -9,7 +9,7 @@ import { allProjectDocuments } from '../../.contentlayer/data';
 import { compareDesc } from 'date-fns';
 
 export default function Home({
-  projects,
+  projects
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <Page title="Hey, I’m screfy" seo={{ title: 'Home' }}>
@@ -48,6 +48,6 @@ export const getStaticProps = async () => {
   );
 
   return {
-    props: { projects },
+    props: { projects }
   };
 };

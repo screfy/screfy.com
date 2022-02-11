@@ -16,54 +16,54 @@ const TECHNOLOGIES: TechnologyProps[] = [
     description:
       'TypeScript is a strongly typed programming language that builds on JavaScript.',
     icon: <TypeScript />,
-    color: '#007ACC',
+    color: '#007ACC'
   },
   {
     name: 'Node.js',
     description: `Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine.`,
     icon: <NodeJS />,
-    color: '#026E00',
+    color: '#026E00'
   },
   {
     name: 'GraphQL',
     description:
       'A query language for APIs and a runtime for fulfilling those queries with your existing data.',
     icon: <GraphQL />,
-    color: '#e10098',
+    color: '#e10098'
   },
   {
     name: 'React',
     description: 'A JavaScript library for building user interfaces.',
     icon: <React />,
-    color: '#232340',
+    color: '#232340'
   },
   {
     name: 'Next.js',
     description:
       'Next.js gives you the best developer experience with all the features you need for production.',
     icon: <NextJS />,
-    color: '#0070f3',
+    color: '#0070f3'
   },
   {
     name: 'TailwindCSS',
     description:
       'Rapidly build modern websites without ever leaving your HTML.',
     icon: <TailwindCSS />,
-    color: '#06AAC6',
+    color: '#06AAC6'
   },
   {
     name: 'Docker',
     description:
       'Docker takes away repetitive and mundane configuration tasks.',
     icon: <Docker />,
-    color: '#2496ED',
+    color: '#2496ED'
   },
   {
     name: 'PostgreSQL',
     description: `The world's most advanced open-source relational database.`,
     icon: <PostgreSQL />,
-    color: '#336791',
-  },
+    color: '#336791'
+  }
 ];
 
 export default function Technologies() {

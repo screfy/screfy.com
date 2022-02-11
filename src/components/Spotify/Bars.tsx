@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 function Bar({
   height,
   scale,
-  delay,
+  delay
 }: {
   height: string;
   scale: number;

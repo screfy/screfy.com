@@ -3,7 +3,7 @@ import { BASE_URL, GIT_REPO_OWNER, GIT_REPO_SLUG } from '../../../constants';
 
 function PostFooterLink({
   href,
-  children,
+  children
 }: {
   href: string;
   children: ReactChild;
