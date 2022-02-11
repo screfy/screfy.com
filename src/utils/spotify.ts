@@ -1,7 +1,12 @@
+import {
+  SPOTIFY_CLIENT_ID,
+  SPOTIFY_CLIENT_SECRET,
+  SPOTIFY_REFRESH_TOKEN,
+} from '../constants';
 import { TrackData } from '../types';
 
 const SPOTIFY_BASIC_TOKEN = Buffer.from(
-  `${process.env.SPOTIFY_CLIENT_ID}:${process.env.SPOTIFY_CLIENT_SECRET}`
+  `${SPOTIFY_CLIENT_ID}:${SPOTIFY_CLIENT_SECRET}`
 ).toString('base64');
 const SPOTIFY_TOKEN_ENDPOINT = 'https://accounts.spotify.com/api/token';
 const SPOTIFY_TOP_TRACKS_ENDPOINT = `https://api.spotify.com/v1/me/top/tracks`;
@@ -22,7 +27,7 @@ async function getAccessToken(): Promise<string | undefined> {
     },
     body: new URLSearchParams({
       grant_type: 'refresh_token',
-      refresh_token: process.env.SPOTIFY_REFRESH_TOKEN,
+      refresh_token: SPOTIFY_REFRESH_TOKEN,
     }),
   });
   const { access_token } = await res.json();

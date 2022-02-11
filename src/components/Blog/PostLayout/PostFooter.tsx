@@ -1,4 +1,5 @@
 import { ReactChild } from 'react';
+import { BASE_URL, GIT_REPO_OWNER, GIT_REPO_SLUG } from '../../../constants';
 
 function PostFooterLink({
   href,
@@ -24,7 +25,7 @@ export default function PostFooter({ slug }: { slug: string }) {
     <div className="flex justify-end space-x-2 text-sm">
       <PostFooterLink
         href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
-          `https://screfy.com/blog/${slug} by @screfy_`
+          `${BASE_URL}/blog/${slug} by @screfy_`
         )}`}
       >
         Share on Twitter
@@ -33,7 +34,7 @@ export default function PostFooter({ slug }: { slug: string }) {
       <span>·</span>
 
       <PostFooterLink
-        href={`https://github.com/screfy/screfy.com/edit/main/data/posts/${slug}.mdx`}
+        href={`https://github.com/${GIT_REPO_OWNER}/${GIT_REPO_SLUG}/edit/main/data/posts/${slug}.mdx`}
       >
         Edit on GitHub
       </PostFooterLink>

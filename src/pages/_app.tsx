@@ -3,11 +3,10 @@ import '../styles/global.css';
 import { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
+import { ThemeProvider } from 'next-themes';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { ThemeProvider } from 'next-themes';
-
-const BASE_URL = 'https://screfy.com';
+import { BASE_URL } from '../constants';
 
 export default function App({ Component, pageProps }: AppProps) {
   const { pathname } = useRouter();
