@@ -7,6 +7,10 @@ body {
   @apply flex min-h-screen justify-center bg-gray-50 text-gray-400 dark:bg-gray-800 dark:text-gray-300;
 }
 
+::selection {
+  @apply bg-blue-600/40 dark:bg-blue-500/30;
+}
+
 /* Scrollbar styles: */
 ::-webkit-scrollbar {
   @apply w-2.5;
