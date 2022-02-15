@@ -1,4 +1,4 @@
-import '../styles/global.css';
+import '../styles/globals.css';
 
 import { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
@@ -39,14 +39,12 @@ export default function App({ Component, pageProps }: AppProps) {
         twitter={{ handle: '@screfy_', cardType: 'summary_large_image' }}
       />
 
-      <div className="flex min-h-screen justify-center bg-gray-50 text-gray-400 dark:bg-gray-800 dark:text-gray-300">
-        <div className="flex w-full flex-col px-6 py-8 sm:w-[40rem] sm:px-0">
-          <Navbar />
+      <div className="flex w-full flex-col px-6 py-8 sm:w-[40rem] sm:px-0">
+        <Navbar />
 
-          <Component {...pageProps} />
+        <Component {...pageProps} />
 
-          <Footer />
-        </div>
+        <Footer />
       </div>
     </ThemeProvider>
   );
