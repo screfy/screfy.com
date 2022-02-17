@@ -5,8 +5,8 @@ import Repositories from '../components/Repositories';
 import Projects from '../components/Projects';
 import Heading from '../components/Heading';
 import { InferGetStaticPropsType } from 'next';
-import { allProjectDocuments } from '../../.contentlayer/data';
 import { compareDesc } from 'date-fns';
+import { allProjectDocuments } from '../../.contentlayer/generated';
 
 export default function Home({
   projects

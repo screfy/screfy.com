@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { ProjectDocument } from '../../../.contentlayer/types';
+import { ProjectDocument } from '../../../.contentlayer/generated';
 import Heading from '../Heading';
 
 export default function Project({

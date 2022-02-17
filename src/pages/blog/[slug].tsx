@@ -4,10 +4,12 @@ import {
   InferGetStaticPropsType
 } from 'next';
 import Page from '../../components/Page';
-import { allPostDocuments } from '../../../.contentlayer/data';
-import { PostDocument } from '../../../.contentlayer/types';
 import { pick } from 'contentlayer/client';
 import PostLayout from '../../components/Blog/PostLayout';
+import {
+  allPostDocuments,
+  PostDocument
+} from '../../../.contentlayer/generated';
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 

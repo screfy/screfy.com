@@ -1,4 +1,4 @@
-import { ProjectDocument } from '../../../.contentlayer/types';
+import { ProjectDocument } from '../../../.contentlayer/generated';
 import Project from './Project';
 
 export default function Projects({

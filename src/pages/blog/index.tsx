@@ -5,7 +5,7 @@ import Page from '../../components/Page';
 import Section from '../../components/Section';
 import PostsGroup from '../../components/Blog/PostsGroup';
 import { groupBy } from '../../utils/groupBy';
-import { allPostDocuments } from '../../../.contentlayer/data';
+import { allPostDocuments } from '../../../.contentlayer/generated';
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 

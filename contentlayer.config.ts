@@ -8,7 +8,6 @@ import remarkGfm from 'remark-gfm';
 
 const ProjectDocument = defineDocumentType(() => ({
   name: 'ProjectDocument',
-  bodyType: 'none',
   filePathPattern: 'projects/*.md',
   fields: {
     name: {
@@ -43,7 +42,7 @@ const ProjectDocument = defineDocumentType(() => ({
 
 const PostDocument = defineDocumentType(() => ({
   name: 'PostDocument',
-  bodyType: 'mdx',
+  contentType: 'mdx',
   filePathPattern: 'posts/*.mdx',
   fields: {
     title: {
