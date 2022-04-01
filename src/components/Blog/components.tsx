@@ -4,7 +4,7 @@ import { useTheme } from 'next-themes';
 import Image, { ImageProps } from 'next/image';
 import { ReactChild, useRef, useState } from 'react';
 import { Check, Copy } from 'react-feather';
-import { useMounted } from '../../hooks/useMounted';
+import { useMounted } from '../../hooks/use-mounted';
 import Bars from '../Spotify/Bars';
 
 interface MdxImageProps extends ImageProps {

@@ -1,6 +1,6 @@
 import { useTheme } from 'next-themes';
 import { Moon, Sun } from 'react-feather';
-import { useMounted } from '../../hooks/useMounted';
+import { useMounted } from '../../hooks/use-mounted';
 
 export default function ThemeChanger() {
   const mounted = useMounted();
