@@ -1,53 +1,53 @@
 /* Custom spacing between heading and content: */
 .prose > :first-child {
-  @apply mt-6;
+	@apply mt-6;
 }
 
 .prose > :last-child {
-  @apply mb-6;
+	@apply mb-6;
 }
 
 /* Code styles: */
 .prose .rehype-code-title {
-  @apply rounded-t-lg border border-b-0 border-gray-200 bg-gray-50 px-5 py-3 text-sm font-bold text-gray-500 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-100;
+	@apply rounded-t-lg border border-b-0 border-gray-200 bg-gray-50 px-5 py-3 text-sm font-bold text-gray-500 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-100;
 }
 
 .prose .rehype-code-title + div > pre {
-  @apply mt-0 rounded-t-none;
+	@apply mt-0 rounded-t-none;
 }
 
 .prose pre {
-  @apply mt-0 rounded-b-lg border border-gray-200 bg-gray-50 dark:border-gray-600 dark:bg-gray-800;
+	@apply mt-0 rounded-b-lg border border-gray-200 bg-gray-50 dark:border-gray-600 dark:bg-gray-800;
 }
 
 .prose code[class*='language-'],
 .prose pre[class*='language-'] {
-  @apply text-gray-600 dark:text-gray-100;
+	@apply text-gray-600 dark:text-gray-100;
 }
 
 /* Headings anchor styles: */
 .prose .anchor {
-  @apply invisible absolute -ml-5 w-1/2 cursor-pointer sm:-ml-6;
+	@apply invisible absolute -ml-5 w-1/2 cursor-pointer sm:-ml-6;
 }
 
 .prose .anchor:hover {
-  @apply visible no-underline;
+	@apply visible no-underline;
 }
 
 .prose .anchor:after {
-  @apply text-gray-300 content-['#'];
+	@apply text-gray-300 content-['#'];
 }
 
 .prose *:hover > .anchor {
-  @apply visible no-underline;
+	@apply visible no-underline;
 }
 
 /* Remove scrollbar from code cards: */
 .prose pre::-webkit-scrollbar {
-  @apply hidden;
+	@apply hidden;
 }
 
 .prose pre {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
 }

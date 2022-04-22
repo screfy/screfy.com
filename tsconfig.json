@@ -1,28 +1,28 @@
 {
-  "compilerOptions": {
-    "moduleResolution": "Node",
-    "target": "ES2021",
-    "module": "ESNext",
-    "jsx": "preserve",
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "noImplicitAny": true,
-    "alwaysStrict": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "esModuleInterop": true,
-    "allowJs": false,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "incremental": true
-  },
-  "include": [
-    "next-env.d.ts",
-    "env.d.ts",
-    "./**/*.ts",
-    "./**/*.tsx",
-    ".contentlayer/generated"
-  ],
-  "exclude": ["node_modules"]
+	"compilerOptions": {
+		"moduleResolution": "Node",
+		"target": "ES2021",
+		"module": "ESNext",
+		"jsx": "preserve",
+		"lib": ["DOM", "DOM.Iterable", "ESNext"],
+		"noImplicitAny": true,
+		"alwaysStrict": true,
+		"skipLibCheck": true,
+		"strict": true,
+		"forceConsistentCasingInFileNames": true,
+		"esModuleInterop": true,
+		"allowJs": false,
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"noEmit": true,
+		"incremental": true
+	},
+	"include": [
+		"next-env.d.ts",
+		"env.d.ts",
+		"./**/*.ts",
+		"./**/*.tsx",
+		".contentlayer/generated"
+	],
+	"exclude": ["node_modules"]
 }

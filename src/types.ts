@@ -1,22 +1,22 @@
 export interface RepositoryData {
-  name: string;
-  url: string;
-  description?: string;
-  stars: number;
+	name: string;
+	url: string;
+	description?: string;
+	stars: number;
 }
 
 export interface RepositoriesResponse {
-  data: RepositoryData[];
+	data: RepositoryData[];
 }
 
 export interface TrackData {
-  name: string;
-  url: string;
-  album: string;
-  artist: string;
-  image: string;
+	name: string;
+	url: string;
+	album: string;
+	artist: string;
+	image: string;
 }
 
 export interface TracksResponse {
-  data: TrackData[];
+	data: TrackData[];
 }
