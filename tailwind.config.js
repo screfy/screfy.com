@@ -1,5 +1,6 @@
 /* eslint @typescript-eslint/no-var-requires: off */
 const radixColors = require('@radix-ui/colors');
+const { fontFamily } = require('tailwindcss/defaultTheme');
 
 const colors = Object.fromEntries(
 	Object.keys(radixColors)
@@ -23,6 +24,11 @@ const colors = Object.fromEntries(
 module.exports = {
 	content: ['./src/**/*.{ts,tsx}'],
 	theme: {
+		extend: {
+			fontFamily: {
+				sans: ['Karla', ...fontFamily.sans]
+			}
+		},
 		colors
 	},
 	plugins: []
