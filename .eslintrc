@@ -15,6 +15,7 @@
 	"plugins": ["@typescript-eslint"],
 	"rules": {
 		"no-loss-of-precision": "error",
+		"import/no-anonymous-default-export": "off",
 		"@typescript-eslint/no-empty-function": "off",
 		"no-empty-pattern": "off",
 		"react/display-name": "off",
