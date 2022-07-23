@@ -27,9 +27,18 @@ module.exports = {
 		extend: {
 			fontFamily: {
 				sans: ['Karla', ...fontFamily.sans]
+			},
+			animation: {
+				'tooltip-open': 'tooltip-open 300ms ease-out forwards'
+			},
+			keyframes: {
+				'tooltip-open': {
+					from: { opacity: 0 },
+					to: { opacity: 1 }
+				}
 			}
 		},
 		colors
 	},
-	plugins: []
+	plugins: [require('tailwindcss-radix')()]
 };

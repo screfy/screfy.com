@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import {
@@ -45,21 +45,28 @@ export function Navbar() {
 	const { visible } = useNavbar();
 
 	return (
-		<motion.nav
-			className="fixed top-5 z-50 w-full max-w-screen-sm"
-			variants={variants}
-			initial="initial"
-			animate={visible ? 'animate' : 'initial'}
-			exit="initial"
-			transition={{ duration: 0.2, ease: 'easeInOut' }}
-		>
-			<div className="-mx-4 flex flex-1 items-center justify-between rounded-xl bg-gray-2 px-4 py-2">
-				<Link href="/">
-					<a className="h-10 w-10 rounded-full bg-blue-9" aria-label="Home" />
-				</Link>
+		<AnimatePresence>
+			{visible && (
+				<motion.nav
+					className="fixed top-5 z-50 w-full max-w-screen-sm"
+					variants={variants}
+					initial="initial"
+					animate="animate"
+					exit="initial"
+					transition={{ duration: 0.2, ease: 'easeInOut' }}
+				>
+					<div className="-mx-4 flex flex-1 items-center justify-between rounded-xl bg-gray-2 px-4 py-2 shadow-md">
+						<Link href="/">
+							<a
+								className="h-10 w-10 rounded-full bg-blue-9"
+								aria-label="Home"
+							/>
+						</Link>
 
-				<NavbarLinks />
-			</div>
-		</motion.nav>
+						<NavbarLinks />
+					</div>
+				</motion.nav>
+			)}
+		</AnimatePresence>
 	);
 }
