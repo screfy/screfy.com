@@ -19,6 +19,6 @@
 		"allowJs": false,
 		"composite": false
 	},
-	"include": ["src", "next-env.d.ts"],
+	"include": ["src", "next-env.d.ts", ".contentlayer/generated"],
 	"exclude": ["node_modules"]
 }
