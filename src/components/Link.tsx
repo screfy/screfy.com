@@ -18,8 +18,6 @@ export function Link({
 			href={href}
 			target={isExternal ? '_blank' : undefined}
 			rel={isExternal ? 'noreferrer' : undefined}
-			// TODO: Enable new next link behavior in config:
-			legacyBehavior={false}
 		>
 			{children}
 		</NextLink>

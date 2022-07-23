@@ -56,12 +56,11 @@ export function Navbar() {
 					transition={{ duration: 0.2, ease: 'easeInOut' }}
 				>
 					<div className="-mx-4 flex flex-1 items-center justify-between rounded-xl bg-gray-2 px-4 py-2 shadow-md">
-						<Link href="/">
-							<a
-								className="h-10 w-10 rounded-full bg-blue-9"
-								aria-label="Home"
-							/>
-						</Link>
+						<Link
+							className="h-10 w-10 rounded-full bg-blue-9"
+							href="/"
+							aria-label="Home"
+						/>
 
 						<NavbarLinks />
 					</div>

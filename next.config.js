@@ -6,5 +6,8 @@ module.exports = withContentlayer({
 	reactStrictMode: true,
 	images: {
 		domains: ['s2.googleusercontent.com']
+	},
+	experimental: {
+		newNextLinkBehavior: true
 	}
 });

@@ -30,16 +30,15 @@ function NavbarItem({ href, icon, label }: NavbarItemProps) {
 	return (
 		<Tooltip.Provider delayDuration={0}>
 			<Tooltip.Root>
-				<Link href={href} passHref>
-					<Tooltip.Trigger asChild>
-						<a
-							className="rounded-xl bg-gray-3 p-2 text-gray-8 transition-colors hover:bg-gray-4 hover:text-gray-9"
-							aria-label={label}
-						>
-							{icon}
-						</a>
-					</Tooltip.Trigger>
-				</Link>
+				<Tooltip.Trigger asChild>
+					<Link
+						href={href}
+						className="rounded-xl bg-gray-3 p-2 text-gray-8 transition-colors hover:bg-gray-4 hover:text-gray-9"
+						aria-label={label}
+					>
+						{icon}
+					</Link>
+				</Tooltip.Trigger>
 
 				<Tooltip.Portal>
 					<Tooltip.Content
