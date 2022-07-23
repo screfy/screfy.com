@@ -20,6 +20,7 @@
 		"no-empty-pattern": "off",
 		"react/display-name": "off",
 		"react-hooks/exhaustive-deps": "off",
+		"react/no-unescaped-entities": ["error", { "forbid": [">", "}"] }],
 		"@next/next/no-html-link-for-pages": "off"
 	}
 }
