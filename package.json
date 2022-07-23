@@ -14,11 +14,13 @@
 		"@radix-ui/react-tooltip": "^1.0.0",
 		"clsx": "^1.2.1",
 		"contentlayer": "^0.2.6",
+		"date-fns": "^2.29.1",
 		"framer-motion": "^6.5.1",
 		"next": "^12.2.2",
 		"next-contentlayer": "^0.2.6",
 		"react": "^18.2.0",
-		"react-dom": "^18.2.0"
+		"react-dom": "^18.2.0",
+		"reading-time": "^1.5.0"
 	},
 	"devDependencies": {
 		"@radix-ui/colors": "^0.1.8",

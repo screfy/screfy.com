@@ -40,7 +40,7 @@ export function Site({
 				</div>
 
 				<p className="text-sm text-gray-11">
-					{new Date(date).toLocaleDateString(undefined, {
+					{new Date(date).toLocaleDateString('en-US', {
 						month: 'long',
 						year: 'numeric'
 					})}

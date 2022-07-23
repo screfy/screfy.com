@@ -11,6 +11,7 @@ specifiers:
   autoprefixer: ^10.4.7
   clsx: ^1.2.1
   contentlayer: ^0.2.6
+  date-fns: ^2.29.1
   eslint: ^8.20.0
   eslint-config-next: ^12.2.2
   eslint-config-prettier: ^8.5.0
@@ -23,6 +24,7 @@ specifiers:
   prettier-plugin-tailwindcss: ^0.1.12
   react: ^18.2.0
   react-dom: ^18.2.0
+  reading-time: ^1.5.0
   tailwindcss: ^3.1.6
   tailwindcss-radix: ^2.4.0
   typescript: ^4.7.4
@@ -31,11 +33,13 @@ dependencies:
   '@radix-ui/react-tooltip': 1.0.0_bb2bxwco6ptpubzwpazr52qf6i
   clsx: 1.2.1
   contentlayer: 0.2.6
+  date-fns: 2.29.1
   framer-motion: 6.5.1_biqbaboplfbrettd7655fr4n2y
   next: 12.2.2_biqbaboplfbrettd7655fr4n2y
   next-contentlayer: 0.2.6_7gpduzaz4csxytrukenoyuq3te
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  reading-time: 1.5.0
 
 devDependencies:
   '@radix-ui/colors': 0.1.8
@@ -3909,6 +3913,10 @@ packages:
     engines: {node: '>=8.10.0'}
     dependencies:
       picomatch: 2.3.1
+
+  /reading-time/1.5.0:
+    resolution: {integrity: sha512-onYyVhBNr4CmAxFsKS7bz+uTLRakypIe4R+5A824vBSkQy/hB3fZepoVEf8OVAxzLvK+H/jm9TzpI3ETSm64Kg==}
+    dev: false
 
   /regenerator-runtime/0.13.9:
     resolution: {integrity: sha512-p3VT+cOEgxFsRRA9X4lkI1E+k2/CtnKtU4gcxyaCUreilL/vqI6CdZ3wxVUx3UOUg+gnUOQQcRI7BmSI656MYA==}
