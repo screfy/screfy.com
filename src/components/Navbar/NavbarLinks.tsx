@@ -24,6 +24,7 @@ const items: NavbarItemProps[] = [
 
 function NavbarItem({ href, icon, label }: NavbarItemProps) {
 	return (
+		// TODO: Add tooltip?
 		<Link href={href}>
 			<a
 				className="rounded-xl bg-gray-3 p-2 text-gray-8 transition-colors hover:bg-gray-4 hover:text-gray-9"
