@@ -12,6 +12,7 @@
 	},
 	"dependencies": {
 		"@radix-ui/react-tooltip": "^1.0.0",
+		"clsx": "^1.2.1",
 		"contentlayer": "^0.2.6",
 		"framer-motion": "^6.5.1",
 		"next": "^12.2.2",

@@ -1,5 +1,7 @@
 import * as Tooltip from '@radix-ui/react-tooltip';
+import clsx from 'clsx';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { ReactNode } from 'react';
 import { useNavbar } from '.';
 import { Annotation } from '../../icons/Annotation';
@@ -25,6 +27,7 @@ const items: NavbarItemProps[] = [
 ];
 
 function NavbarItem({ href, icon, label }: NavbarItemProps) {
+	const { asPath } = useRouter();
 	const { visible } = useNavbar();
 
 	return (
@@ -33,7 +36,10 @@ function NavbarItem({ href, icon, label }: NavbarItemProps) {
 				<Tooltip.Trigger asChild>
 					<Link
 						href={href}
-						className="rounded-xl bg-gray-3 p-2 text-gray-8 transition-colors hover:bg-gray-4 hover:text-gray-9"
+						className={clsx(
+							'rounded-xl bg-gray-3 p-2 text-gray-8 transition-colors hover:bg-gray-4 hover:text-gray-9',
+							asPath === href && 'bg-gray-4 text-gray-9'
+						)}
 						aria-label={label}
 					>
 						{icon}
