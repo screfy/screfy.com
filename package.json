@@ -12,6 +12,7 @@
 	},
 	"dependencies": {
 		"@radix-ui/react-tooltip": "^1.0.0",
+		"class-variance-authority": "^0.2.3",
 		"clsx": "^1.2.1",
 		"contentlayer": "^0.2.6",
 		"date-fns": "^2.29.1",
@@ -20,7 +21,13 @@
 		"next-contentlayer": "^0.2.6",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
-		"reading-time": "^1.5.0"
+		"reading-time": "^1.5.0",
+		"rehype-autolink-headings": "^6.1.1",
+		"rehype-pretty-code": "^0.3.2",
+		"rehype-slug": "^5.0.1",
+		"remark-gfm": "^3.0.1",
+		"shiki": "^0.10.1",
+		"unist-util-visit": "^4.1.0"
 	},
 	"devDependencies": {
 		"@radix-ui/colors": "^0.1.8",

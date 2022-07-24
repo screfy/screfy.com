@@ -24,25 +24,28 @@ const variants = {
 const NavbarContext = createContext<{
 	visible: boolean;
 	setVisible: (visible: boolean) => void;
-}>({ visible: false, setVisible: () => {} });
+	title?: string;
+	setTitle: (title?: string) => void;
+}>({ visible: false, setVisible: () => {}, setTitle: () => {} });
 
 export const useNavbar = () => useContext(NavbarContext);
 
 export function NavbarProvider({ children }: { children: ReactNode }) {
 	const { asPath } = useRouter();
 	const [visible, setVisible] = useState(false);
+	const [title, setTitle] = useState<string | undefined>(undefined);
 
 	useEffect(() => setVisible(asPath !== '/'), [asPath]);
 
 	return (
-		<NavbarContext.Provider value={{ visible, setVisible }}>
+		<NavbarContext.Provider value={{ visible, setVisible, title, setTitle }}>
 			{children}
 		</NavbarContext.Provider>
 	);
 }
 
 export function Navbar() {
-	const { visible } = useNavbar();
+	const { visible, title } = useNavbar();
 
 	return (
 		<AnimatePresence>
@@ -56,11 +59,33 @@ export function Navbar() {
 					transition={{ duration: 0.2, ease: 'easeInOut' }}
 				>
 					<div className="-mx-4 flex flex-1 items-center justify-between rounded-xl bg-gray-2 px-4 py-2 shadow-md">
-						<Link
-							className="h-10 w-10 rounded-full bg-blue-9"
-							href="/"
-							aria-label="Home"
-						/>
+						<div className="flex items-center space-x-3 overflow-hidden">
+							<Link
+								className="h-10 w-10 rounded-full bg-blue-9"
+								href="/"
+								aria-label="Home"
+							/>
+
+							<AnimatePresence>
+								{title && (
+									<motion.a
+										className="max-w-md truncate font-bold"
+										href="#top"
+										aria-label="Scroll to top"
+										initial={{ opacity: 0, y: 30 }}
+										animate={{ opacity: 1, y: 0 }}
+										exit={{ opacity: 0, y: 30 }}
+										transition={{ delay: 0.025, ease: 'easeInOut' }}
+										onClick={(e) => {
+											e.preventDefault();
+											window.scrollTo({ top: 0, behavior: 'smooth' });
+										}}
+									>
+										{title}
+									</motion.a>
+								)}
+							</AnimatePresence>
+						</div>
 
 						<NavbarLinks />
 					</div>

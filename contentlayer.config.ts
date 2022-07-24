@@ -1,15 +1,14 @@
-import {
-	defineDocumentType,
-	LocalDocument,
-	makeSource
-} from 'contentlayer/source-files';
+import { defineDocumentType, makeSource } from 'contentlayer/source-files';
 import readingTime from 'reading-time';
-
-function resolveTypedDocument<Document, Return = unknown>(
-	fn: (doc: Document & LocalDocument) => Return
-): (doc: LocalDocument) => Return {
-	return (doc) => fn(doc as Document & LocalDocument);
-}
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import rehypePrettyCode from 'rehype-pretty-code';
+import rehypeSlug from 'rehype-slug';
+import remarkGfm from 'remark-gfm';
+import {
+	loadTheme,
+	rehypePrettyCodeTransformer,
+	resolveTypedDocument
+} from './src/contentlayer';
 
 const Post = defineDocumentType(() => ({
 	name: 'Post',
@@ -83,5 +82,38 @@ const Site = defineDocumentType(() => ({
 export default makeSource({
 	disableImportAliasWarning: true,
 	contentDirPath: 'data',
-	documentTypes: [Post, Site]
+	documentTypes: [Post, Site],
+	mdx: {
+		esbuildOptions(options) {
+			options.target = 'esnext';
+
+			return options;
+		},
+		remarkPlugins: [[remarkGfm]],
+		rehypePlugins: [
+			[rehypeSlug],
+			[
+				rehypePrettyCode,
+				{
+					theme: loadTheme(),
+					tokensMap: {
+						fn: 'entity.name.function',
+						objKey: 'meta.object-literal.key'
+					}
+				}
+			],
+			[
+				rehypeAutolinkHeadings,
+				{
+					behavior: 'wrap',
+					properties: {
+						className: [
+							`after:ml-1.5 after:inline-block after:h-4 after:w-4 after:bg-[url(/link.svg)] after:bg-cover after:bg-no-repeat after:align-middle after:font-normal after:opacity-0 after:transition-opacity after:content-[''] hover:after:opacity-100`
+						]
+					}
+				}
+			],
+			[rehypePrettyCodeTransformer]
+		]
+	}
 });

@@ -3,18 +3,17 @@ import { compareDesc } from 'date-fns';
 import { InferGetStaticPropsType } from 'next';
 import Link from 'next/link';
 import { allPosts } from '../../../.contentlayer/generated';
+import { PostMeta } from '../../components/PostMeta';
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
-export function PostItem({
+function PostItem({
 	title,
 	summary,
 	slug,
 	publishedAt,
 	meta
-}: Omit<Props['posts'][number], 'meta'> & {
-	meta: { text: string; minutes: number; time: number; words: number };
-}) {
+}: Props['posts'][number]) {
 	return (
 		<Link
 			className="block w-full space-y-4 rounded-xl bg-gray-2 px-4 py-3.5 transition-colors hover:bg-gray-3"
@@ -24,15 +23,16 @@ export function PostItem({
 				<h2 className="text-2xl font-medium">{title}</h2>
 
 				<div className="flex items-center space-x-2 text-base text-gray-10">
-					<p>
-						{new Date(publishedAt).toLocaleDateString('en-US', {
-							day: 'numeric',
-							month: 'short',
-							year: 'numeric'
-						})}
-					</p>
-					<span>·</span>
-					<p>{meta.text}</p>
+					<PostMeta
+						data={[
+							new Date(publishedAt).toLocaleDateString('en-US', {
+								day: 'numeric',
+								month: 'short',
+								year: 'numeric'
+							}),
+							meta.text
+						]}
+					/>
 				</div>
 			</div>
 

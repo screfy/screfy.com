@@ -22,7 +22,7 @@ const colors = Object.fromEntries(
  * @type {import('tailwindcss').Config}
  **/
 module.exports = {
-	content: ['./src/**/*.{ts,tsx}'],
+	content: ['./src/**/*.{ts,tsx}', './contentlayer.config.ts'],
 	theme: {
 		extend: {
 			fontFamily: {
