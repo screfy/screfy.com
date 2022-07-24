@@ -1,6 +1,11 @@
+import { InferGetStaticPropsType } from 'next';
+import { ItemList } from '../components/ItemList';
 import { Link } from '../components/Link';
+import { getTopTracks } from '../utils/spotify';
 
-export default function About() {
+export default function About({
+	tracks
+}: InferGetStaticPropsType<typeof getStaticProps>) {
 	return (
 		<>
 			<div className="space-y-5">
@@ -28,7 +33,21 @@ export default function About() {
 						.
 					</p>
 				</div>
+
+				<ItemList items={tracks} size="40" rounded />
 			</div>
 		</>
 	);
+}
+
+export async function getStaticProps() {
+	const tracks = await getTopTracks();
+
+	return {
+		props: {
+			tracks
+		},
+		// Regenerate this page after 24 hours:
+		revalidate: 86400
+	};
 }

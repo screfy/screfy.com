@@ -1,11 +1,10 @@
-import { pick } from 'contentlayer/client';
 import { allSites } from '../../.contentlayer/generated';
 import { InferGetStaticPropsType } from 'next';
-import { Site } from '../components/Site';
+import { ItemList, ItemProps } from '../components/ItemList';
 
-export type DesignProps = InferGetStaticPropsType<typeof getStaticProps>;
-
-export default function Design({ sites }: DesignProps) {
+export default function Design({
+	sites
+}: InferGetStaticPropsType<typeof getStaticProps>) {
 	return (
 		<div className="space-y-8">
 			<div className="space-y-5">
@@ -13,18 +12,23 @@ export default function Design({ sites }: DesignProps) {
 				<p>Below you can find a collection of sites I like.</p>
 			</div>
 
-			<div className="[&>div:last-child>div]:border-none">
-				{sites.map((props, i) => (
-					<Site key={i} {...props} />
-				))}
-			</div>
+			<ItemList items={sites} size="32" />
 		</div>
 	);
 }
 
 export function getStaticProps() {
-	const sites = allSites.map((site) =>
-		pick(site, ['title', 'url', 'sanitizedUrl', 'baseUrl', 'date'])
+	const sites: ItemProps[] = allSites.map(
+		({ title, url, sanitizedUrl, imageUrl, date }) => ({
+			title,
+			url,
+			imageUrl,
+			subtitle: sanitizedUrl,
+			right: new Date(date).toLocaleDateString('en-US', {
+				month: 'long',
+				year: 'numeric'
+			})
+		})
 	);
 
 	return {

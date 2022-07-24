@@ -68,12 +68,12 @@ const Site = defineDocumentType(() => ({
 				return `${hostname}${pathname === '/' ? '' : pathname}`;
 			})
 		},
-		baseUrl: {
+		imageUrl: {
 			type: 'string',
 			resolve: resolveTypedDocument<{ url: string }>(({ url }) => {
 				const { origin } = new URL(url);
 
-				return origin;
+				return `https://s2.googleusercontent.com/s2/favicons?domain=${origin}&sz=32`;
 			})
 		}
 	}
