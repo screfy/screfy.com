@@ -11,6 +11,7 @@ interface SpotifyTrack {
 	name: string;
 	external_urls: { spotify: string };
 	album: { name: string; images: { url: string }[] };
+	artists: { name: string }[];
 	duration_ms: number;
 }
 
@@ -51,9 +52,11 @@ export async function getTopTracks(): Promise<ItemProps[]> {
 
 	const tracks = (items as SpotifyTrack[])
 		.slice(0, 10)
-		.map(({ name, external_urls, album, duration_ms }) => ({
+		.map(({ name, external_urls, album, artists, duration_ms }) => ({
 			title: name,
-			subtitle: album.name,
+			subtitle: `${album.name} · ${artists
+				.map((artist) => artist.name)
+				.join(', ')}`,
 			right: format(new Date(duration_ms), 'mm:ss'),
 			url: external_urls.spotify,
 			imageUrl: album.images[2].url
