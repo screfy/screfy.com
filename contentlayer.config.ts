@@ -5,10 +5,10 @@ import rehypePrettyCode from 'rehype-pretty-code';
 import rehypeSlug from 'rehype-slug';
 import remarkGfm from 'remark-gfm';
 import {
-	loadTheme,
 	rehypePrettyCodeTransformer,
 	resolveTypedDocument
 } from './src/contentlayer';
+import theme from './theme.json';
 
 const Post = defineDocumentType(() => ({
 	name: 'Post',
@@ -95,7 +95,7 @@ export default makeSource({
 			[
 				rehypePrettyCode,
 				{
-					theme: loadTheme(),
+					theme,
 					tokensMap: {
 						fn: 'entity.name.function',
 						objKey: 'meta.object-literal.key'
