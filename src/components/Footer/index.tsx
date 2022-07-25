@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { NowPlaying } from './NowPlaying';
 
 interface FooterLinkProps {
@@ -6,6 +7,10 @@ interface FooterLinkProps {
 }
 
 const links: FooterLinkProps[] = [
+	{
+		href: '/design',
+		label: 'Design'
+	},
 	{
 		href: 'https://twitter.com/screfy_',
 		label: 'Twitter'
@@ -17,16 +22,18 @@ const links: FooterLinkProps[] = [
 ];
 
 function FooterLink({ href, label }: FooterLinkProps) {
+	const isLocal = href.startsWith('/');
+
 	return (
-		<a
+		<Link
 			className="text-gray-11 transition-colors hover:text-gray-12"
 			href={href}
 			aria-label={label}
-			target="_blank"
-			rel="noreferrer"
+			target={isLocal ? undefined : '_blank'}
+			rel={isLocal ? undefined : 'noreferrer'}
 		>
 			{label}
-		</a>
+		</Link>
 	);
 }
 
