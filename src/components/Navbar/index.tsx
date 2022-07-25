@@ -59,7 +59,7 @@ export function Navbar() {
 					transition={{ duration: 0.2, ease: 'easeInOut' }}
 				>
 					<div className="-mx-4 flex flex-1 items-center justify-between rounded-xl bg-gray-3/60 px-4 py-2 shadow-md backdrop-blur">
-						<div className="flex items-center space-x-3 overflow-hidden">
+						<div className="flex items-center space-x-4 overflow-hidden">
 							<Link
 								className="h-10 w-10 rounded-full bg-blue-9"
 								href="/"

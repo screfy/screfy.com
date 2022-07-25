@@ -27,28 +27,24 @@ export default function Post({
 
 	return (
 		<>
-			<div className="space-y-4">
-				<div className="space-y-2">
-					<h1 ref={ref} className="text-4xl font-bold">
-						{post.title}
-					</h1>
+			<div className="space-y-2">
+				<h1 ref={ref} className="text-4xl font-bold">
+					{post.title}
+				</h1>
 
-					<div className="flex items-center space-x-2 text-base text-gray-11">
-						<PostMeta
-							data={[
-								new Date(post.publishedAt).toLocaleDateString('en-US', {
-									day: 'numeric',
-									month: 'short',
-									year: 'numeric'
-								}),
-								post.meta.text,
-								`${post.meta.words} words`
-							]}
-						/>
-					</div>
+				<div className="flex items-center space-x-2 text-base text-gray-11">
+					<PostMeta
+						data={[
+							new Date(post.publishedAt).toLocaleDateString('en-US', {
+								day: 'numeric',
+								month: 'short',
+								year: 'numeric'
+							}),
+							post.meta.text,
+							`${post.meta.words} words`
+						]}
+					/>
 				</div>
-
-				<p>{post.summary}</p>
 			</div>
 
 			<div className="space-y-6">
@@ -68,7 +64,7 @@ export function getStaticPaths() {
 export function getStaticProps(ctx: GetStaticPropsContext) {
 	const post = pick(
 		allPosts.find(({ slug }) => slug === ctx.params?.slug) as PostType,
-		['title', 'body', 'summary', 'publishedAt', 'meta']
+		['title', 'body', 'publishedAt', 'meta']
 	);
 
 	return {

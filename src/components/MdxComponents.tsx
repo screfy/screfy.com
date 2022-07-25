@@ -1,6 +1,6 @@
 import { Link } from './Link';
 
-// TODO: ul, ol, image
+// TODO: ol, image
 
 export const components = {
 	a(props: JSX.IntrinsicElements['a']) {
@@ -17,9 +17,17 @@ export const components = {
 		return <h3 className="text-xl font-bold" {...props} />;
 	},
 	h3(props: JSX.IntrinsicElements['h3']) {
-		return <h3 className="text-lg font-bold" {...props} />;
+		return <h4 className="text-lg font-bold" {...props} />;
 	},
 	strong(props: JSX.IntrinsicElements['strong']) {
 		return <strong className="font-bold" {...props} />;
+	},
+	ul(props: JSX.IntrinsicElements['ul']) {
+		return (
+			<ul
+				className="space-y-2 [&>li]:relative [&>li]:pl-6 before:[&>li]:absolute before:[&>li]:left-1.5 before:[&>li]:top-3 before:[&>li]:h-1 before:[&>li]:w-1 before:[&>li]:rounded-full before:[&>li]:bg-gray-6"
+				{...props}
+			/>
+		);
 	}
 };

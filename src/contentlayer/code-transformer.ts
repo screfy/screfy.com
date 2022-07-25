@@ -1,13 +1,13 @@
 import { Node, visit } from 'unist-util-visit';
 
 const INLINE_CODE =
-	'inline-block rounded-lg border border-gray-6 bg-gray-3 px-1.5 py-px font-mono text-sm';
+	'inline-block rounded-md border border-gray-6 bg-gray-3 px-1 py-px font-mono text-sm';
 
 const CODE_DIV = '-mx-4 overflow-hidden rounded-xl';
 const CODE_TITLE =
 	'flex justify-between bg-gray-3 px-4 py-2 text-base text-gray-11';
 const CODE_PRE =
-	'overflow-x-auto border border-gray-3 bg-gray-2 p-4 font-mono text-sm';
+	'overflow-x-auto bg-gray-2 p-4 font-mono text-sm leading-relaxed';
 
 export function rehypePrettyCodeTransformer() {
 	return (tree: Node) => {
