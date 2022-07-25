@@ -49,7 +49,7 @@ function Item({
 						<ArrowTopRight
 							width="14"
 							height="14"
-							className="opacity-0 transition-opacity group-hover:opacity-100"
+							className="text-gray-8 opacity-0 transition-opacity group-hover:opacity-100"
 						/>
 					</div>
 
