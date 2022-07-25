@@ -75,7 +75,11 @@ export function Navbar() {
 										initial={{ opacity: 0, y: 30 }}
 										animate={{ opacity: 1, y: 0 }}
 										exit={{ opacity: 0, y: 30 }}
-										transition={{ delay: 0.025, ease: 'easeInOut' }}
+										transition={{
+											duration: 0.3,
+											delay: 0.1,
+											ease: 'easeInOut'
+										}}
 										onClick={(e) => {
 											e.preventDefault();
 											window.scrollTo({ top: 0, behavior: 'smooth' });
