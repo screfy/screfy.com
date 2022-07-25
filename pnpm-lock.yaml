@@ -25,6 +25,7 @@ specifiers:
   prettier-plugin-tailwindcss: ^0.1.12
   react: ^18.2.0
   react-dom: ^18.2.0
+  react-use-lanyard: ^0.1.2
   reading-time: ^1.5.0
   rehype-autolink-headings: ^6.1.1
   rehype-pretty-code: ^0.3.2
@@ -47,6 +48,7 @@ dependencies:
   next-contentlayer: 0.2.6_7gpduzaz4csxytrukenoyuq3te
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  react-use-lanyard: 0.1.2_react@18.2.0
   reading-time: 1.5.0
   rehype-autolink-headings: 6.1.1
   rehype-pretty-code: 0.3.2_shiki@0.10.1
@@ -4093,6 +4095,16 @@ packages:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
     dev: true
 
+  /react-use-lanyard/0.1.2_react@18.2.0:
+    resolution: {integrity: sha512-QScCarw4MQelEhjcQO9HvTKWUfpIvt+ZcMPvOOaaDRJk/QNPml27rNzILM7k4TrhrevSuMmgF+3WJtTcUlqidA==}
+    peerDependencies:
+      react: '>=16'
+    dependencies:
+      react: 18.2.0
+      swr: 1.3.0_react@18.2.0
+      tslib: 2.4.0
+    dev: false
+
   /react/18.2.0:
     resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
     engines: {node: '>=0.10.0'}
@@ -4482,6 +4494,14 @@ packages:
   /supports-preserve-symlinks-flag/1.0.0:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
+
+  /swr/1.3.0_react@18.2.0:
+    resolution: {integrity: sha512-dkghQrOl2ORX9HYrMDtPa7LTVHJjCTeZoB1dqTbnnEDlSvN8JEKpYIYurDfvbQFUUS8Cg8PceFVZNkW0KNNYPw==}
+    peerDependencies:
+      react: ^16.11.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /tailwindcss-radix/2.4.0:
     resolution: {integrity: sha512-VkCXBU98s4gDCO9N+exdJ/p0HRKiN8mxDUIX53J2NyBX61BvPr268b+hP5TEHqO0stdTCQJMpcnjwCwFGDisXQ==}

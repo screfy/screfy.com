@@ -38,7 +38,12 @@ module.exports = {
 				}
 			}
 		},
-		colors
+		colors: {
+			...colors,
+			spotify: {
+				DEFAULT: '#1ED760'
+			}
+		}
 	},
 	plugins: [require('tailwindcss-radix')()]
 };
