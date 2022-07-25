@@ -9,7 +9,7 @@ export default function App({ Component, pageProps }: AppProps) {
 			<div className="flex min-h-screen flex-col items-center">
 				<Navbar />
 
-				<main className="mt-36 w-full max-w-screen-sm flex-1 space-y-14">
+				<main className="mt-36 grid flex-1 grid-cols-[1fr,minmax(auto,17.5rem),min(40rem,100%),minmax(auto,17.5rem),1fr] gap-y-14 gap-x-8 [&>*]:col-start-3">
 					<Component {...pageProps} />
 				</main>
 

@@ -1,4 +1,5 @@
 import { defineDocumentType, makeSource } from 'contentlayer/source-files';
+import GitHubSlugger from 'github-slugger';
 import readingTime from 'reading-time';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypePrettyCode from 'rehype-pretty-code';
@@ -9,6 +10,8 @@ import {
 	resolveTypedDocument
 } from './src/contentlayer';
 import theme from './theme.json';
+
+const HEADING_REGEX = /(#{1,6})\s+(.+)/g;
 
 const Post = defineDocumentType(() => ({
 	name: 'Post',
@@ -32,6 +35,22 @@ const Post = defineDocumentType(() => ({
 		slug: {
 			type: 'string',
 			resolve: ({ _raw }) => _raw.sourceFileName.replace('.mdx', '')
+		},
+		headings: {
+			type: 'json',
+			resolve: resolveTypedDocument<{ body: { raw: string } }>(({ body }) => {
+				const slugger = new GitHubSlugger();
+
+				const headings = Array.from(body.raw.matchAll(HEADING_REGEX))
+					.map((value) => ({
+						size: value[1].length,
+						content: value[2],
+						slug: slugger.slug(value[2])
+					}))
+					.filter(({ size }) => size <= 3);
+
+				return headings;
+			})
 		},
 		meta: {
 			type: 'json',

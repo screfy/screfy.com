@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@radix-ui/colors': ^0.1.8
   '@radix-ui/react-tooltip': ^1.0.0
+  '@types/github-slugger': ^1.3.0
   '@types/node': ^18.0.6
   '@types/react': ^18.0.15
   '@types/react-dom': ^18.0.6
@@ -18,6 +19,7 @@ specifiers:
   eslint-config-prettier: ^8.5.0
   eslint-plugin-prettier: ^4.2.1
   framer-motion: ^6.5.1
+  github-slugger: ^1.4.0
   next: ^12.2.2
   next-contentlayer: ^0.2.6
   postcss: ^8.4.14
@@ -44,6 +46,7 @@ dependencies:
   contentlayer: 0.2.6
   date-fns: 2.29.1
   framer-motion: 6.5.1_biqbaboplfbrettd7655fr4n2y
+  github-slugger: 1.4.0
   next: 12.2.2_biqbaboplfbrettd7655fr4n2y
   next-contentlayer: 0.2.6_7gpduzaz4csxytrukenoyuq3te
   react: 18.2.0
@@ -59,6 +62,7 @@ dependencies:
 
 devDependencies:
   '@radix-ui/colors': 0.1.8
+  '@types/github-slugger': 1.3.0
   '@types/node': 18.0.6
   '@types/react': 18.0.15
   '@types/react-dom': 18.0.6
@@ -1034,6 +1038,10 @@ packages:
   /@types/estree/1.0.0:
     resolution: {integrity: sha512-WulqXMDUTYAXCjZnk6JtIHPigp55cVtDgDrO2gHRwhyJto21+1zbVCtOYB2L1F9w4qCQ0rOGWBnBe0FNTiEJIQ==}
     dev: false
+
+  /@types/github-slugger/1.3.0:
+    resolution: {integrity: sha512-J/rMZa7RqiH/rT29TEVZO4nBoDP9XJOjnbbIofg7GQKs4JIduEO3WLpte+6WeUz/TcrXKlY+bM7FYrp8yFB+3g==}
+    dev: true
 
   /@types/hast/2.3.4:
     resolution: {integrity: sha512-wLEm0QvaoawEDoTRwzTXp4b4jpwiJDvR5KMnFnVodm3scufTlBOWRD6N1OBf9TZMhjlNsSfcO5V+7AF4+Vy+9g==}
