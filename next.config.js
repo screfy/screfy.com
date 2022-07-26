@@ -8,6 +8,9 @@ module.exports = withContentlayer({
 		domains: ['s2.googleusercontent.com', 'i.scdn.co']
 	},
 	experimental: {
-		newNextLinkBehavior: true
+		newNextLinkBehavior: true,
+		images: {
+			allowFutureImage: true
+		}
 	}
 });

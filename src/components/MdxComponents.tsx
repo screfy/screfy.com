@@ -1,8 +1,8 @@
+import { Image } from './Image';
 import { Link } from './Link';
 
-// TODO: ol, image
-
 export const components = {
+	Image,
 	a(props: JSX.IntrinsicElements['a']) {
 		if (props.href?.startsWith('#')) {
 			return <a {...props} />;
