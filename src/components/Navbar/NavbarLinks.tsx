@@ -35,20 +35,28 @@ function NavbarItem({ href, icon, label }: NavbarItemProps) {
 			<Tooltip.Root>
 				<Tooltip.Trigger asChild>
 					<Link
+						className="flex items-center space-x-1.5"
 						href={href}
-						className={clsx(
-							'rounded-xl bg-gray-3 p-2 text-gray-8 transition-colors hover:bg-gray-4 hover:text-gray-9',
-							asPath === href && 'bg-gray-4 text-gray-9'
-						)}
 						aria-label={label}
 					>
-						{icon}
+						<div
+							className={clsx(
+								'rounded-xl bg-gray-3 p-2 text-gray-8 transition-colors hover:bg-gray-4 hover:text-gray-9',
+								asPath === href && 'bg-gray-4 text-gray-9'
+							)}
+						>
+							{icon}
+						</div>
+
+						{!visible && (
+							<p className="block text-base text-gray-11 md:hidden">{label}</p>
+						)}
 					</Link>
 				</Tooltip.Trigger>
 
 				<Tooltip.Portal>
 					<Tooltip.Content
-						className="hidden rounded-lg border border-gray-6 bg-gray-3 px-1 py-px text-sm text-gray-11 shadow-md radix-state-delayed-open:animate-tooltip-open xl:block"
+						className="hidden rounded-lg border border-gray-6 bg-gray-3 px-1 py-px text-sm text-gray-11 shadow-md radix-state-delayed-open:animate-tooltip-open md:block"
 						side="bottom"
 						sideOffset={visible ? 16 : 6}
 					>
