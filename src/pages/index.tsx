@@ -24,7 +24,7 @@ export default function Home() {
 		<div className="space-y-10">
 			<motion.div
 				ref={ref}
-				className="flex items-center justify-between"
+				className="flex flex-col justify-between space-y-4 md:flex-row md:items-center md:space-y-0"
 				variants={variants}
 				initial="initial"
 				animate={inView ? 'initial' : 'animate'}

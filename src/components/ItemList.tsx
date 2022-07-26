@@ -42,11 +42,13 @@ function Item({
 
 			<div className="flex w-full items-center justify-between border-b border-gray-6 py-5">
 				<div>
-					<p>{title}</p>
-					<p className="text-base leading-none text-gray-11">{subtitle}</p>
+					<p className="text-base md:text-lg">{title}</p>
+					<p className="text-sm leading-none text-gray-11 md:text-base">
+						{subtitle}
+					</p>
 				</div>
 
-				<p className="text-base text-gray-11">{right}</p>
+				<p className="text-sm text-gray-11 md:text-base">{right}</p>
 			</div>
 		</a>
 	);

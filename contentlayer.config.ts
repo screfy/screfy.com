@@ -114,11 +114,7 @@ export default makeSource({
 			[
 				rehypePrettyCode,
 				{
-					theme,
-					tokensMap: {
-						fn: 'entity.name.function',
-						objKey: 'meta.object-literal.key'
-					}
+					theme
 				}
 			],
 			[

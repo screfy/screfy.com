@@ -25,7 +25,7 @@ export function getStaticProps() {
 			imageUrl,
 			subtitle: sanitizedUrl,
 			right: new Date(date).toLocaleDateString('en-US', {
-				month: 'long',
+				month: 'short',
 				year: 'numeric'
 			})
 		})

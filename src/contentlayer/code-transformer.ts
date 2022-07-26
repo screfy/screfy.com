@@ -3,11 +3,11 @@ import { Node, visit } from 'unist-util-visit';
 const INLINE_CODE =
 	'inline-block rounded-md border border-gray-6 bg-gray-3 px-1 py-px font-mono text-sm';
 
-const CODE_DIV = '-mx-4 overflow-hidden rounded-xl';
+const CODE_DIV = '-mx-5 overflow-hidden md:-mx-4 md:rounded-xl';
 const CODE_TITLE =
-	'flex justify-between bg-gray-3 px-4 py-2 text-base text-gray-11';
+	'flex justify-between bg-gray-3 px-5 py-2 text-base text-gray-11 md:px-4';
 const CODE_PRE =
-	'overflow-x-auto bg-gray-2 p-4 font-mono text-sm leading-relaxed';
+	'overflow-x-auto bg-gray-2 p-5 font-mono text-sm leading-relaxed md:p-4';
 
 export function rehypePrettyCodeTransformer() {
 	return (tree: Node) => {

@@ -51,14 +51,14 @@ export function Navbar() {
 		<AnimatePresence>
 			{visible && (
 				<motion.nav
-					className="fixed top-5 z-50 w-full max-w-screen-sm"
+					className="fixed top-5 z-50 w-full px-2 md:max-w-screen-sm md:px-0"
 					variants={variants}
 					initial="initial"
 					animate="animate"
 					exit="initial"
 					transition={{ duration: 0.2, ease: 'easeInOut' }}
 				>
-					<div className="-mx-4 flex flex-1 items-center justify-between rounded-xl bg-gray-3/60 px-4 py-2 shadow-md backdrop-blur">
+					<div className="flex flex-1 items-center justify-between rounded-xl bg-gray-3/60 px-3 py-2 shadow-md backdrop-blur md:-mx-4 md:px-4">
 						<div className="flex items-center space-x-4 overflow-hidden">
 							<Link
 								className="h-10 w-10 rounded-full bg-blue-9"
@@ -69,7 +69,7 @@ export function Navbar() {
 							<AnimatePresence>
 								{title && (
 									<motion.a
-										className="max-w-md truncate font-bold"
+										className="hidden truncate font-bold md:block md:max-w-sm lg:max-w-md"
 										href="#top"
 										aria-label="Scroll to top"
 										initial={{ opacity: 0, y: 30 }}
