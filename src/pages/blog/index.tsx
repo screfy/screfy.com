@@ -1,6 +1,7 @@
 import { pick } from 'contentlayer/client';
 import { compareDesc } from 'date-fns';
 import { InferGetStaticPropsType } from 'next';
+import { NextSeo } from 'next-seo';
 import Link from 'next/link';
 import { allPosts } from '../../../.contentlayer/generated';
 import { PostMeta } from '../../components/PostMeta';
@@ -44,6 +45,8 @@ function PostItem({
 export default function Blog({ posts }: Props) {
 	return (
 		<div className="space-y-8">
+			<NextSeo title="Blog" />
+
 			<div className="space-y-5">
 				<h1 className="text-4xl font-bold">Blog</h1>
 

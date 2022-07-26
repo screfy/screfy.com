@@ -3,6 +3,7 @@ import { pick } from 'contentlayer/client';
 import { useInView } from 'framer-motion';
 import { GetStaticPropsContext, InferGetStaticPropsType } from 'next';
 import { useMDXComponent } from 'next-contentlayer/hooks';
+import { NextSeo } from 'next-seo';
 import { useEffect } from 'react';
 import { useRef } from 'react';
 import { allPosts, Post as PostType } from '../../../.contentlayer/generated';
@@ -50,6 +51,8 @@ export default function Post({
 
 	return (
 		<>
+			<NextSeo title={post.title} description={post.summary} />
+
 			<div className="space-y-2">
 				<h1 ref={ref} className="text-4xl font-bold">
 					{post.title}
@@ -97,7 +100,7 @@ export function getStaticPaths() {
 export function getStaticProps(ctx: GetStaticPropsContext) {
 	const post = pick(
 		allPosts.find(({ slug }) => slug === ctx.params?.slug) as PostType,
-		['title', 'body', 'publishedAt', 'headings', 'meta']
+		['title', 'summary', 'body', 'publishedAt', 'headings', 'meta']
 	);
 
 	return {

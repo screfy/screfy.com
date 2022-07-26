@@ -1,4 +1,5 @@
 import { motion, useInView } from 'framer-motion';
+import { NextSeo } from 'next-seo';
 import { useEffect, useRef } from 'react';
 import { useNavbar } from '../components/Navbar';
 import { NavbarLinks } from '../components/Navbar/NavbarLinks';
@@ -22,6 +23,8 @@ export default function Home() {
 
 	return (
 		<div className="space-y-10">
+			<NextSeo title="Home" />
+
 			<motion.div
 				ref={ref}
 				className="flex flex-col justify-between space-y-4 md:flex-row md:items-center md:space-y-0"

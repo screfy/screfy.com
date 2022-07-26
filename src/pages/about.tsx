@@ -1,4 +1,5 @@
 import { InferGetStaticPropsType } from 'next';
+import { NextSeo } from 'next-seo';
 import { ItemList } from '../components/ItemList';
 import { Link } from '../components/Link';
 import { getTopTracks } from '../utils/spotify';
@@ -8,6 +9,8 @@ export default function About({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
 	return (
 		<>
+			<NextSeo title="About" />
+
 			<div className="space-y-5">
 				<h1 className="text-4xl font-bold">About</h1>
 

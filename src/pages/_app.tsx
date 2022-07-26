@@ -1,11 +1,55 @@
 import 'tailwindcss/tailwind.css';
-import { AppProps } from 'next/app';
+import type { AppProps } from 'next/app';
+import { DefaultSeo } from 'next-seo';
+import { useRouter } from 'next/router';
 import { Navbar, NavbarProvider } from '../components/Navbar';
 import { Footer } from '../components/Footer';
 
+const BASE_URL = 'https://screfy.com';
+
 export default function App({ Component, pageProps }: AppProps) {
+	const { asPath } = useRouter();
+	const url = `${BASE_URL}${asPath}`;
+
 	return (
 		<NavbarProvider>
+			<DefaultSeo
+				titleTemplate="%s · screfy.com"
+				description="A self-taught software engineer interested in web and serverless technologies and DevOps practices."
+				canonical={url}
+				additionalMetaTags={[
+					{
+						name: 'viewport',
+						content: 'width=device-width, initial-scale=1.0'
+					},
+					{
+						name: 'theme-color',
+						content: '#161616'
+					},
+					{
+						name: 'url',
+						content: url
+					}
+				]}
+				additionalLinkTags={[
+					{
+						rel: 'shortcut icon',
+						href: '/favicon.ico',
+						type: 'image/x-icon'
+					}
+				]}
+				openGraph={{
+					type: 'website',
+					site_name: 'screfy.com',
+					images: [{ url: `${BASE_URL}/og.png` }]
+				}}
+				twitter={{
+					handle: '@screfy_',
+					site: '@screfy_',
+					cardType: 'summary_large_image'
+				}}
+			/>
+
 			<div className="flex min-h-screen flex-col items-center">
 				<Navbar />
 

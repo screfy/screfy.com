@@ -22,6 +22,7 @@ specifiers:
   github-slugger: ^1.4.0
   next: ^12.2.2
   next-contentlayer: ^0.2.6
+  next-seo: ^5.5.0
   postcss: ^8.4.14
   prettier: ^2.7.1
   prettier-plugin-tailwindcss: ^0.1.12
@@ -49,6 +50,7 @@ dependencies:
   github-slugger: 1.4.0
   next: 12.2.2_biqbaboplfbrettd7655fr4n2y
   next-contentlayer: 0.2.6_7gpduzaz4csxytrukenoyuq3te
+  next-seo: 5.5.0_7gpduzaz4csxytrukenoyuq3te
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-use-lanyard: 0.1.2_react@18.2.0
@@ -3650,6 +3652,18 @@ packages:
       - '@effect-ts/otel-node'
       - markdown-wasm
       - supports-color
+    dev: false
+
+  /next-seo/5.5.0_7gpduzaz4csxytrukenoyuq3te:
+    resolution: {integrity: sha512-5ouBHFtx8YrSDW44lj0qIEQ+oMcz6stgoITB+SqHUZbhgizoJsyLmq73gJ0lxtEKpcN8vG2QgRIJfdb8OAPChw==}
+    peerDependencies:
+      next: ^8.1.1-canary.54 || >=9.0.0
+      react: '>=16.0.0'
+      react-dom: '>=16.0.0'
+    dependencies:
+      next: 12.2.2_biqbaboplfbrettd7655fr4n2y
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
     dev: false
 
   /next/12.2.2_biqbaboplfbrettd7655fr4n2y:

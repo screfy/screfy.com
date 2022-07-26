@@ -1,5 +1,6 @@
-import { allSites } from '../../.contentlayer/generated';
 import { InferGetStaticPropsType } from 'next';
+import { NextSeo } from 'next-seo';
+import { allSites } from '../../.contentlayer/generated';
 import { ItemList, ItemProps } from '../components/ItemList';
 
 export default function Design({
@@ -7,8 +8,10 @@ export default function Design({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
 	return (
 		<div className="space-y-8">
+			<NextSeo title="Design" />
+
 			<div className="space-y-5">
-				<h1 className="text-2xl font-bold">Design</h1>
+				<h1 className="text-4xl font-bold">Design</h1>
 				<p>Below you can find a collection of sites I like.</p>
 			</div>
 
