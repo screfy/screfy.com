@@ -53,27 +53,33 @@ export default function Post({
 		<>
 			<NextSeo title={post.title} description={post.summary} />
 
-			<div className="space-y-2">
-				<h1 ref={ref} className="text-4xl font-bold">
-					{post.title}
-				</h1>
+			<div className="space-y-14">
+				<div className="space-y-2">
+					<h1 ref={ref} className="text-4xl font-bold">
+						{post.title}
+					</h1>
 
-				<div className="flex items-center space-x-2 text-base text-gray-11">
-					<PostMeta
-						data={[
-							new Date(post.publishedAt).toLocaleDateString('en-US', {
-								day: 'numeric',
-								month: 'short',
-								year: 'numeric'
-							}),
-							post.meta.text,
-							`${post.meta.words} words`
-						]}
-					/>
+					<div className="flex items-center space-x-2 text-base text-gray-11">
+						<PostMeta
+							data={[
+								new Date(post.publishedAt).toLocaleDateString('en-US', {
+									day: 'numeric',
+									month: 'short',
+									year: 'numeric'
+								}),
+								post.meta.text,
+								`${post.meta.words} words`
+							]}
+						/>
+					</div>
+				</div>
+
+				<div className="space-y-6">
+					<MDXComponent components={components} />
 				</div>
 			</div>
 
-			<div className="sticky top-5 !col-start-4 row-span-6 ml-3 hidden space-y-2 self-start text-base xl:block">
+			<div className="sticky top-5 !col-start-4 ml-3 hidden space-y-2 self-start text-base xl:block">
 				<p className="text-sm uppercase text-gray-9">On this page</p>
 
 				<div className="flex flex-col space-y-1">
@@ -81,10 +87,6 @@ export default function Post({
 						<TocItem key={props.slug} {...props} />
 					))}
 				</div>
-			</div>
-
-			<div className="space-y-6">
-				<MDXComponent components={components} />
 			</div>
 		</>
 	);
