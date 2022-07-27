@@ -6,3 +6,5 @@ node_modules
 .env*.local
 .pnpm-debug.log*
 *.tsbuildinfo
+robots.txt
+sitemap*.xml

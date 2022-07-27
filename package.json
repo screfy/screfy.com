@@ -4,13 +4,15 @@
 	"private": true,
 	"scripts": {
 		"dev": "next dev",
-		"build": "next build",
+		"build": "next build && pnpm sitemap",
 		"start": "next start",
 		"lint": "next lint",
+		"sitemap": "next-sitemap --config next-sitemap.config.mjs",
 		"format": "prettier --write .",
 		"typecheck": "tsc"
 	},
 	"dependencies": {
+		"@next/env": "^12.2.3",
 		"@radix-ui/react-tooltip": "^1.0.0",
 		"class-variance-authority": "^0.2.3",
 		"clsx": "^1.2.1",
@@ -21,6 +23,7 @@
 		"next": "^12.2.2",
 		"next-contentlayer": "^0.2.6",
 		"next-seo": "^5.5.0",
+		"next-sitemap": "^3.1.14",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-use-lanyard": "^0.1.2",

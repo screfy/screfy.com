@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@next/env': ^12.2.3
   '@radix-ui/colors': ^0.1.8
   '@radix-ui/react-tooltip': ^1.0.0
   '@types/github-slugger': ^1.3.0
@@ -23,6 +24,7 @@ specifiers:
   next: ^12.2.2
   next-contentlayer: ^0.2.6
   next-seo: ^5.5.0
+  next-sitemap: ^3.1.14
   postcss: ^8.4.14
   prettier: ^2.7.1
   prettier-plugin-tailwindcss: ^0.1.12
@@ -41,6 +43,7 @@ specifiers:
   unist-util-visit: ^4.1.0
 
 dependencies:
+  '@next/env': 12.2.3
   '@radix-ui/react-tooltip': 1.0.0_bb2bxwco6ptpubzwpazr52qf6i
   class-variance-authority: 0.2.3_typescript@4.7.4
   clsx: 1.2.1
@@ -51,6 +54,7 @@ dependencies:
   next: 12.2.2_biqbaboplfbrettd7655fr4n2y
   next-contentlayer: 0.2.6_7gpduzaz4csxytrukenoyuq3te
   next-seo: 5.5.0_7gpduzaz4csxytrukenoyuq3te
+  next-sitemap: 3.1.14_tdegcdwimlm7hhb6on5blpsmpa
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-use-lanyard: 0.1.2_react@18.2.0
@@ -204,6 +208,10 @@ packages:
       oo-ascii-tree: 1.62.0
       ts-pattern: 4.0.5
       type-fest: 2.17.0
+    dev: false
+
+  /@corex/deepmerge/4.0.29:
+    resolution: {integrity: sha512-q/yVUnqckA8Do+EvAfpy7RLdumnBy9ZsducMUtZTvpdbJC7azEf1hGtnYYxm0QfphYxjwggv6XtH64prvS1W+A==}
     dev: false
 
   /@effect-ts/core/0.58.1:
@@ -469,6 +477,10 @@ packages:
 
   /@next/env/12.2.2:
     resolution: {integrity: sha512-BqDwE4gDl1F608TpnNxZqrCn6g48MBjvmWFEmeX5wEXDXh3IkAOw6ASKUgjT8H4OUePYFqghDFUss5ZhnbOUjw==}
+    dev: false
+
+  /@next/env/12.2.3:
+    resolution: {integrity: sha512-2lWKP5Xcvnor70NaaROZXBvU8z9mFReePCG8NhZw6NyNGnPvC+8s+Cre/63LAB1LKzWw/e9bZJnQUg0gYFRb2Q==}
     dev: false
 
   /@next/eslint-plugin-next/12.2.2:
@@ -3608,7 +3620,6 @@ packages:
 
   /minimist/1.2.6:
     resolution: {integrity: sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==}
-    dev: true
 
   /mri/1.2.0:
     resolution: {integrity: sha512-tzzskb3bG8LvYGFF/mDTpq3jpI6Q9wc3LEmBaghu+DdCssd1FakN7Bc0hVNmEyGq1bq3RgfkCb3cmQLpNPOroA==}
@@ -3664,6 +3675,20 @@ packages:
       next: 12.2.2_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
+    dev: false
+
+  /next-sitemap/3.1.14_tdegcdwimlm7hhb6on5blpsmpa:
+    resolution: {integrity: sha512-NzlFFapr/GNCHj77ocg8MidtkpY/jY4J2FUjHtV/Z/lW3nbaD2VZjwlpgbwOrgYzByjNETVdvU2K18kTJdU3WA==}
+    engines: {node: '>=14.18'}
+    hasBin: true
+    peerDependencies:
+      '@next/env': '*'
+      next: '*'
+    dependencies:
+      '@corex/deepmerge': 4.0.29
+      '@next/env': 12.2.3
+      minimist: 1.2.6
+      next: 12.2.2_biqbaboplfbrettd7655fr4n2y
     dev: false
 
   /next/12.2.2_biqbaboplfbrettd7655fr4n2y:
