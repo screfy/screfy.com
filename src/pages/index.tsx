@@ -24,7 +24,7 @@ export default function Home() {
 
 	return (
 		<div className="space-y-10">
-			<NextSeo title="Home" />
+			<NextSeo title={undefined} defaultTitle="screfy – Software Engineer" />
 
 			<motion.div
 				ref={ref}

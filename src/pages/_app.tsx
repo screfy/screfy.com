@@ -14,7 +14,7 @@ export default function App({ Component, pageProps }: AppProps) {
 	return (
 		<NavbarProvider>
 			<DefaultSeo
-				titleTemplate="%s · screfy.com"
+				titleTemplate="%s – screfy.com"
 				description="A self-taught software engineer interested in web and serverless technologies and DevOps practices."
 				canonical={url}
 				additionalMetaTags={[
