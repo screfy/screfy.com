@@ -3,6 +3,7 @@ import { NextSeo } from 'next-seo';
 import { useEffect, useRef } from 'react';
 import { useNavbar } from '../components/Navbar';
 import { NavbarLinks } from '../components/Navbar/NavbarLinks';
+import { Polygon } from '../icons/Polygon';
 
 const variants = {
 	initial: {
@@ -34,7 +35,7 @@ export default function Home() {
 				transition={{ duration: 0.6, ease: 'easeInOut' }}
 			>
 				<div className="flex items-center space-x-4">
-					<div className="h-16 w-16 rounded-full bg-blue-9" />
+					<Polygon width="64" height="64" />
 
 					<div>
 						<h1 className="text-3xl font-bold">screfy</h1>

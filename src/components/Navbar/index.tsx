@@ -8,6 +8,7 @@ import {
 	useEffect,
 	useState
 } from 'react';
+import { Polygon } from '../../icons/Polygon';
 import { NavbarLinks } from './NavbarLinks';
 
 const variants = {
@@ -60,11 +61,9 @@ export function Navbar() {
 				>
 					<div className="flex flex-1 items-center justify-between rounded-xl bg-gray-3/60 px-3 py-2 shadow-md backdrop-blur md:-mx-4 md:px-4">
 						<div className="flex items-center space-x-4 overflow-hidden">
-							<Link
-								className="h-10 w-10 rounded-full bg-blue-9"
-								href="/"
-								aria-label="Home"
-							/>
+							<Link href="/" aria-label="Home">
+								<Polygon width="36" height="36" />
+							</Link>
 
 							<AnimatePresence>
 								{title && (
