@@ -8,6 +8,8 @@ module.exports = withContentlayer({
 		domains: ['s2.googleusercontent.com', 'i.scdn.co']
 	},
 	experimental: {
+		legacyBrowsers: false,
+		browsersListForSwc: true,
 		newNextLinkBehavior: true,
 		images: {
 			allowFutureImage: true
