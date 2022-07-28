@@ -23,7 +23,7 @@ export default function Home() {
 	useEffect(() => setVisible(!inView), [inView]);
 
 	return (
-		<div className="space-y-10">
+		<div className="space-y-8">
 			<NextSeo title={undefined} defaultTitle="screfy – Software Engineer" />
 
 			<motion.div
