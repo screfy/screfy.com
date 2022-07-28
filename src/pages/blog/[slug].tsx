@@ -77,7 +77,7 @@ export default function Post({
 				</div>
 			</div>
 
-			<div className="sticky top-5 !col-start-4 ml-3 hidden space-y-2 self-start text-base xl:block">
+			<div className="sticky top-5 !col-start-3 ml-3 hidden max-w-[14rem] space-y-2 self-start text-base xl:block">
 				<p className="text-sm uppercase text-gray-9">On this page</p>
 
 				<div className="flex flex-col space-y-1">
