@@ -2,8 +2,9 @@ import 'tailwindcss/tailwind.css';
 import type { AppProps } from 'next/app';
 import { DefaultSeo } from 'next-seo';
 import { useRouter } from 'next/router';
-import { Navbar, NavbarProvider } from '../components/Navbar';
+import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
+import { NavbarProvider } from '../hooks/use-navbar';
 
 const BASE_URL = 'https://screfy.com';
 

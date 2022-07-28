@@ -2,14 +2,13 @@ import clsx from 'clsx';
 import { pick } from 'contentlayer/client';
 import { useInView } from 'framer-motion';
 import { GetStaticPropsContext, InferGetStaticPropsType } from 'next';
-import { useMDXComponent } from 'next-contentlayer/hooks';
 import { NextSeo } from 'next-seo';
-import { useEffect } from 'react';
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { allPosts, Post as PostType } from '../../../.contentlayer/generated';
 import { components } from '../../components/MdxComponents';
-import { useNavbar } from '../../components/Navbar';
 import { PostMeta } from '../../components/PostMeta';
+import { useMdxComponent } from '../../hooks/use-mdx-component';
+import { useNavbar } from '../../hooks/use-navbar';
 
 interface TocItemProps {
 	size: number;
@@ -25,7 +24,6 @@ function TocItem({ size, content, slug }: TocItemProps) {
 				size === 2 && 'ml-2',
 				size === 3 && 'ml-4'
 			)}
-			key={slug}
 			href={`#${slug}`}
 		>
 			{content}
@@ -36,7 +34,7 @@ function TocItem({ size, content, slug }: TocItemProps) {
 export default function Post({
 	post
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-	const MDXComponent = useMDXComponent(post.body.code);
+	const MdxComponent = useMdxComponent(post.body.code);
 
 	const { setTitle } = useNavbar();
 
@@ -75,7 +73,7 @@ export default function Post({
 				</div>
 
 				<div className="space-y-6">
-					<MDXComponent components={components} />
+					<MdxComponent components={components} />
 				</div>
 			</div>
 

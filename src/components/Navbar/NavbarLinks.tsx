@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { ReactNode } from 'react';
-import { useNavbar } from '.';
+import { useNavbar } from '../../hooks/use-navbar';
 import { Annotation } from '../../icons/Annotation';
 import { UserCircle } from '../../icons/UserCircle';
 

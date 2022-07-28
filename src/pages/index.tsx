@@ -1,8 +1,8 @@
 import { motion, useInView } from 'framer-motion';
 import { NextSeo } from 'next-seo';
 import { useEffect, useRef } from 'react';
-import { useNavbar } from '../components/Navbar';
 import { NavbarLinks } from '../components/Navbar/NavbarLinks';
+import { useNavbar } from '../hooks/use-navbar';
 import { Polygon } from '../icons/Polygon';
 
 const variants = {
