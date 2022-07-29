@@ -1,5 +1,6 @@
 import { Image } from './Image';
 import { Link } from './Link';
+import { NowPlayingExample } from './lab/NowPlayingExample';
 
 export const components = {
 	Image,
@@ -29,5 +30,7 @@ export const components = {
 				{...props}
 			/>
 		);
-	}
+	},
+	// Components used in posts as examples:
+	NowPlayingExample
 };

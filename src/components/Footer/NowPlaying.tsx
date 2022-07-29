@@ -29,7 +29,7 @@ function Bar({
 	);
 }
 
-function Bars() {
+export function Bars() {
 	return (
 		<div className="flex items-end space-x-0.5">
 			<Bar height="h-3" scale={0.2} />
