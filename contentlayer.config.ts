@@ -36,6 +36,17 @@ const Post = defineDocumentType(() => ({
 			type: 'string',
 			resolve: ({ _raw }) => _raw.sourceFileName.replace('.mdx', '')
 		},
+		publishedAtHuman: {
+			type: 'string',
+			resolve: resolveTypedDocument<{ publishedAt: string }>(
+				({ publishedAt }) =>
+					new Date(publishedAt).toLocaleDateString('en-US', {
+						day: 'numeric',
+						month: 'short',
+						year: 'numeric'
+					})
+			)
+		},
 		headings: {
 			type: 'json',
 			resolve: resolveTypedDocument<{ body: { raw: string } }>(({ body }) => {
@@ -73,12 +84,21 @@ const Site = defineDocumentType(() => ({
 			type: 'string',
 			required: true
 		},
-		date: {
+		createdAt: {
 			type: 'date',
 			required: true
 		}
 	},
 	computedFields: {
+		createdAtHuman: {
+			type: 'string',
+			resolve: resolveTypedDocument<{ createdAt: string }>(({ createdAt }) =>
+				new Date(createdAt).toLocaleDateString('en-US', {
+					month: 'short',
+					year: 'numeric'
+				})
+			)
+		},
 		sanitizedUrl: {
 			type: 'string',
 			resolve: resolveTypedDocument<{ url: string }>(({ url }) => {

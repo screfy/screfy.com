@@ -22,15 +22,12 @@ export default function Design({
 
 export function getStaticProps() {
 	const sites: ItemProps[] = allSites.map(
-		({ title, url, sanitizedUrl, imageUrl, date }) => ({
+		({ title, url, sanitizedUrl, imageUrl, createdAtHuman }) => ({
 			title,
 			url,
 			imageUrl,
 			subtitle: sanitizedUrl,
-			right: new Date(date).toLocaleDateString('en-US', {
-				month: 'short',
-				year: 'numeric'
-			})
+			right: createdAtHuman
 		})
 	);
 

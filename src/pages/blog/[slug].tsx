@@ -9,6 +9,7 @@ import { components } from '../../components/MdxComponents';
 import { PostMeta } from '../../components/PostMeta';
 import { useMdxComponent } from '../../hooks/use-mdx-component';
 import { useNavbar } from '../../hooks/use-navbar';
+import { generateOpenGraphImage } from '../../utils/open-graph';
 
 interface TocItemProps {
 	size: number;
@@ -49,7 +50,20 @@ export default function Post({
 
 	return (
 		<>
-			<NextSeo title={post.title} description={post.summary} />
+			<NextSeo
+				title={post.title}
+				description={post.summary}
+				openGraph={{
+					images: [
+						{
+							url: generateOpenGraphImage({
+								title: post.title,
+								date: post.publishedAtHuman
+							})
+						}
+					]
+				}}
+			/>
 
 			<div className="space-y-14">
 				<div className="space-y-2">
@@ -60,11 +74,7 @@ export default function Post({
 					<div className="flex items-center space-x-2 text-base text-gray-11">
 						<PostMeta
 							data={[
-								new Date(post.publishedAt).toLocaleDateString('en-US', {
-									day: 'numeric',
-									month: 'short',
-									year: 'numeric'
-								}),
+								post.publishedAtHuman,
 								post.meta.text,
 								`${post.meta.words} words`
 							]}
@@ -100,7 +110,7 @@ export function getStaticPaths() {
 export function getStaticProps(ctx: GetStaticPropsContext) {
 	const post = pick(
 		allPosts.find(({ slug }) => slug === ctx.params?.slug) as PostType,
-		['title', 'summary', 'body', 'publishedAt', 'headings', 'meta']
+		['title', 'summary', 'body', 'publishedAtHuman', 'headings', 'meta']
 	);
 
 	return {

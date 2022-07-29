@@ -1,5 +1,5 @@
 ---
 title: Raycast Careers
 url: https://raycast.com/careers
-date: 2022-07-23
+createdAt: 2022-07-23
 ---

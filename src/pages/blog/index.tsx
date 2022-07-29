@@ -12,7 +12,7 @@ function PostItem({
 	title,
 	summary,
 	slug,
-	publishedAt,
+	publishedAtHuman,
 	meta
 }: Props['posts'][number]) {
 	return (
@@ -24,16 +24,7 @@ function PostItem({
 				<h2 className="text-2xl font-medium">{title}</h2>
 
 				<div className="flex items-center space-x-2 text-base text-gray-10">
-					<PostMeta
-						data={[
-							new Date(publishedAt).toLocaleDateString('en-US', {
-								day: 'numeric',
-								month: 'short',
-								year: 'numeric'
-							}),
-							meta.text
-						]}
-					/>
+					<PostMeta data={[publishedAtHuman, meta.text]} />
 				</div>
 			</div>
 
@@ -69,7 +60,14 @@ export default function Blog({ posts }: Props) {
 export function getStaticProps() {
 	const posts = allPosts
 		.map((post) =>
-			pick(post, ['title', 'summary', 'slug', 'publishedAt', 'meta'])
+			pick(post, [
+				'title',
+				'summary',
+				'slug',
+				'publishedAt',
+				'publishedAtHuman',
+				'meta'
+			])
 		)
 		.sort((a, b) =>
 			compareDesc(new Date(a.publishedAt), new Date(b.publishedAt))
