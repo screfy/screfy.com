@@ -10,8 +10,8 @@ a good chance to share an overview of how I built it.
 
 # The Idea
 
-I’ve always liked to have a space on the internet where I can share what I’m
-currently building, and what I’m thinking about.
+I've always liked to have a space on the internet where I can share what I'm
+currently building, and what I'm thinking about.
 
 Also, I've challenged myself to create a blog because I've never been good at
 writing articles and I think this could improve my writing skills.
@@ -32,7 +32,7 @@ With Next.js, you have a few different options when it comes to page rendering:
 - **[SSG (Static-site generation)][ssg]** - it will pre-render this page at build time.
 - **[ISR (Incremental Static Regeneration)][isr]** - it will pre-render this page at build time and then on-demand.
 
-I’ve opted for **SSG** for blog and **ISR** for the collection of my favorite
+I've opted for **SSG** for blog and **ISR** for the collection of my favorite
 and most-listened tracks on Spotify, which are automatically updated every 24
 hours.
 
@@ -56,11 +56,11 @@ content into type-safe JSON data.
 
 A simple solution to manage content is a CMS, but I wanted to have an option to
 simply use custom React components in my posts. When using a rich-editor in a
-CMS, it’s not at all clear how to do this and you’re generally limited to the
+CMS, it's not at all clear how to do this and you're generally limited to the
 handful of HTML elements that these tools can render.
 
 [MDX][mdx] is an extension of Markdown that allows you to use custom React
-components, but I didn’t want to focus on setting up MDX with Next.js, so I
+components, but I didn't want to focus on setting up MDX with Next.js, so I
 chose Contentlayer for a few reasons:
 
 - You can just import content as you would any other library or component.
@@ -89,12 +89,12 @@ Next.js, and honestly, I really like their platform.
 
 Whenever I push a change to [my GitHub repository][repository], it is
 automatically deployed using Vercel's [GitHub Integration][github-integration].
-This allows me to focus on code and don’t think about how to deploy my website.
+This allows me to focus on code and don't think about how to deploy my website.
 
 # Design
 
 The design doesn't come naturally to me, so I gravitate towards minimalist
-websites that emphasize content, but just because a design is simple, it doesn’t
+websites that emphasize content, but just because the design is simple, it doesn't
 mean it should be plain.
 
 This design reflects my values of performance and simplicity.
