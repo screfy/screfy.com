@@ -41,34 +41,35 @@ export function Bars() {
 }
 
 export function NowPlaying() {
-	const { data } = useLanyard({
-		userId: DISCORD_USER_ID
+	const { status } = useLanyard({
+		userId: DISCORD_USER_ID,
+		socket: true
 	});
 
 	return (
 		<div className="flex items-center space-x-2">
-			{data?.data.spotify ? (
+			{status?.spotify ? (
 				<Bars />
 			) : (
 				<Spotify className="text-spotify" width="16" height="16" />
 			)}
 
 			<div className="flex space-x-1">
-				{data?.data.spotify?.song ? (
+				{status?.spotify?.song ? (
 					<a
-						href={`https://open.spotify.com/track/${data.data.spotify.track_id}`}
+						href={`https://openstatus?.spotify.com/track/${status.spotify.track_id}`}
 						target="_blank"
 						rel="noreferrer"
-						aria-label={data.data.spotify.song}
+						aria-label={status.spotify.song}
 					>
-						{data?.data.spotify.song}
+						{status.spotify.song}
 					</a>
 				) : (
 					<p>Not playing</p>
 				)}
 				<span className="text-gray-11">·</span>
 				<p className="text-gray-11">
-					{data?.data.spotify?.artist ? data?.data.spotify.artist : 'Spotify'}
+					{status?.spotify?.artist ? status.spotify.artist : 'Spotify'}
 				</p>
 			</div>
 		</div>
