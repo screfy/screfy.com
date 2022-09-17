@@ -1,3 +1,5 @@
+import { IsoDateTimeString } from 'contentlayer/core';
+
 // NOTE: We need to double escape strings for commas and slashes.
 function encode(str: string) {
 	return encodeURIComponent(encodeURIComponent(str));
@@ -8,7 +10,7 @@ export function generateOpenGraphImage({
 	date
 }: {
 	title: string;
-	date: string;
+	date: IsoDateTimeString;
 }) {
 	return [
 		'https://res.cloudinary.com/screfy/image/upload',

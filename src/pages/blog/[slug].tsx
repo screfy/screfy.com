@@ -45,7 +45,9 @@ export default function Post({
 	useEffect(() => {
 		setTitle(inView ? undefined : post.title);
 
-		return () => setTitle(undefined);
+		return () => {
+			setTitle(undefined);
+		};
 	}, [inView]);
 
 	return (
