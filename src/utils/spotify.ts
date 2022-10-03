@@ -1,6 +1,3 @@
-import { format } from 'date-fns';
-import { ItemProps } from '../components/ItemList';
-
 const SPOTIFY_BASIC_TOKEN = Buffer.from(
 	`${process.env.SPOTIFY_CLIENT_ID}:${process.env.SPOTIFY_CLIENT_SECRET}`
 ).toString('base64');
@@ -8,11 +5,22 @@ const SPOTIFY_TOKEN_ENDPOINT = 'https://accounts.spotify.com/api/token';
 const SPOTIFY_TOP_TRACKS_ENDPOINT = `https://api.spotify.com/v1/me/top/tracks`;
 
 interface SpotifyTrack {
+	id: string;
 	name: string;
 	external_urls: { spotify: string };
 	album: { name: string; images: { url: string }[] };
 	artists: { name: string }[];
-	duration_ms: number;
+	explicit: boolean;
+}
+
+export interface TrackProps {
+	id: string;
+	name: string;
+	album: string;
+	artist: string;
+	spotifyUrl: string;
+	albumImageUrl: string;
+	explicit: boolean;
 }
 
 async function getAccessToken(): Promise<string | undefined> {
@@ -32,7 +40,7 @@ async function getAccessToken(): Promise<string | undefined> {
 	return access_token;
 }
 
-export async function getTopTracks(): Promise<ItemProps[]> {
+export async function getTopTracks(): Promise<TrackProps[]> {
 	const token = await getAccessToken();
 
 	if (!token) {
@@ -52,14 +60,14 @@ export async function getTopTracks(): Promise<ItemProps[]> {
 
 	const tracks = (items as SpotifyTrack[])
 		.slice(0, 10)
-		.map(({ name, external_urls, album, artists, duration_ms }) => ({
-			title: name,
-			subtitle: `${album.name} · ${artists
-				.map((artist) => artist.name)
-				.join(', ')}`,
-			right: format(new Date(duration_ms), 'mm:ss'),
-			url: external_urls.spotify,
-			imageUrl: album.images[2].url
+		.map(({ id, name, external_urls, album, artists, explicit }) => ({
+			id,
+			name,
+			album: album.name,
+			artist: artists.map((artist) => artist.name).join(', '),
+			spotifyUrl: external_urls.spotify,
+			albumImageUrl: album.images[1].url,
+			explicit
 		}));
 
 	return tracks;
