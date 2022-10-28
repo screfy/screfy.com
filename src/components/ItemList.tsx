@@ -1,9 +1,9 @@
 import clsx from 'clsx';
-import Image from 'next/future/image';
+import Image from 'next/image';
 
 interface ItemListProps {
 	items: ItemProps[];
-	size?: string | number;
+	size?: number;
 	rounded?: boolean;
 }
 

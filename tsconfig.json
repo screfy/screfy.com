@@ -17,8 +17,14 @@
 		"resolveJsonModule": true,
 		"isolatedModules": true,
 		"allowJs": false,
-		"composite": false
+		"composite": false,
+		"plugins": [{ "name": "next" }]
 	},
-	"include": ["src", "next-env.d.ts", ".contentlayer/generated"],
+	"include": [
+		"src",
+		"next-env.d.ts",
+		".contentlayer/generated",
+		".next/types/**/*.ts"
+	],
 	"exclude": ["node_modules"]
 }

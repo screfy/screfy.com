@@ -1,6 +1,6 @@
 import { InferGetStaticPropsType } from 'next';
 import { NextSeo } from 'next-seo';
-import Image from 'next/future/image';
+import Image from 'next/image';
 import { Link } from '../components/Link';
 import { Explicit } from '../icons/Explicit';
 import { getTopTracks, TrackProps } from '../utils/spotify';

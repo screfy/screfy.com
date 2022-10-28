@@ -15,7 +15,7 @@ export default function Design({
 				<p>Below you can find a collection of sites I like.</p>
 			</div>
 
-			<ItemList items={sites} size="32" />
+			<ItemList items={sites} size={32} />
 		</div>
 	);
 }

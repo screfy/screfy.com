@@ -44,7 +44,6 @@ module.exports = withContentlayer({
 	},
 	experimental: {
 		legacyBrowsers: false,
-		browsersListForSwc: true,
 		newNextLinkBehavior: true
 	}
 });
