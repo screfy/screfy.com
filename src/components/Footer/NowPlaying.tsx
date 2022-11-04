@@ -57,7 +57,7 @@ export function NowPlaying() {
 			<div className="flex space-x-1">
 				{status?.spotify?.song ? (
 					<a
-						href={`https://openstatus?.spotify.com/track/${status.spotify.track_id}`}
+						href={`https://open.spotify.com/track/${status.spotify.track_id}`}
 						target="_blank"
 						rel="noreferrer"
 						aria-label={status.spotify.song}
