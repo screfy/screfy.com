@@ -7,7 +7,7 @@ import rehypeSlug from 'rehype-slug';
 import remarkGfm from 'remark-gfm';
 import {
 	rehypePrettyCodeTransformer,
-	resolveTypedDocument
+	resolveTypedDocument,
 } from './src/contentlayer';
 import theme from './theme.json';
 
@@ -20,21 +20,21 @@ const Post = defineDocumentType(() => ({
 	fields: {
 		title: {
 			type: 'string',
-			required: true
+			required: true,
 		},
 		summary: {
 			type: 'string',
-			required: true
+			required: true,
 		},
 		publishedAt: {
 			type: 'date',
-			required: true
-		}
+			required: true,
+		},
 	},
 	computedFields: {
 		slug: {
 			type: 'string',
-			resolve: ({ _raw }) => _raw.sourceFileName.replace('.mdx', '')
+			resolve: ({ _raw }) => _raw.sourceFileName.replace('.mdx', ''),
 		},
 		publishedAtHuman: {
 			type: 'string',
@@ -43,9 +43,9 @@ const Post = defineDocumentType(() => ({
 					new Date(publishedAt).toLocaleDateString('en-US', {
 						day: 'numeric',
 						month: 'short',
-						year: 'numeric'
+						year: 'numeric',
 					})
-			)
+			),
 		},
 		headings: {
 			type: 'json',
@@ -56,20 +56,20 @@ const Post = defineDocumentType(() => ({
 					.map((value) => ({
 						size: value[1].length,
 						content: value[2],
-						slug: slugger.slug(value[2])
+						slug: slugger.slug(value[2]),
 					}))
 					.filter(({ size }) => size <= 3);
 
 				return headings;
-			})
+			}),
 		},
 		meta: {
 			type: 'json',
 			resolve: resolveTypedDocument<{ body: { raw: string } }>(({ body }) =>
 				readingTime(body.raw)
-			)
-		}
-	}
+			),
+		},
+	},
 }));
 
 const Site = defineDocumentType(() => ({
@@ -78,16 +78,16 @@ const Site = defineDocumentType(() => ({
 	fields: {
 		title: {
 			type: 'string',
-			required: true
+			required: true,
 		},
 		url: {
 			type: 'string',
-			required: true
+			required: true,
 		},
 		createdAt: {
 			type: 'date',
-			required: true
-		}
+			required: true,
+		},
 	},
 	computedFields: {
 		createdAtHuman: {
@@ -95,9 +95,9 @@ const Site = defineDocumentType(() => ({
 			resolve: resolveTypedDocument<{ createdAt: string }>(({ createdAt }) =>
 				new Date(createdAt).toLocaleDateString('en-US', {
 					month: 'short',
-					year: 'numeric'
+					year: 'numeric',
 				})
-			)
+			),
 		},
 		sanitizedUrl: {
 			type: 'string',
@@ -105,7 +105,7 @@ const Site = defineDocumentType(() => ({
 				const { hostname, pathname } = new URL(url);
 
 				return `${hostname}${pathname === '/' ? '' : pathname}`;
-			})
+			}),
 		},
 		imageUrl: {
 			type: 'string',
@@ -113,9 +113,9 @@ const Site = defineDocumentType(() => ({
 				const { origin } = new URL(url);
 
 				return `https://s2.googleusercontent.com/s2/favicons?domain=${origin}&sz=32`;
-			})
-		}
-	}
+			}),
+		},
+	},
 }));
 
 export default makeSource({
@@ -134,8 +134,8 @@ export default makeSource({
 			[
 				rehypePrettyCode,
 				{
-					theme
-				}
+					theme,
+				},
 			],
 			[
 				rehypeAutolinkHeadings,
@@ -143,12 +143,12 @@ export default makeSource({
 					behavior: 'wrap',
 					properties: {
 						className: [
-							`after:ml-1.5 after:inline-block after:h-4 after:w-4 after:bg-[url(/link.svg)] after:bg-cover after:bg-no-repeat after:align-middle after:font-normal after:opacity-0 after:transition-opacity after:content-[''] hover:after:opacity-100`
-						]
-					}
-				}
+							`after:ml-1.5 after:inline-block after:h-4 after:w-4 after:bg-[url(/link.svg)] after:bg-cover after:bg-no-repeat after:align-middle after:font-normal after:opacity-0 after:transition-opacity after:content-[''] hover:after:opacity-100`,
+						],
+					},
+				},
 			],
-			[rehypePrettyCodeTransformer]
-		]
-	}
+			[rehypePrettyCodeTransformer],
+		],
+	},
 });

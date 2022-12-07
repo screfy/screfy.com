@@ -8,7 +8,7 @@ const DISCORD_USER_ID = '363406775925604352';
 function Bar({
 	height,
 	scale,
-	delay
+	delay,
 }: {
 	height: string;
 	scale: number;
@@ -23,7 +23,7 @@ function Bar({
 				delay,
 				duration: 0.5,
 				ease: 'easeInOut',
-				repeat: Infinity
+				repeat: Infinity,
 			}}
 		/>
 	);
@@ -43,7 +43,7 @@ export function Bars() {
 export function NowPlaying() {
 	const { status } = useLanyard({
 		userId: DISCORD_USER_ID,
-		socket: true
+		socket: true,
 	});
 
 	return (

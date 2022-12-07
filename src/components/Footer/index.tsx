@@ -9,16 +9,16 @@ interface FooterLinkProps {
 const links: FooterLinkProps[] = [
 	{
 		href: '/design',
-		label: 'Design'
+		label: 'Design',
 	},
 	{
 		href: 'https://twitter.com/screfy_',
-		label: 'Twitter'
+		label: 'Twitter',
 	},
 	{
 		href: 'https://github.com/screfy',
-		label: 'GitHub'
-	}
+		label: 'GitHub',
+	},
 ];
 
 function FooterLink({ href, label }: FooterLinkProps) {

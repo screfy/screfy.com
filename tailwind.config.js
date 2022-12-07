@@ -26,24 +26,24 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ['Karla', ...fontFamily.sans]
+				sans: ['Karla', ...fontFamily.sans],
 			},
 			animation: {
-				'tooltip-open': 'tooltip-open 300ms ease-out forwards'
+				'tooltip-open': 'tooltip-open 300ms ease-out forwards',
 			},
 			keyframes: {
 				'tooltip-open': {
 					from: { opacity: 0 },
-					to: { opacity: 1 }
-				}
-			}
+					to: { opacity: 1 },
+				},
+			},
 		},
 		colors: {
 			...colors,
 			spotify: {
-				DEFAULT: '#1ED760'
-			}
-		}
+				DEFAULT: '#1ED760',
+			},
+		},
 	},
-	plugins: [require('tailwindcss-radix')()]
+	plugins: [require('tailwindcss-radix')()],
 };

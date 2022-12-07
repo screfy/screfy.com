@@ -7,11 +7,11 @@ import { Polygon } from '../icons/Polygon';
 
 const variants = {
 	initial: {
-		opacity: 1
+		opacity: 1,
 	},
 	animate: {
-		opacity: 0
-	}
+		opacity: 0,
+	},
 };
 
 export default function Home() {

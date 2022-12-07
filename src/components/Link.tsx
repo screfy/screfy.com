@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 
 export function Link({
 	href,
-	children
+	children,
 }: {
 	href: string;
 	children: ReactNode;

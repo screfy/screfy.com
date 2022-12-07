@@ -13,7 +13,7 @@ function PostItem({
 	summary,
 	slug,
 	publishedAtHuman,
-	meta
+	meta,
 }: Props['posts'][number]) {
 	return (
 		<Link
@@ -66,7 +66,7 @@ export function getStaticProps() {
 				'slug',
 				'publishedAt',
 				'publishedAtHuman',
-				'meta'
+				'meta',
 			])
 		)
 		.sort((a, b) =>
@@ -75,7 +75,7 @@ export function getStaticProps() {
 
 	return {
 		props: {
-			posts
-		}
+			posts,
+		},
 	};
 }

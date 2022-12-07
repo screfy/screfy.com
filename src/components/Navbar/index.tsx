@@ -7,12 +7,12 @@ import { NavbarLinks } from './NavbarLinks';
 const variants = {
 	initial: {
 		opacity: 0,
-		scale: 0.95
+		scale: 0.95,
 	},
 	animate: {
 		opacity: 1,
-		scale: 1
-	}
+		scale: 1,
+	},
 };
 
 export function Navbar() {
@@ -51,7 +51,7 @@ export function Navbar() {
 										transition={{
 											duration: 0.3,
 											delay: 0.1,
-											ease: 'easeInOut'
+											ease: 'easeInOut',
 										}}
 										onClick={(e) => {
 											e.preventDefault();

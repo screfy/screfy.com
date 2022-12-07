@@ -17,13 +17,13 @@ const items: NavbarItemProps[] = [
 	{
 		href: '/about',
 		icon: <UserCircle />,
-		label: 'About'
+		label: 'About',
 	},
 	{
 		href: '/blog',
 		icon: <Annotation />,
-		label: 'Blog'
-	}
+		label: 'Blog',
+	},
 ];
 
 function NavbarItem({ href, icon, label }: NavbarItemProps) {

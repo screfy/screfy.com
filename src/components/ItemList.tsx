@@ -22,7 +22,7 @@ function Item({
 	url,
 	imageUrl,
 	size,
-	rounded
+	rounded,
 }: ItemProps) {
 	return (
 		<a

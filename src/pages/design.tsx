@@ -4,7 +4,7 @@ import { allSites } from '../../.contentlayer/generated';
 import { ItemList, ItemProps } from '../components/ItemList';
 
 export default function Design({
-	sites
+	sites,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
 	return (
 		<div className="space-y-8">
@@ -27,13 +27,13 @@ export function getStaticProps() {
 			url,
 			imageUrl,
 			subtitle: sanitizedUrl,
-			right: createdAtHuman
+			right: createdAtHuman,
 		})
 	);
 
 	return {
 		props: {
-			sites
-		}
+			sites,
+		},
 	};
 }

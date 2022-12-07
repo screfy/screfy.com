@@ -32,5 +32,5 @@ export const components = {
 		);
 	},
 	// Components used in posts as examples:
-	NowPlayingExample
+	NowPlayingExample,
 };

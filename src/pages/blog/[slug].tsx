@@ -33,7 +33,7 @@ function TocItem({ size, content, slug }: TocItemProps) {
 }
 
 export default function Post({
-	post
+	post,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
 	const MdxComponent = useMdxComponent(post.body.code);
 
@@ -60,10 +60,10 @@ export default function Post({
 						{
 							url: generateOpenGraphImage({
 								title: post.title,
-								date: post.publishedAtHuman
-							})
-						}
-					]
+								date: post.publishedAtHuman,
+							}),
+						},
+					],
 				}}
 			/>
 
@@ -78,7 +78,7 @@ export default function Post({
 							data={[
 								post.publishedAtHuman,
 								post.meta.text,
-								`${post.meta.words} words`
+								`${post.meta.words} words`,
 							]}
 						/>
 					</div>
@@ -105,7 +105,7 @@ export default function Post({
 export function getStaticPaths() {
 	return {
 		paths: allPosts.map(({ slug }) => ({ params: { slug } })),
-		fallback: false
+		fallback: false,
 	};
 }
 
@@ -116,6 +116,6 @@ export function getStaticProps(ctx: GetStaticPropsContext) {
 	);
 
 	return {
-		props: { post }
+		props: { post },
 	};
 }

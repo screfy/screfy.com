@@ -4,7 +4,7 @@ import {
 	useContext,
 	ReactNode,
 	useState,
-	useEffect
+	useEffect,
 } from 'react';
 
 const NavbarContext = createContext<{

@@ -25,33 +25,33 @@ export default function App({ Component, pageProps }: AppProps) {
 				additionalMetaTags={[
 					{
 						name: 'viewport',
-						content: 'width=device-width, initial-scale=1.0'
+						content: 'width=device-width, initial-scale=1.0',
 					},
 					{
 						name: 'theme-color',
-						content: '#161616'
+						content: '#161616',
 					},
 					{
 						name: 'url',
-						content: url
-					}
+						content: url,
+					},
 				]}
 				additionalLinkTags={[
 					{
 						rel: 'shortcut icon',
 						href: '/favicon.ico',
-						type: 'image/x-icon'
-					}
+						type: 'image/x-icon',
+					},
 				]}
 				openGraph={{
 					type: 'website',
 					site_name: 'screfy.com',
-					images: [{ url: `${BASE_URL}/og.png` }]
+					images: [{ url: `${BASE_URL}/og.png` }],
 				}}
 				twitter={{
 					handle: '@screfy_',
 					site: '@screfy_',
-					cardType: 'summary_large_image'
+					cardType: 'summary_large_image',
 				}}
 			/>
 

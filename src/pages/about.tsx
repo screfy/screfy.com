@@ -11,7 +11,7 @@ function Track({
 	artist,
 	spotifyUrl,
 	albumImageUrl,
-	explicit
+	explicit,
 }: TrackProps) {
 	return (
 		<a
@@ -44,7 +44,7 @@ function Track({
 }
 
 export default function About({
-	tracks
+	tracks,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
 	return (
 		<>
@@ -91,9 +91,9 @@ export async function getStaticProps() {
 
 	return {
 		props: {
-			tracks
+			tracks,
 		},
 		// Regenerate this page after 24 hours:
-		revalidate: 86400
+		revalidate: 86400,
 	};
 }

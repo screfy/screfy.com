@@ -7,7 +7,7 @@ function encode(str: string) {
 
 export function generateOpenGraphImage({
 	title,
-	date
+	date,
 }: {
 	title: string;
 	date: IsoDateTimeString;
@@ -19,6 +19,6 @@ export function generateOpenGraphImage({
 		'fl_layer_apply,g_south_west,x_60,y_136',
 		`l_text:Karla_24:${encode(`${date} · screfy.com`)},co_rgb:A0A0A0`,
 		'fl_layer_apply,g_south_west,x_60,y_100',
-		'banner.png'
+		'banner.png',
 	].join('/');
 }
