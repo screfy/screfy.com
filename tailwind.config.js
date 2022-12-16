@@ -26,7 +26,7 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ['Karla', ...fontFamily.sans],
+				sans: ['var(--font-karla)', ...fontFamily.sans],
 			},
 			animation: {
 				'tooltip-open': 'tooltip-open 300ms ease-out forwards',

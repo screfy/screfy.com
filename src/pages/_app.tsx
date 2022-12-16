@@ -6,7 +6,6 @@ import { useRouter } from 'next/router';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
 import { NavbarProvider } from '../hooks/use-navbar';
-import clsx from 'clsx';
 
 const BASE_URL = 'https://screfy.com';
 
@@ -55,12 +54,13 @@ export default function App({ Component, pageProps }: AppProps) {
 				}}
 			/>
 
-			<div
-				className={clsx(
-					'flex min-h-screen flex-col items-center',
-					karla.className
-				)}
-			>
+			<style jsx global>{`
+				:root {
+					--font-karla: ${karla.style.fontFamily};
+				}
+			`}</style>
+
+			<div className="flex min-h-screen flex-col items-center">
 				<Navbar />
 
 				<main className="mt-24 grid flex-1 grid-cols-1 gap-y-14 gap-x-8 px-5 md:grid-cols-[1fr,minmax(auto,640px),1fr] md:px-0 md:[&>*]:col-start-2 lg:mt-36">
