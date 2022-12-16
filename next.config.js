@@ -32,7 +32,14 @@ module.exports = withContentlayer({
 	swcMinify: true,
 	reactStrictMode: true,
 	images: {
-		domains: ['s2.googleusercontent.com', 'i.scdn.co'],
+		remotePatterns: [
+			{
+				hostname: 's2.googleusercontent.com',
+			},
+			{
+				hostname: 'i.scdn.co',
+			},
+		],
 	},
 	async headers() {
 		return [

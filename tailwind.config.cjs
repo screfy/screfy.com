@@ -18,9 +18,7 @@ const colors = Object.fromEntries(
 		})
 );
 
-/**
- * @type {import('tailwindcss').Config}
- **/
+/** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: ['./src/**/*.{ts,tsx}', './contentlayer.config.ts'],
 	theme: {
