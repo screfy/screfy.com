@@ -31,7 +31,7 @@ function Bar({
 
 export function Bars() {
 	return (
-		<div className="flex items-end space-x-0.5">
+		<div className="flex items-end gap-0.5">
 			<Bar height="h-3" scale={0.2} />
 			<Bar height="h-2" scale={0.3} delay={0.1} />
 			<Bar height="h-2.5" scale={0.1} delay={0.2} />
@@ -47,14 +47,14 @@ export function NowPlaying() {
 	});
 
 	return (
-		<div className="flex items-center space-x-2">
+		<div className="flex items-center gap-2">
 			{status?.spotify ? (
 				<Bars />
 			) : (
 				<Spotify className="text-spotify" width="16" height="16" />
 			)}
 
-			<div className="flex space-x-1">
+			<div className="flex gap-1">
 				{status?.spotify?.song ? (
 					<a
 						href={`https://open.spotify.com/track/${status.spotify.track_id}`}
@@ -67,7 +67,9 @@ export function NowPlaying() {
 				) : (
 					<p>Not playing</p>
 				)}
+
 				<span className="text-gray-11">·</span>
+
 				<p className="text-gray-11">
 					{status?.spotify?.artist ? status.spotify.artist : 'Spotify'}
 				</p>

@@ -17,43 +17,36 @@ function PostItem({
 }: Props['posts'][number]) {
 	return (
 		<Link
-			className="block w-full space-y-4 rounded-xl bg-gray-2 px-4 py-3.5 transition-colors hover:bg-gray-3"
+			className="block w-full rounded-xl bg-gray-2 px-4 py-3.5 transition-colors hover:bg-gray-3"
 			href={`/blog/${slug}`}
 		>
-			<div>
-				<h2 className="text-2xl font-medium">{title}</h2>
+			<h2 className="text-2xl font-medium">{title}</h2>
 
-				<div className="flex items-center space-x-2 text-base text-gray-10">
-					<PostMeta data={[publishedAtHuman, meta.text]} />
-				</div>
-			</div>
+			<PostMeta data={[publishedAtHuman, meta.text]} />
 
-			<p className="text-gray-11">{summary}</p>
+			<p className="mt-4 text-gray-11">{summary}</p>
 		</Link>
 	);
 }
 
 export default function Blog({ posts }: Props) {
 	return (
-		<div className="space-y-8">
+		<>
 			<NextSeo title="Blog" />
 
-			<div className="space-y-5">
-				<h1 className="text-4xl font-bold">Blog</h1>
+			<h1 className="mb-4 text-4xl font-bold">Blog</h1>
 
-				<p>
-					A space for exploring my mind. Here, I share everything what I know
-					about TypeScript, React, serverless technologies, and DevOps
-					practices.
-				</p>
-			</div>
+			<p>
+				A space for exploring my mind. Here, I share everything what I know
+				about TypeScript, React, serverless technologies, and DevOps practices.
+			</p>
 
-			<div className="-mx-4 space-y-5 px-2 sm:px-0">
+			<div className="-mx-4 mt-8 space-y-5 px-2 sm:px-0">
 				{posts.map((props, i) => (
 					<PostItem key={i} {...props} />
 				))}
 			</div>
-		</div>
+		</>
 	);
 }
 

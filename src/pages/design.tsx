@@ -15,7 +15,7 @@ function Website({
 }: Props['sites'][number]) {
 	return (
 		<a
-			className="flex items-center space-x-4 transition-opacity hover:!opacity-100"
+			className="flex items-center gap-4 transition-opacity hover:!opacity-100"
 			href={url}
 			target="_blank"
 			rel="noreferrer"
@@ -44,20 +44,19 @@ function Website({
 
 export default function Design({ sites }: Props) {
 	return (
-		<div className="space-y-8">
+		<>
 			<NextSeo title="Design" />
 
-			<div className="space-y-5">
-				<h1 className="text-4xl font-bold">Design</h1>
-				<p>Below you can find a collection of sites I like.</p>
-			</div>
+			<h1 className="mb-4 text-4xl font-bold">Design</h1>
 
-			<div className="[&>a]:hover:opacity-50 [&>a:last-child>div]:border-none">
+			<p>Below you can find a collection of sites I like.</p>
+
+			<div className="mt-8 [&>a]:hover:opacity-50 [&>a:last-child>div]:border-none">
 				{sites.map((props, i) => (
 					<Website key={i} {...props} />
 				))}
 			</div>
-		</div>
+		</>
 	);
 }
 

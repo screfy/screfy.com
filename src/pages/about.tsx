@@ -15,7 +15,7 @@ function Track({
 }: TrackProps) {
 	return (
 		<a
-			className="group flex items-center space-x-3.5"
+			className="group flex items-center gap-3.5"
 			href={spotifyUrl}
 			target="_blank"
 			rel="noreferrer"
@@ -32,7 +32,7 @@ function Track({
 			</div>
 
 			<div className="overflow-hidden leading-none">
-				<div className="flex items-center space-x-1.5">
+				<div className="flex items-center gap-1.5">
 					{explicit && <Explicit className="shrink-0" width="18" height="18" />}
 					<h3 className="w-full truncate text-lg font-medium">{name}</h3>
 				</div>
@@ -50,37 +50,30 @@ export default function About({
 		<>
 			<NextSeo title="About" />
 
-			<div className="space-y-5">
-				<h1 className="text-4xl font-bold">About</h1>
+			<h1 className="mb-4 text-4xl font-bold">About</h1>
 
-				<p>
-					I'm a huge fan of new bleeding-edge technologies and languages. I've
-					learned a lot about web technologies and core programming, and I
-					strive to learn more about these things every day and utilize my
-					knowledge to understand further how or why the technology around us
-					works.
-				</p>
-			</div>
+			<p>
+				I'm a huge fan of new bleeding-edge technologies and languages. I've
+				learned a lot about web technologies and core programming, and I strive
+				to learn more about these things every day and utilize my knowledge to
+				understand further how or why the technology around us works.
+			</p>
 
-			<div className="space-y-8">
-				<div className="space-y-5">
-					<h2 className="text-2xl font-bold">Music</h2>
+			<h2 className="mt-16 mb-4 text-2xl font-bold">Music</h2>
 
-					<p>
-						I'm enjoying listening to music, below you can find an up-to-date
-						collection of my favorite and most-listened tracks on{' '}
-						<Link href="https://open.spotify.com/user/hx89ssa0da40l5qt8zd5nxw3b">
-							Spotify
-						</Link>
-						.
-					</p>
-				</div>
+			<p>
+				I'm enjoying listening to music, below you can find an up-to-date
+				collection of my favorite and most-listened tracks on{' '}
+				<Link href="https://open.spotify.com/user/hx89ssa0da40l5qt8zd5nxw3b">
+					Spotify
+				</Link>
+				.
+			</p>
 
-				<div className="grid grid-cols-1 gap-x-8 gap-y-5 md:grid-cols-2">
-					{tracks.map((props) => (
-						<Track {...props} key={props.id} />
-					))}
-				</div>
+			<div className="mt-8 grid grid-cols-1 gap-x-8 gap-y-5 md:grid-cols-2">
+				{tracks.map((props) => (
+					<Track {...props} key={props.id} />
+				))}
 			</div>
 		</>
 	);

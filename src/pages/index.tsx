@@ -23,18 +23,18 @@ export default function Home() {
 	useEffect(() => setVisible(!inView), [inView]);
 
 	return (
-		<div className="space-y-8">
+		<>
 			<NextSeo title={undefined} defaultTitle="screfy – Software Engineer" />
 
 			<motion.div
 				ref={ref}
-				className="flex flex-col justify-between space-y-4 md:flex-row md:items-center md:space-y-0"
+				className="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-center"
 				variants={variants}
 				initial="initial"
 				animate={inView ? 'initial' : 'animate'}
 				transition={{ duration: 0.6, ease: 'easeInOut' }}
 			>
-				<div className="flex items-center space-x-4">
+				<div className="flex items-center gap-4">
 					<Polygon width="64" height="64" />
 
 					<div>
@@ -51,6 +51,6 @@ export default function Home() {
 				self-taught software engineer interested in web and serverless
 				technologies and DevOps practices.
 			</p>
-		</div>
+		</>
 	);
 }

@@ -30,7 +30,7 @@ export function Navbar() {
 					transition={{ duration: 0.2, ease: 'easeInOut' }}
 				>
 					<div className="flex flex-1 items-center justify-between rounded-xl bg-gray-3 px-3 py-2 shadow-md backdrop-blur supports-[backdrop-filter]:bg-gray-3/60 md:-mx-4 md:px-4">
-						<div className="flex items-center space-x-4 overflow-hidden">
+						<div className="flex items-center gap-4 overflow-hidden">
 							<Link href="/" aria-label="Home">
 								<Polygon
 									className="transition-transform hover:scale-105"

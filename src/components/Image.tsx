@@ -6,8 +6,8 @@ export function Image(props: ImageProps & { caption?: string }) {
 	const [loading, setLoading] = useState(true);
 
 	return (
-		<div className="flex flex-col space-y-3 text-center">
-			<div className="flex w-fit overflow-hidden rounded-xl bg-gray-2">
+		<div className="my-6 text-center">
+			<div className="mb-3 flex w-fit overflow-hidden rounded-xl bg-gray-2">
 				<NextImage
 					{...props}
 					className={clsx(

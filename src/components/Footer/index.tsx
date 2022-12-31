@@ -40,10 +40,10 @@ function FooterLink({ href, label }: FooterLinkProps) {
 export function Footer() {
 	return (
 		<footer className="mb-4 mt-12 w-full max-w-screen-sm px-5 text-base md:mb-8 md:mt-24 md:px-0">
-			<div className="flex flex-col-reverse gap-y-4 md:flex-row md:items-center md:justify-between md:gap-y-0">
+			<div className="flex flex-col-reverse gap-4 md:flex-row md:items-center md:justify-between md:gap-0">
 				<NowPlaying />
 
-				<div className="flex items-center space-x-6">
+				<div className="flex items-center gap-6">
 					{links.map((props, i) => (
 						<FooterLink key={i} {...props} />
 					))}

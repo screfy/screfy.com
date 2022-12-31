@@ -35,7 +35,7 @@ function NavbarItem({ href, icon, label }: NavbarItemProps) {
 			<Tooltip.Root>
 				<Tooltip.Trigger asChild>
 					<Link
-						className="flex items-center space-x-1.5"
+						className="flex items-center gap-1.5"
 						href={href}
 						aria-label={label}
 					>
@@ -70,7 +70,7 @@ function NavbarItem({ href, icon, label }: NavbarItemProps) {
 
 export function NavbarLinks() {
 	return (
-		<div className="flex items-center space-x-3">
+		<div className="flex items-center gap-3">
 			{items.map((props, i) => (
 				<NavbarItem key={i} {...props} />
 			))}
