@@ -1,5 +1,4 @@
 import { defineDocumentType, makeSource } from 'contentlayer/source-files';
-import GitHubSlugger from 'github-slugger';
 import readingTime from 'reading-time';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypePrettyCode from 'rehype-pretty-code';
@@ -100,10 +99,41 @@ const Site = defineDocumentType(() => ({
 	},
 }));
 
+const Project = defineDocumentType(() => ({
+	name: 'Project',
+	filePathPattern: 'projects/*.md',
+	fields: {
+		title: {
+			type: 'string',
+			required: true,
+		},
+		description: {
+			type: 'string',
+			required: true,
+		},
+		url: {
+			type: 'string',
+			required: true,
+		},
+		createdAt: {
+			type: 'date',
+			required: true,
+		},
+	},
+	computedFields: {
+		year: {
+			type: 'string',
+			resolve: resolveTypedDocument<{ createdAt: string }>(({ createdAt }) =>
+				new Date(createdAt).getFullYear()
+			),
+		},
+	},
+}));
+
 export default makeSource({
 	disableImportAliasWarning: true,
 	contentDirPath: 'data',
-	documentTypes: [Post, Site],
+	documentTypes: [Post, Site, Project],
 	mdx: {
 		esbuildOptions(options) {
 			options.target = 'esnext';
