@@ -22,7 +22,7 @@ function Track({
 		>
 			<div className="shrink-0 overflow-hidden rounded-lg">
 				<Image
-					className="rounded-lg brightness-[0.8] transition-all duration-300 group-hover:scale-105 group-hover:brightness-100"
+					className="rounded-lg brightness-[0.8] transition-all duration-500 group-hover:scale-105 group-hover:brightness-100"
 					src={albumImageUrl}
 					width="80"
 					height="80"
