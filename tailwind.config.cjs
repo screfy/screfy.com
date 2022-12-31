@@ -27,12 +27,17 @@ module.exports = {
 				sans: ['var(--font-karla)', ...fontFamily.sans],
 			},
 			animation: {
-				'tooltip-open': 'tooltip-open 300ms ease-out forwards',
+				'tooltip-open': 'tooltip-open 200ms ease-in-out forwards',
+				'tooltip-close': 'tooltip-close 200ms ease-in-out forwards',
 			},
 			keyframes: {
 				'tooltip-open': {
-					from: { opacity: 0 },
-					to: { opacity: 1 },
+					from: { transform: 'translateY(-4px) scale(0.8)', opacity: 0 },
+					to: { transform: 'translateY(0) scale(1)', opacity: 1 },
+				},
+				'tooltip-close': {
+					from: { transform: 'translateY(0) scale(1)', opacity: 1 },
+					to: { transform: 'translateY(-4px) scale(0.8)', opacity: 0 },
 				},
 			},
 		},
