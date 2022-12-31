@@ -1,4 +1,3 @@
-/* eslint @typescript-eslint/no-var-requires: off */
 const radixColors = require('@radix-ui/colors');
 const { fontFamily } = require('tailwindcss/defaultTheme');
 
