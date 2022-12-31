@@ -48,7 +48,7 @@ export default function Blog({ posts }: Props) {
 				</p>
 			</div>
 
-			<div className="space-y-5">
+			<div className="-mx-4 space-y-5 px-2 sm:px-0">
 				{posts.map((props, i) => (
 					<PostItem key={i} {...props} />
 				))}
