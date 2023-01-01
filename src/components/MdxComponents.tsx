@@ -29,7 +29,7 @@ export const components = {
 	ul(props: JSX.IntrinsicElements['ul']) {
 		return (
 			<ul
-				className="my-6 space-y-2 [&>li]:relative [&>li]:pl-6 before:[&>li]:absolute before:[&>li]:left-1.5 before:[&>li]:top-3 before:[&>li]:h-1 before:[&>li]:w-1 before:[&>li]:rounded-full before:[&>li]:bg-gray-6"
+				className="my-6 space-y-2 [&>li]:relative [&>li]:pl-6 before:[&>li]:absolute before:[&>li]:left-1.5 before:[&>li]:top-3 before:[&>li]:h-1 before:[&>li]:w-1 before:[&>li]:rounded-full before:[&>li]:bg-gray-4"
 				{...props}
 			/>
 		);

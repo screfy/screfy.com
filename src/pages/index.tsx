@@ -32,7 +32,7 @@ function Project({ title, description, url, year }: Props['projects'][number]) {
 
 			<p className="hidden text-gray-11 md:block">{description}</p>
 
-			<span className="h-px flex-1 bg-gray-6" />
+			<span className="h-px flex-1 bg-gray-4" />
 
 			<p className="text-gray-11">{year}</p>
 		</NextLink>
@@ -80,11 +80,11 @@ export default function Home({ projects }: Props) {
 			<h2 className="mt-16 mb-4 text-2xl font-bold">Projects</h2>
 
 			<p>
-				Below are some of my projects I've worked on. You can find most of my
-				work on my <Link href="https://github.com/screfy">GitHub</Link>.
+				Below are some of projects I've worked on. You can find most of my work
+				on my <Link href="https://github.com/screfy">GitHub</Link>.
 			</p>
 
-			<div className="-mx-4 mt-8 flex flex-col gap-6 px-2 sm:px-0">
+			<div className="-mx-4 mt-8 flex flex-col gap-6 px-1 sm:px-0">
 				{projects.map((props, i) => (
 					<Project {...props} key={i} />
 				))}

@@ -1,7 +1,7 @@
 import { Node, visit } from 'unist-util-visit';
 
 const INLINE_CODE =
-	'inline-block rounded-md border border-gray-6 bg-gray-3 px-1 py-px font-mono text-sm';
+	'inline-block rounded-md bg-gray-3 px-1 py-px font-mono text-sm';
 
 const CODE_DIV = '-mx-5 overflow-hidden md:-mx-4 md:rounded-xl my-6';
 const CODE_TITLE =

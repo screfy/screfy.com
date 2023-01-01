@@ -15,28 +15,28 @@ function Website({
 }: Props['sites'][number]) {
 	return (
 		<a
-			className="flex items-center gap-4 transition-opacity hover:!opacity-100"
+			className="relative flex items-center gap-4 rounded-xl px-4 transition-colors hover:bg-gray-2"
 			href={url}
 			target="_blank"
 			rel="noreferrer"
 		>
 			<Image
 				src={imageUrl}
-				width={32}
-				height={32}
+				width={26}
+				height={26}
 				quality={95}
 				alt={`${title} Image`}
 			/>
 
-			<div className="flex w-full items-center justify-between border-b border-gray-6 py-5">
+			<div className="flex w-full items-center justify-between py-3">
 				<div>
 					<p className="text-base md:text-lg">{title}</p>
-					<p className="text-sm leading-none text-gray-11 md:text-base">
+					<p className="hidden text-base leading-none text-gray-11 md:block">
 						{sanitizedUrl}
 					</p>
 				</div>
 
-				<p className="text-sm text-gray-11 md:text-base">{createdAtHuman}</p>
+				<p className="text-xs text-gray-11 md:text-sm">{createdAtHuman}</p>
 			</div>
 		</a>
 	);
@@ -51,7 +51,7 @@ export default function Design({ sites }: Props) {
 
 			<p>Below you can find a collection of sites I like.</p>
 
-			<div className="mt-8 [&>a]:hover:opacity-50 [&>a:last-child>div]:border-none">
+			<div className="-mx-4 mt-8 space-y-1 px-1 sm:px-0">
 				{sites.map((props, i) => (
 					<Website key={i} {...props} />
 				))}

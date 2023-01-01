@@ -41,7 +41,7 @@ export default function Blog({ posts }: Props) {
 				about TypeScript, React, serverless technologies, and DevOps practices.
 			</p>
 
-			<div className="-mx-4 mt-8 space-y-5 px-2 sm:px-0">
+			<div className="-mx-4 mt-8 space-y-5 px-1 sm:px-0">
 				{posts.map((props, i) => (
 					<PostItem key={i} {...props} />
 				))}
