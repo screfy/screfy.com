@@ -15,7 +15,7 @@ function Track({
 }: TrackProps) {
 	return (
 		<a
-			className="group flex items-center gap-3.5"
+			className="group flex select-none items-center gap-3.5"
 			href={spotifyUrl}
 			target="_blank"
 			rel="noreferrer"

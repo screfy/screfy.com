@@ -15,7 +15,7 @@ function Website({
 }: Props['sites'][number]) {
 	return (
 		<a
-			className="relative flex items-center gap-4 rounded-xl px-4 transition-colors hover:bg-gray-2"
+			className="relative flex select-none items-center gap-4 rounded-xl px-4 transition-colors hover:bg-gray-2"
 			href={url}
 			target="_blank"
 			rel="noreferrer"

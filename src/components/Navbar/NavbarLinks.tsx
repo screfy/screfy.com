@@ -56,7 +56,7 @@ function NavbarItem({ href, icon, label }: NavbarItemProps) {
 
 				<Tooltip.Portal>
 					<Tooltip.Content
-						className="hidden rounded-lg bg-gray-3 px-1.5 py-1 text-sm text-gray-11 radix-state-closed:animate-tooltip-close radix-state-delayed-open:animate-tooltip-open md:block"
+						className="hidden select-none rounded-lg bg-gray-3 px-1.5 py-1 text-sm text-gray-11 radix-state-closed:animate-tooltip-close radix-state-delayed-open:animate-tooltip-open md:block"
 						side="bottom"
 						sideOffset={visible ? 16 : 6}
 					>
