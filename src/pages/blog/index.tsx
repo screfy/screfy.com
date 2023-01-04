@@ -4,7 +4,7 @@ import { InferGetStaticPropsType } from 'next';
 import { NextSeo } from 'next-seo';
 import Link from 'next/link';
 import { allPosts } from '../../../.contentlayer/generated';
-import { PostMeta } from '../../components/PostMeta';
+import { ArrowRight } from '../../icons/ArrowRight';
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
@@ -17,14 +17,27 @@ function PostItem({
 }: Props['posts'][number]) {
 	return (
 		<Link
-			className="block w-full rounded-xl bg-gray-2 px-4 py-3.5 transition-colors hover:bg-gray-3"
+			className="group block w-full select-none rounded-xl px-4 py-3.5 transition-colors hover:bg-gray-2"
 			href={`/blog/${slug}`}
 		>
+			<div className="flex items-center gap-1.5 text-sm leading-tight text-gray-10">
+				<span>{publishedAtHuman}</span>
+				<span>·</span>
+				<span>{meta.text}</span>
+			</div>
+
 			<h2 className="text-2xl font-medium">{title}</h2>
 
-			<PostMeta data={[publishedAtHuman, meta.text]} />
+			<p className="mt-1 text-gray-11">{summary}</p>
 
-			<p className="mt-4 text-gray-11">{summary}</p>
+			<div className="mt-2 flex items-center gap-1 text-base font-medium">
+				<span>Read article</span>
+				<ArrowRight
+					className="transition-transform will-change-transform group-hover:translate-x-1"
+					width="16"
+					height="16"
+				/>
+			</div>
 		</Link>
 	);
 }
@@ -41,7 +54,7 @@ export default function Blog({ posts }: Props) {
 				about TypeScript, React, serverless technologies, and DevOps practices.
 			</p>
 
-			<div className="-mx-4 mt-8 space-y-5 px-1 sm:px-0">
+			<div className="-mx-4 mt-8 space-y-6 px-1 sm:px-0">
 				{posts.map((props, i) => (
 					<PostItem key={i} {...props} />
 				))}

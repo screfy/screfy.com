@@ -5,7 +5,6 @@ import { NextSeo } from 'next-seo';
 import { useEffect, useRef } from 'react';
 import { allPosts, Post as PostType } from '../../../.contentlayer/generated';
 import { components } from '../../components/MdxComponents';
-import { PostMeta } from '../../components/PostMeta';
 import { useMdxComponent } from '../../hooks/use-mdx-component';
 import { useNavbar } from '../../hooks/use-navbar';
 import { generateOpenGraphImage } from '../../utils/open-graph';
@@ -49,13 +48,13 @@ export default function Post({
 				{post.title}
 			</h1>
 
-			<PostMeta
-				data={[
-					post.publishedAtHuman,
-					post.meta.text,
-					`${post.meta.words} words`,
-				]}
-			/>
+			<div className="flex items-center gap-2 text-base text-gray-11">
+				<span>{post.publishedAtHuman}</span>
+				<span>·</span>
+				<span>{post.meta.text}</span>
+				<span>·</span>
+				<span>{post.meta.words} words</span>
+			</div>
 
 			<div className="mt-14">
 				<MdxComponent components={components} />
