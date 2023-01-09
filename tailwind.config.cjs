@@ -26,18 +26,11 @@ module.exports = {
 				sans: ['var(--font-karla)', ...fontFamily.sans],
 			},
 			animation: {
-				'tooltip-open': 'tooltip-open 200ms ease-in-out forwards',
-				'tooltip-close': 'tooltip-close 200ms ease-in-out forwards',
-			},
-			keyframes: {
-				'tooltip-open': {
-					from: { transform: 'translateY(-4px) scale(0.8)', opacity: 0 },
-					to: { transform: 'translateY(0) scale(1)', opacity: 1 },
-				},
-				'tooltip-close': {
-					from: { transform: 'translateY(0) scale(1)', opacity: 1 },
-					to: { transform: 'translateY(-4px) scale(0.8)', opacity: 0 },
-				},
+				'tooltip-open-top': 'tooltip-open-top 200ms ease-in-out forwards',
+				'tooltip-close-top': 'tooltip-close-top 200ms ease-in-out forwards',
+				'tooltip-open-bottom': 'tooltip-open-bottom 200ms ease-in-out forwards',
+				'tooltip-close-bottom':
+					'tooltip-close-bottom 200ms ease-in-out forwards',
 			},
 		},
 		colors: {

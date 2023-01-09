@@ -18,3 +18,47 @@
 		);
 	}
 }
+
+@keyframes tooltip-open-top {
+	0% {
+		transform: translateY(4px) scale(0.8);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0) scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes tooltip-close-top {
+	0% {
+		transform: translateY(0) scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(4px) scale(0.8);
+		opacity: 0;
+	}
+}
+
+@keyframes tooltip-open-bottom {
+	0% {
+		transform: translateY(-4px) scale(0.8);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0) scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes tooltip-close-bottom {
+	0% {
+		transform: translateY(0) scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(-4px) scale(0.8);
+		opacity: 0;
+	}
+}
