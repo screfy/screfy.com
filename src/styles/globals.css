@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	:root {
+		--spotify-gradient-color-dark: theme(colors.spotify.DEFAULT / 0.05);
+		--spotify-gradient-color-light: theme(colors.spotify.DEFAULT / 0.15);
+	}
+}
+
+@layer utilities {
+	.bg-spotify-gradient {
+		background-image: radial-gradient(
+			95% 175% at 95% 25%,
+			var(--spotify-gradient-color-light) 0%,
+			var(--spotify-gradient-color-dark) 100%
+		);
+	}
+}

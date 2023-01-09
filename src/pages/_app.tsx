@@ -1,10 +1,11 @@
-import 'tailwindcss/tailwind.css';
+import '../styles/globals.css';
+
 import { Karla } from '@next/font/google';
-import type { AppProps } from 'next/app';
 import { DefaultSeo } from 'next-seo';
+import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
-import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
+import { Navbar } from '../components/Navbar';
 import { NavbarProvider } from '../hooks/use-navbar';
 
 const BASE_URL = 'https://screfy.com';
