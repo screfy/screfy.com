@@ -28,7 +28,7 @@ function Project({ title, description, url, year }: Props['projects'][number]) {
 			href={url}
 			target="_blank"
 		>
-			<p>{title}</p>
+			<p className="font-semibold">{title}</p>
 
 			<p className="hidden text-gray-11 md:block">{description}</p>
 
