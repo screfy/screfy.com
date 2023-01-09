@@ -22,7 +22,7 @@ export function Navbar() {
 		<AnimatePresence>
 			{visible && (
 				<motion.nav
-					className="fixed top-3 z-50 w-full px-2 md:max-w-screen-sm md:px-0 lg:top-5"
+					className="fixed top-3 z-50 w-full max-w-screen-sm px-2 md:px-0 lg:top-5"
 					variants={variants}
 					initial="initial"
 					animate="animate"
