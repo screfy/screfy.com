@@ -7,6 +7,22 @@
 		--spotify-gradient-color-dark: theme(colors.spotify.DEFAULT / 0.05);
 		--spotify-gradient-color-light: theme(colors.spotify.DEFAULT / 0.15);
 	}
+
+	::-webkit-scrollbar {
+		@apply w-3;
+	}
+
+	::-webkit-scrollbar-track {
+		@apply bg-transparent;
+	}
+
+	::-webkit-scrollbar-thumb {
+		@apply rounded-full border-[3px] border-solid border-transparent bg-gray-4 bg-clip-content;
+	}
+
+	::-webkit-scrollbar-thumb:hover {
+		@apply bg-gray-5 bg-clip-content;
+	}
 }
 
 @layer utilities {
