@@ -52,7 +52,7 @@ export function NowPlaying() {
 						<TooltipProvider delayDuration={500}>
 							<TooltipRoot>
 								<TooltipTrigger asChild>
-									<span>{status.spotify.artist}</span>
+									<span className="truncate">{status.spotify.artist}</span>
 								</TooltipTrigger>
 
 								<TooltipContent sideOffset={12}>
