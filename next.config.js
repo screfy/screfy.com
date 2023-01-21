@@ -49,6 +49,7 @@ module.exports = withContentlayer({
 		];
 	},
 	experimental: {
+		appDir: true,
 		legacyBrowsers: false,
 		fontLoaders: [
 			{

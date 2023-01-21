@@ -1,9 +1,10 @@
-import { InferGetStaticPropsType } from 'next';
-import { NextSeo } from 'next-seo';
 import Image from 'next/image';
-import { Link } from '../components/Link';
-import { Explicit } from '../icons/Explicit';
-import { getTopTracks, TrackProps } from '../utils/spotify';
+import Link from 'next/link';
+import { Explicit } from '../../icons/Explicit';
+import { getTopTracks, TrackProps } from '../../utils/spotify';
+
+// Regenerate this page after 24 hours:
+export const revalidate = 86400;
 
 function Track({
 	name,
@@ -43,13 +44,11 @@ function Track({
 	);
 }
 
-export default function About({
-	tracks,
-}: InferGetStaticPropsType<typeof getStaticProps>) {
+export default async function Page() {
+	const tracks = await getTopTracks();
+
 	return (
 		<>
-			<NextSeo title="About" />
-
 			<h1 className="mb-4 text-4xl font-bold">About</h1>
 
 			<p>
@@ -77,16 +76,4 @@ export default function About({
 			</div>
 		</>
 	);
-}
-
-export async function getStaticProps() {
-	const tracks = await getTopTracks();
-
-	return {
-		props: {
-			tracks,
-		},
-		// Regenerate this page after 24 hours:
-		revalidate: 86400,
-	};
 }

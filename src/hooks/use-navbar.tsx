@@ -1,4 +1,6 @@
-import { useRouter } from 'next/router';
+'use client';
+
+import { usePathname } from 'next/navigation';
 import {
 	createContext,
 	useContext,
@@ -17,11 +19,11 @@ const NavbarContext = createContext<{
 export const useNavbar = () => useContext(NavbarContext);
 
 export function NavbarProvider({ children }: { children: ReactNode }) {
-	const { asPath } = useRouter();
+	const pathname = usePathname();
 	const [visible, setVisible] = useState(false);
 	const [title, setTitle] = useState<string | undefined>(undefined);
 
-	useEffect(() => setVisible(asPath !== '/'), [asPath]);
+	useEffect(() => setVisible(pathname !== '/'), [pathname]);
 
 	return (
 		<NavbarContext.Provider value={{ visible, setVisible, title, setTitle }}>

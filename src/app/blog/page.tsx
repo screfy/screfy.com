@@ -1,12 +1,8 @@
 import { pick } from 'contentlayer/client';
 import { compareDesc } from 'date-fns';
-import { InferGetStaticPropsType } from 'next';
-import { NextSeo } from 'next-seo';
 import Link from 'next/link';
-import { allPosts } from '../../../.contentlayer/generated';
+import { allPosts, Post } from '../../../.contentlayer/generated';
 import { ArrowRight } from '../../icons/ArrowRight';
-
-type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
 function PostItem({
 	title,
@@ -14,7 +10,10 @@ function PostItem({
 	slug,
 	publishedAtHuman,
 	meta,
-}: Props['posts'][number]) {
+}: Pick<
+	Post,
+	'title' | 'summary' | 'slug' | 'publishedAt' | 'publishedAtHuman' | 'meta'
+>) {
 	return (
 		<Link
 			className="group block w-full select-none rounded-xl px-4 py-3.5 transition-colors hover:bg-gray-2"
@@ -42,28 +41,7 @@ function PostItem({
 	);
 }
 
-export default function Blog({ posts }: Props) {
-	return (
-		<>
-			<NextSeo title="Blog" />
-
-			<h1 className="mb-4 text-4xl font-bold">Blog</h1>
-
-			<p>
-				A space for exploring my mind. Here, I share everything what I know
-				about TypeScript, React, serverless technologies, and DevOps practices.
-			</p>
-
-			<div className="-mx-4 mt-8 space-y-6 px-1 sm:px-0">
-				{posts.map((props, i) => (
-					<PostItem key={i} {...props} />
-				))}
-			</div>
-		</>
-	);
-}
-
-export function getStaticProps() {
+export default function Page() {
 	const posts = allPosts
 		.map((post) =>
 			pick(post, [
@@ -79,9 +57,20 @@ export function getStaticProps() {
 			compareDesc(new Date(a.publishedAt), new Date(b.publishedAt))
 		);
 
-	return {
-		props: {
-			posts,
-		},
-	};
+	return (
+		<>
+			<h1 className="mb-4 text-4xl font-bold">Blog</h1>
+
+			<p>
+				A space for exploring my mind. Here, I share everything what I know
+				about TypeScript, React, serverless technologies, and DevOps practices.
+			</p>
+
+			<div className="-mx-4 mt-8 space-y-6 px-1 sm:px-0">
+				{posts.map((props, i) => (
+					<PostItem key={i} {...props} />
+				))}
+			</div>
+		</>
+	);
 }

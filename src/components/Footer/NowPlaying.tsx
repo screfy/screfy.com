@@ -1,3 +1,5 @@
+'use client';
+
 import { TooltipTrigger } from '@radix-ui/react-tooltip';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useLanyard } from 'react-use-lanyard';

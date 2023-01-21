@@ -1,10 +1,6 @@
 import { pick } from 'contentlayer/client';
-import { InferGetStaticPropsType } from 'next';
-import { NextSeo } from 'next-seo';
 import Image from 'next/image';
-import { allSites } from '../../.contentlayer/generated';
-
-type Props = InferGetStaticPropsType<typeof getStaticProps>;
+import { allSites, type Site } from '../../../.contentlayer/generated';
 
 function Website({
 	title,
@@ -12,7 +8,10 @@ function Website({
 	createdAtHuman,
 	sanitizedUrl,
 	imageUrl,
-}: Props['sites'][number]) {
+}: Pick<
+	Site,
+	'title' | 'url' | 'createdAtHuman' | 'sanitizedUrl' | 'imageUrl'
+>) {
 	return (
 		<a
 			className="relative flex select-none items-center gap-4 rounded-xl px-4 transition-colors hover:bg-gray-2"
@@ -42,11 +41,13 @@ function Website({
 	);
 }
 
-export default function Design({ sites }: Props) {
+export default function Page() {
+	const sites = allSites.map((site) =>
+		pick(site, ['title', 'url', 'createdAtHuman', 'sanitizedUrl', 'imageUrl'])
+	);
+
 	return (
 		<>
-			<NextSeo title="Design" />
-
 			<h1 className="mb-4 text-4xl font-bold">Design</h1>
 
 			<p>Below you can find a collection of sites I like.</p>
@@ -58,16 +59,4 @@ export default function Design({ sites }: Props) {
 			</div>
 		</>
 	);
-}
-
-export function getStaticProps() {
-	const sites = allSites.map((site) =>
-		pick(site, ['title', 'url', 'createdAtHuman', 'sanitizedUrl', 'imageUrl'])
-	);
-
-	return {
-		props: {
-			sites,
-		},
-	};
 }

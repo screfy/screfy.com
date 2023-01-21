@@ -1,3 +1,5 @@
+'use client';
+
 import clsx from 'clsx';
 import NextImage, { type ImageProps } from 'next/image';
 import { useState } from 'react';

@@ -1,3 +1,5 @@
+'use client';
+
 import { AnimatePresence, motion } from 'framer-motion';
 import Link from 'next/link';
 import { useNavbar } from '../../hooks/use-navbar';
