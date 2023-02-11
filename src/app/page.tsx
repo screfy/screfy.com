@@ -11,19 +11,21 @@ function Project({
 	year,
 }: Pick<Project, 'title' | 'description' | 'url' | 'year'>) {
 	return (
-		<NextLink
-			className="-my-2 flex select-none items-center gap-2.5 rounded-xl px-4 py-2 transition-colors hover:bg-gray-2"
-			href={url}
-			target="_blank"
-		>
-			<p className="font-semibold">{title}</p>
+		<li>
+			<NextLink
+				className="-my-2 flex select-none items-center gap-2.5 rounded-xl px-4 py-2 transition-colors hover:bg-gray-2"
+				href={url}
+				target="_blank"
+			>
+				<p className="font-semibold">{title}</p>
 
-			<p className="hidden text-gray-11 md:block">{description}</p>
+				<p className="hidden text-gray-11 md:block">{description}</p>
 
-			<span className="h-px flex-1 bg-gray-4" />
+				<span className="h-px flex-1 bg-gray-4" />
 
-			<p className="text-gray-11">{year}</p>
-		</NextLink>
+				<p className="text-gray-11">{year}</p>
+			</NextLink>
+		</li>
 	);
 }
 
@@ -49,11 +51,11 @@ export default function Page() {
 				on my <Link href="https://github.com/screfy">GitHub</Link>.
 			</p>
 
-			<div className="-mx-4 mt-8 flex flex-col gap-6 px-1 sm:px-0">
+			<ul className="-mx-4 mt-8 flex flex-col gap-6 px-1 sm:px-0">
 				{projects.map((props, i) => (
 					<Project {...props} key={i} />
 				))}
-			</div>
+			</ul>
 		</>
 	);
 }
