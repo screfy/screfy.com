@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Link from 'next/link';
+import { Link } from '../../components/Link';
 import { Explicit } from '../../icons/Explicit';
 import { getTopTracks, TrackProps } from '../../utils/spotify';
 
