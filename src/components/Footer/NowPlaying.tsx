@@ -4,7 +4,7 @@ import { TooltipTrigger } from '@radix-ui/react-tooltip';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useLanyard } from 'react-use-lanyard';
 import { Spotify } from '../../icons/Spotify';
-import { TooltipContent, TooltipProvider, TooltipRoot } from '../Tooltip';
+import { TooltipContent, TooltipRoot } from '../Tooltip';
 
 const DISCORD_USER_ID = '363406775925604352';
 
@@ -35,33 +35,29 @@ export function NowPlaying() {
 					/>
 
 					<div className="flex gap-1 overflow-hidden">
-						<TooltipProvider delayDuration={500}>
-							<TooltipRoot>
-								<TooltipTrigger asChild>
-									<span className="truncate font-medium text-gray-12">
-										{status.spotify.song}
-									</span>
-								</TooltipTrigger>
-
-								<TooltipContent sideOffset={12}>
+						<TooltipRoot>
+							<TooltipTrigger asChild>
+								<span className="truncate font-medium text-gray-12">
 									{status.spotify.song}
-								</TooltipContent>
-							</TooltipRoot>
-						</TooltipProvider>
+								</span>
+							</TooltipTrigger>
+
+							<TooltipContent sideOffset={12}>
+								{status.spotify.song}
+							</TooltipContent>
+						</TooltipRoot>
 
 						<span>·</span>
 
-						<TooltipProvider delayDuration={500}>
-							<TooltipRoot>
-								<TooltipTrigger asChild>
-									<span className="truncate">{status.spotify.artist}</span>
-								</TooltipTrigger>
+						<TooltipRoot>
+							<TooltipTrigger asChild>
+								<span className="truncate">{status.spotify.artist}</span>
+							</TooltipTrigger>
 
-								<TooltipContent sideOffset={12}>
-									{status.spotify.artist}
-								</TooltipContent>
-							</TooltipRoot>
-						</TooltipProvider>
+							<TooltipContent sideOffset={12}>
+								{status.spotify.artist}
+							</TooltipContent>
+						</TooltipRoot>
 					</div>
 				</motion.a>
 			) : null}

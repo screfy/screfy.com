@@ -5,12 +5,7 @@ import { ReactNode } from 'react';
 import { useNavbar } from '../../hooks/use-navbar';
 import { Annotation } from '../../icons/Annotation';
 import { UserCircle } from '../../icons/UserCircle';
-import {
-	TooltipContent,
-	TooltipProvider,
-	TooltipRoot,
-	TooltipTrigger,
-} from '../Tooltip';
+import { TooltipContent, TooltipRoot, TooltipTrigger } from '../Tooltip';
 
 interface NavbarItemProps {
 	href: string;
@@ -36,34 +31,32 @@ function NavbarItem({ href, icon, label }: NavbarItemProps) {
 	const { visible } = useNavbar();
 
 	return (
-		<TooltipProvider delayDuration={0}>
-			<TooltipRoot>
-				<TooltipTrigger asChild>
-					<Link
-						className="flex items-center gap-1.5"
-						href={href}
-						aria-label={label}
-					>
-						<div
-							className={clsx(
-								'rounded-xl bg-gray-3 p-2 text-gray-8 transition-colors hover:bg-gray-4 hover:text-gray-9',
-								pathname === href && 'bg-gray-4 text-gray-9'
-							)}
-						>
-							{icon}
-						</div>
-
-						{!visible && (
-							<p className="block text-base text-gray-11 md:hidden">{label}</p>
+		<TooltipRoot>
+			<TooltipTrigger asChild>
+				<Link
+					className="flex items-center gap-1.5"
+					href={href}
+					aria-label={label}
+				>
+					<div
+						className={clsx(
+							'rounded-xl bg-gray-3 p-2 text-gray-8 transition-colors hover:bg-gray-4 hover:text-gray-9',
+							pathname === href && 'bg-gray-4 text-gray-9'
 						)}
-					</Link>
-				</TooltipTrigger>
+					>
+						{icon}
+					</div>
 
-				<TooltipContent side="bottom" sideOffset={visible ? 16 : 6}>
-					{label}
-				</TooltipContent>
-			</TooltipRoot>
-		</TooltipProvider>
+					{!visible && (
+						<p className="block text-base text-gray-11 md:hidden">{label}</p>
+					)}
+				</Link>
+			</TooltipTrigger>
+
+			<TooltipContent side="bottom" sideOffset={visible ? 16 : 6}>
+				{label}
+			</TooltipContent>
+		</TooltipRoot>
 	);
 }
 
