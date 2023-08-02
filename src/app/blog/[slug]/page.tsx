@@ -1,7 +1,7 @@
 import { pick } from 'contentlayer/client';
 import {
 	allPosts,
-	Post as PostType,
+	type Post as PostType,
 } from '../../../../.contentlayer/generated';
 import { components } from '../../../components/MdxComponents';
 import { PostTitle } from '../../../components/PostTitle';
@@ -10,7 +10,7 @@ import { useMdxComponent } from '../../../hooks/use-mdx-component';
 export default function Page({ params }: { params: { slug: string } }) {
 	const post = pick(
 		allPosts.find((post) => post.slug === params.slug) as PostType,
-		['title', 'summary', 'body', 'publishedAtHuman', 'meta']
+		['title', 'summary', 'body', 'publishedAtHuman', 'meta'],
 	);
 
 	const MdxComponent = useMdxComponent(post.body.code);

@@ -1,15 +1,16 @@
 import '../styles/globals.css';
 
-import { ReactNode } from 'react';
 import { Karla } from '@next/font/google';
 import clsx from 'clsx';
+import type { ReactNode } from 'react';
 import { Footer } from '../components/Footer';
 import { Navbar } from '../components/Navbar';
-import { NavbarProvider } from '../hooks/use-navbar';
 import { TooltipProvider } from '../components/Tooltip';
+import { NavbarProvider } from '../hooks/use-navbar';
 
 const karla = Karla({
 	variable: '--font-karla',
+	subsets: ['latin'],
 });
 
 export default function RootLayout({ children }: { children: ReactNode }) {
@@ -17,7 +18,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 		<html
 			className={clsx(
 				'scroll-pt-24 scroll-smooth [color-scheme:dark]',
-				karla.variable
+				karla.variable,
 			)}
 			lang="en"
 		>

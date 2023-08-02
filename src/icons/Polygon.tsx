@@ -1,5 +1,5 @@
 import { forwardRef } from 'react';
-import { IconProps } from './icon-props';
+import type { IconProps } from './icon-props';
 
 export const Polygon = forwardRef<SVGSVGElement, Omit<IconProps, 'color'>>(
 	(props, ref) => (
@@ -30,5 +30,5 @@ export const Polygon = forwardRef<SVGSVGElement, Omit<IconProps, 'color'>>(
 				</linearGradient>
 			</defs>
 		</svg>
-	)
+	),
 );

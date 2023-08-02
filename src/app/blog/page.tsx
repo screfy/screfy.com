@@ -1,7 +1,7 @@
 import { pick } from 'contentlayer/client';
 import { compareDesc } from 'date-fns';
 import Link from 'next/link';
-import { allPosts, Post } from '../../../.contentlayer/generated';
+import { allPosts, type Post } from '../../../.contentlayer/generated';
 import { ArrowRight } from '../../icons/ArrowRight';
 
 function PostItem({
@@ -53,10 +53,10 @@ export default function Page() {
 				'publishedAt',
 				'publishedAtHuman',
 				'meta',
-			])
+			]),
 		)
 		.sort((a, b) =>
-			compareDesc(new Date(a.publishedAt), new Date(b.publishedAt))
+			compareDesc(new Date(a.publishedAt), new Date(b.publishedAt)),
 		);
 
 	return (

@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { Link } from '../../components/Link';
 import { Explicit } from '../../icons/Explicit';
-import { getTopTracks, TrackProps } from '../../utils/spotify';
+import { getTopTracks, type TrackProps } from '../../utils/spotify';
 
 // Regenerate this page after 24 hours:
 export const revalidate = 86400;
@@ -62,7 +62,7 @@ export default async function Page() {
 				understand further how or why the technology around us works.
 			</p>
 
-			<h2 className="mt-16 mb-4 text-2xl font-bold">Music</h2>
+			<h2 className="mb-4 mt-16 text-2xl font-bold">Music</h2>
 
 			<p>
 				I'm enjoying listening to music, below you can find an up-to-date

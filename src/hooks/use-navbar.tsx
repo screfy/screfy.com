@@ -4,9 +4,9 @@ import { usePathname } from 'next/navigation';
 import {
 	createContext,
 	useContext,
-	ReactNode,
-	useState,
 	useEffect,
+	useState,
+	type ReactNode,
 } from 'react';
 
 const NavbarContext = createContext<{

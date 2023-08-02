@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { ReactNode } from 'react';
+import type { ReactNode } from 'react';
 import { useNavbar } from '../../hooks/use-navbar';
 import { Annotation } from '../../icons/Annotation';
 import { UserCircle } from '../../icons/UserCircle';
@@ -41,7 +41,7 @@ function NavbarItem({ href, icon, label }: NavbarItemProps) {
 					<div
 						className={clsx(
 							'rounded-xl bg-gray-3 p-2 text-gray-8 transition-colors hover:bg-gray-4 hover:text-gray-9',
-							pathname === href && 'bg-gray-4 text-gray-9'
+							pathname === href && 'bg-gray-4 text-gray-9',
 						)}
 					>
 						{icon}

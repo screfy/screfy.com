@@ -1,4 +1,4 @@
-import { IsoDateTimeString } from 'contentlayer/core';
+import type { IsoDateTimeString } from 'contentlayer/core';
 
 // NOTE: We need to double escape strings for commas and slashes.
 function encode(str: string) {

@@ -51,13 +51,5 @@ module.exports = withContentlayer({
 	experimental: {
 		appDir: true,
 		legacyBrowsers: false,
-		fontLoaders: [
-			{
-				loader: '@next/font/google',
-				options: {
-					subsets: ['latin'],
-				},
-			},
-		],
 	},
 });

@@ -1,4 +1,4 @@
-import { Node, visit } from 'unist-util-visit';
+import { visit } from 'unist-util-visit';
 
 const INLINE_CODE =
 	'inline-block rounded-md bg-gray-3 px-1 py-px font-mono text-sm';
@@ -10,7 +10,7 @@ const CODE_PRE =
 	'overflow-x-auto bg-gray-2 p-5 font-mono text-sm leading-relaxed md:p-4';
 
 export function rehypePrettyCodeTransformer() {
-	return (tree: Node) => {
+	return (tree: any) => {
 		visit(
 			tree,
 			(node: any) =>
@@ -19,7 +19,7 @@ export function rehypePrettyCodeTransformer() {
 				node.children.some((n: any) => n.type === 'text'),
 			(node: any) => {
 				node.properties.className = [INLINE_CODE];
-			}
+			},
 		);
 
 		visit(
@@ -49,7 +49,7 @@ export function rehypePrettyCodeTransformer() {
 				}
 
 				return node;
-			}
+			},
 		);
 	};
 }
