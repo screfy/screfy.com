@@ -4,47 +4,33 @@
 	"private": true,
 	"scripts": {
 		"dev": "next dev",
-		"build": "next build && pnpm sitemap",
+		"build": "next build",
 		"start": "next start",
-		"sitemap": "next-sitemap --config next-sitemap.config.mjs",
 		"format": "prettier --write .",
 		"typecheck": "tsc"
 	},
+	"engines": {
+		"pnpm": ">=8.0.0",
+		"npm": "pnpm",
+		"yarn": "pnpm",
+		"node": ">=20.11"
+	},
 	"dependencies": {
-		"@next/env": "^13.4.12",
-		"@next/font": "^13.4.12",
-		"@radix-ui/react-tooltip": "^1.0.6",
-		"class-variance-authority": "^0.7.0",
-		"clsx": "^2.0.0",
-		"contentlayer": "^0.3.4",
-		"date-fns": "^2.30.0",
-		"framer-motion": "10.15.0",
-		"next": "^13.4.12",
-		"next-contentlayer": "^0.3.4",
-		"next-sitemap": "^4.1.8",
+		"clsx": "^2.1.0",
+		"next": "^14.1.4",
 		"react": "^18.2.0",
-		"react-dom": "^18.2.0",
-		"react-use-lanyard": "^0.3.0",
-		"reading-time": "^1.5.0",
-		"rehype-autolink-headings": "^6.1.1",
-		"rehype-pretty-code": "^0.10.0",
-		"rehype-slug": "^5.1.0",
-		"remark-gfm": "^3.0.1",
-		"shiki": "^0.14.3",
-		"unist-util-visit": "^5.0.0"
+		"react-dom": "^18.2.0"
 	},
 	"devDependencies": {
-		"@radix-ui/colors": "^1.0.1",
-		"@types/node": "^20.4.6",
-		"@types/react": "^18.2.18",
-		"@types/react-dom": "^18.2.7",
-		"autoprefixer": "^10.4.14",
-		"esbuild": "^0.18.17",
-		"postcss": "^8.4.27",
-		"prettier": "^3.0.0",
-		"prettier-plugin-tailwindcss": "^0.4.1",
-		"tailwindcss": "^3.3.3",
-		"tailwindcss-radix": "^2.8.0",
-		"typescript": "^5.1.6"
+		"@radix-ui/colors": "^3.0.0",
+		"@types/node": "^20.11.30",
+		"@types/react": "^18.2.72",
+		"@types/react-dom": "^18.2.22",
+		"autoprefixer": "^10.4.19",
+		"postcss": "^8.4.38",
+		"prettier": "^3.2.5",
+		"prettier-plugin-tailwindcss": "^0.5.12",
+		"tailwindcss": "^3.4.1",
+		"typescript": "^5.4.3"
 	}
 }

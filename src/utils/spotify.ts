@@ -4,16 +4,16 @@ const SPOTIFY_BASIC_TOKEN = Buffer.from(
 const SPOTIFY_TOKEN_ENDPOINT = 'https://accounts.spotify.com/api/token';
 const SPOTIFY_TOP_TRACKS_ENDPOINT = `https://api.spotify.com/v1/me/top/tracks`;
 
-interface SpotifyTrack {
+type SpotifyTrack = {
 	id: string;
 	name: string;
 	external_urls: { spotify: string };
 	album: { name: string; images: { url: string }[] };
 	artists: { name: string }[];
 	explicit: boolean;
-}
+};
 
-export interface TrackProps {
+export type TrackProps = {
 	id: string;
 	name: string;
 	album: string;
@@ -21,7 +21,7 @@ export interface TrackProps {
 	spotifyUrl: string;
 	albumImageUrl: string;
 	explicit: boolean;
-}
+};
 
 async function getAccessToken(): Promise<string | undefined> {
 	const res = await fetch(SPOTIFY_TOKEN_ENDPOINT, {

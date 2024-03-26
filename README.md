@@ -4,7 +4,7 @@
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org) v16
+- [Node.js](https://nodejs.org) v20
 - Package Manager (this project is using [pnpm](https://pnpm.io))
 
 ### Setting Up a Project

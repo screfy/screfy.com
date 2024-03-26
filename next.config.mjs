@@ -1,5 +1,3 @@
-const { withContentlayer } = require('next-contentlayer');
-
 const securityHeaders = [
 	{
 		key: 'X-DNS-Prefetch-Control',
@@ -27,19 +25,8 @@ const securityHeaders = [
 	},
 ];
 
-module.exports = withContentlayer({
-	swcMinify: true,
-	reactStrictMode: true,
-	images: {
-		remotePatterns: [
-			{
-				hostname: 's2.googleusercontent.com',
-			},
-			{
-				hostname: 'i.scdn.co',
-			},
-		],
-	},
+/** @type {import('next').NextConfig} */
+export default {
 	async headers() {
 		return [
 			{
@@ -48,8 +35,4 @@ module.exports = withContentlayer({
 			},
 		];
 	},
-	experimental: {
-		appDir: true,
-		legacyBrowsers: false,
-	},
-});
+};
