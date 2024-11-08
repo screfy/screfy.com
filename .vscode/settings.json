@@ -1,0 +1,10 @@
+{
+	"files.associations": {
+		"*.css": "tailwindcss"
+	},
+	"typescript.tsdk": "node_modules/.pnpm/typescript@5.6.3/node_modules/typescript/lib",
+	"typescript.enablePromptUseWorkspaceTsdk": true,
+	"typescript.preferences.preferTypeOnlyAutoImports": true,
+	"javascript.preferences.importModuleSpecifierEnding": "js",
+	"typescript.preferences.importModuleSpecifierEnding": "js"
+}
