@@ -1,15 +1,38 @@
 import '~/styles/globals.css';
 
 import { GeistSans } from 'geist/font/sans';
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import type { ReactNode } from 'react';
 
 import { getLastVisitorLocation } from '~/utils/visitor.ts';
 
 import { Time } from './_components/Time.tsx';
 
+const DEFAULT_TITLE = 'screfy – Software Engineer';
+const DEFAULT_DESCRIPTION =
+	'A self-taught software engineer with a passion for web development, design engineering, and crafting delightful interfaces.';
+const METADATA_BASE_URL =
+	process.env.NEXT_PUBLIC_BASE_URL || 'https://screfy.com';
+
 export const metadata: Metadata = {
-	title: 'screfy.com',
+	title: DEFAULT_TITLE,
+	description: DEFAULT_DESCRIPTION,
+	metadataBase: new URL(METADATA_BASE_URL),
+	openGraph: {
+		type: 'website',
+		title: DEFAULT_TITLE,
+		description: DEFAULT_DESCRIPTION,
+		siteName: 'screfy.com',
+	},
+	twitter: {
+		card: 'summary_large_image',
+		site: '@screfy_',
+		creator: '@screfy_',
+	},
+};
+
+export const viewport: Viewport = {
+	themeColor: '#FAFAFA',
 };
 
 export default async function RootLayout({
