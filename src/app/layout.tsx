@@ -1,7 +1,7 @@
 import '~/styles/globals.css';
 
-import { GeistSans } from 'geist/font/sans';
 import type { Metadata, Viewport } from 'next';
+import { Geist } from 'next/font/google';
 import type { ReactNode } from 'react';
 
 import { getLastVisitorLocation } from '~/utils/visitor.ts';
@@ -14,13 +14,21 @@ const DEFAULT_DESCRIPTION =
 const METADATA_BASE_URL =
 	process.env.NEXT_PUBLIC_BASE_URL || 'https://screfy.com';
 
+const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] });
+
 export const metadata: Metadata = {
-	title: DEFAULT_TITLE,
+	title: {
+		absolute: DEFAULT_TITLE,
+		template: '%s - screfy',
+	},
 	description: DEFAULT_DESCRIPTION,
 	metadataBase: new URL(METADATA_BASE_URL),
 	openGraph: {
 		type: 'website',
-		title: DEFAULT_TITLE,
+		title: {
+			absolute: DEFAULT_TITLE,
+			template: '%s - screfy',
+		},
 		description: DEFAULT_DESCRIPTION,
 		siteName: 'screfy.com',
 	},
@@ -41,7 +49,7 @@ export default async function RootLayout({
 	const location = await getLastVisitorLocation();
 
 	return (
-		<html className={GeistSans.variable} lang="en">
+		<html className={geistSans.variable} lang="en">
 			<body className="flex min-h-dvh flex-col items-center bg-zinc-50 font-sans text-zinc-600 antialiased optimize-legibility selection:bg-zinc-200/60">
 				<main className="w-full max-w-2xl flex-1 px-4 py-16 md:px-0 md:py-24">
 					{children}
