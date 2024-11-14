@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, useMotionValue, type Variants } from 'framer-motion';
+import { motion, useMotionValue, type Variants } from 'motion/react';
 import Image from 'next/image';
 import { useState } from 'react';
 
