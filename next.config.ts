@@ -28,6 +28,7 @@ const securityHeaders = [
 ];
 
 export default {
+	transpilePackages: ['next-mdx-remote'],
 	async headers() {
 		return [
 			{

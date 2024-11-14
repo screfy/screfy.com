@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from 'react';
 
+import { LOCALE } from '~/utils/date.ts';
+
 const BASE_X = 100;
 const BASE_Y = 100;
 const STROKE_WIDTH = 10;
@@ -9,7 +11,7 @@ const STROKE_WIDTH = 10;
 const WATCH_TIMEZONE =
 	process.env.NEXT_PUBLIC_WATCH_TIMEZONE || 'Europe/Bratislava';
 
-const timeFormatter = new Intl.DateTimeFormat(undefined, {
+const timeFormatter = new Intl.DateTimeFormat(LOCALE, {
 	hour: '2-digit',
 	minute: '2-digit',
 	second: '2-digit',

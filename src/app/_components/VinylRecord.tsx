@@ -27,7 +27,7 @@ const barVariants: Variants = {
 	stopped: {
 		height: 2,
 		transition: {
-			duration: 0.25,
+			duration: 0.35,
 			ease: 'easeInOut',
 		},
 	},

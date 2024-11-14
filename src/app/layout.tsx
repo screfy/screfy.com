@@ -19,7 +19,6 @@ const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] });
 export const metadata: Metadata = {
 	title: {
 		absolute: DEFAULT_TITLE,
-		template: '%s - screfy',
 	},
 	description: DEFAULT_DESCRIPTION,
 	metadataBase: new URL(METADATA_BASE_URL),
@@ -27,7 +26,6 @@ export const metadata: Metadata = {
 		type: 'website',
 		title: {
 			absolute: DEFAULT_TITLE,
-			template: '%s - screfy',
 		},
 		description: DEFAULT_DESCRIPTION,
 		siteName: 'screfy.com',

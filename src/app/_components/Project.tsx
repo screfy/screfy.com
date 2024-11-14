@@ -75,45 +75,48 @@ export function Project({
 }: {
 	name: string;
 	description: string;
-	href: string;
+	href?: string;
 	src: string;
 	year: number;
 }) {
 	const [isOpen, setIsOpen] = useState(false);
 
-	const motionX = useMotionValue(0);
-	const motionY = useMotionValue(0);
+	const x = useMotionValue(0);
+	const y = useMotionValue(0);
 
-	const handleOpen = () => setIsOpen(true);
-	const handleClose = () => setIsOpen(false);
+	const Component = href ? Link : 'div';
 
 	return (
 		<>
 			<li
-				onPointerEnter={handleOpen}
-				onPointerLeave={handleClose}
-				onPointerDown={handleClose}
+				onPointerEnter={() => setIsOpen(true)}
+				onPointerLeave={() => setIsOpen(false)}
+				onPointerDown={() => {
+					if (href) {
+						setIsOpen(false);
+					}
+				}}
 				onPointerMove={(e) => {
-					motionX.set(e.clientX + CURSOR_PREVIEW_OFFSET);
-					motionY.set(e.clientY + CURSOR_PREVIEW_OFFSET);
+					x.set(e.clientX + CURSOR_PREVIEW_OFFSET);
+					y.set(e.clientY + CURSOR_PREVIEW_OFFSET);
 				}}
 			>
-				<Link
-					className="flex select-none items-center gap-3 rounded-lg px-4 py-2 hover:bg-zinc-100"
-					href={href}
-					rel="noreferrer noopener"
+				<Component
+					className="flex select-none items-center gap-3 rounded-lg px-4 py-2 transition-colors hover:bg-zinc-100"
+					href={href!}
+					rel={href ? 'noreferrer noopener' : undefined}
 				>
 					<p className="font-medium text-zinc-900">{name}</p>
 					<p className="hidden text-sm md:block">{description}</p>
 					<span className="h-px flex-1 bg-zinc-200" aria-hidden />
 					<p>{year}</p>
-				</Link>
+				</Component>
 			</li>
 
 			{typeof document !== 'undefined' &&
 				createPortal(
 					<AnimatePresence>
-						{isOpen && <ProjectPreview x={motionX} y={motionY} src={src} />}
+						{isOpen && <ProjectPreview x={x} y={y} src={src} />}
 					</AnimatePresence>,
 					document.body
 				)}
