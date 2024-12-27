@@ -1,43 +1,69 @@
-import '../styles/globals.css';
+import '~/styles/globals.css';
 
-import { Karla } from '@next/font/google';
-import clsx from 'clsx';
+import type { Metadata, Viewport } from 'next';
+import { Geist } from 'next/font/google';
 import type { ReactNode } from 'react';
-import { Footer } from '../components/Footer';
-import { Navbar } from '../components/Navbar';
-import { TooltipProvider } from '../components/Tooltip';
-import { NavbarProvider } from '../hooks/use-navbar';
 
-const karla = Karla({
-	variable: '--font-karla',
-	subsets: ['latin'],
-});
+import { getLastVisitorLocation } from '~/utils/visitor.ts';
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+import { Time } from './_components/Time.tsx';
+
+const DEFAULT_TITLE = 'screfy – Software Engineer';
+const DEFAULT_DESCRIPTION =
+	'A self-taught software engineer with a passion for web development, design engineering, and crafting delightful interfaces.';
+const METADATA_BASE_URL =
+	process.env.NEXT_PUBLIC_BASE_URL || 'https://screfy.com';
+
+const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] });
+
+export const metadata: Metadata = {
+	title: {
+		absolute: DEFAULT_TITLE,
+	},
+	description: DEFAULT_DESCRIPTION,
+	metadataBase: new URL(METADATA_BASE_URL),
+	openGraph: {
+		type: 'website',
+		title: {
+			absolute: DEFAULT_TITLE,
+		},
+		description: DEFAULT_DESCRIPTION,
+		siteName: 'screfy.com',
+	},
+	twitter: {
+		card: 'summary_large_image',
+		site: '@screfy_',
+		creator: '@screfy_',
+	},
+};
+
+export const viewport: Viewport = {
+	themeColor: '#FAFAFA',
+};
+
+export default async function RootLayout({
+	children,
+}: Readonly<{ children: ReactNode }>) {
+	const location = await getLastVisitorLocation();
+
 	return (
-		<html
-			className={clsx(
-				'scroll-pt-24 scroll-smooth [color-scheme:dark]',
-				karla.variable,
-			)}
-			lang="en"
-		>
-			<head />
+		<html className={geistSans.variable} lang="en">
+			<body className="flex min-h-dvh flex-col items-center bg-zinc-50 font-sans text-zinc-600 antialiased optimize-legibility selection:bg-zinc-200/60">
+				<main className="w-full max-w-2xl flex-1 px-4 py-16 md:px-0 md:py-24">
+					{children}
+				</main>
 
-			<body className="bg-gray-1 text-lg text-gray-12 antialiased selection:bg-gray-5">
-				<TooltipProvider delayDuration={0}>
-					<NavbarProvider>
-						<div className="flex min-h-screen flex-col items-center">
-							<Navbar />
-
-							<main className="mt-24 flex w-full max-w-screen-sm flex-1 flex-col px-5 md:px-0 lg:mt-36">
-								{children}
-							</main>
-
-							<Footer />
+				<footer className="flex w-full max-w-2xl justify-between gap-4 px-4 pb-6 text-sm text-zinc-500 md:px-0">
+					<Time />
+					{location && (
+						<div className="flex items-center gap-2">
+							<div className="relative size-1.5 shrink-0 rounded-full bg-green-400" />
+							<p>
+								Last visitor from {location.city}, {location.country}
+							</p>
 						</div>
-					</NavbarProvider>
-				</TooltipProvider>
+					)}
+				</footer>
 			</body>
 		</html>
 	);

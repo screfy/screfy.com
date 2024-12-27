@@ -18,8 +18,8 @@
 		"useUnknownInCatchVariables": true,
 		"verbatimModuleSyntax": true,
 		"noEmit": true,
-		"allowJs": true,
-		"checkJs": true,
+		"allowJs": false,
+		"allowImportingTsExtensions": true,
 		"allowUnreachableCode": false,
 		"allowUnusedLabels": false,
 		"esModuleInterop": true,
@@ -31,11 +31,6 @@
 			"~/*": ["./src/*"]
 		}
 	},
-	"include": [
-		"src",
-		"next-env.d.ts",
-		".contentlayer/generated",
-		".next/types/**/*.ts"
-	],
+	"include": ["src", "next-env.d.ts", ".next/types/**/*.ts"],
 	"exclude": ["node_modules"]
 }

@@ -4,8 +4,8 @@
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org) v16
-- Package Manager (this project is using [pnpm](https://pnpm.io))
+- [Node.js](https://nodejs.org) v20
+- Package Manager (this project is using [pnpm](https://pnpm.io) v9)
 
 ### Setting Up a Project
 
@@ -21,7 +21,7 @@
    $ pnpm install
    ```
 
-3. Create a [`.env.local`](https://nextjs.org/docs/basic-features/environment-variables) file similar to [`.env.example`](.env.example).
+3. Create a [`.env.local`](https://nextjs.org/docs/app/building-your-application/configuring/environment-variables) file similar to [`.env.example`](.env.example).
 
 4. Start the development server:
 
