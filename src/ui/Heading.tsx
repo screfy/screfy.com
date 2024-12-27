@@ -1,4 +1,4 @@
-import { forwardRef, type ComponentProps } from 'react';
+import type { ComponentProps } from 'react';
 import { tv, type VariantProps } from 'tailwind-variants';
 
 export type HeadingProps = ComponentProps<'h1'> &
@@ -17,17 +17,15 @@ const headingStyles = tv({
 	},
 });
 
-export const Heading = forwardRef<HTMLHeadingElement, HeadingProps>(
-	({ className, level = 'h1', as, ...props }, ref) => {
-		const Component = as ? as : level;
+export function Heading({
+	className,
+	level = 'h1',
+	as,
+	...props
+}: HeadingProps) {
+	const Component = as ? as : level;
 
-		return (
-			<Component
-				className={headingStyles({ className, level })}
-				{...props}
-				ref={ref}
-			/>
-		);
-	}
-);
-Heading.displayName = 'Heading';
+	return (
+		<Component className={headingStyles({ className, level })} {...props} />
+	);
+}
