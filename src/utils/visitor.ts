@@ -13,11 +13,15 @@ const COUNTRY_HEADER_NAME = 'x-vercel-ip-country';
 
 const redis = Redis.fromEnv();
 
+const decodeHeaderValue = (value: string | null) =>
+	value ? decodeURIComponent(value) : null;
+
 export async function getLastVisitorLocation() {
 	const location = await redis.get<LastVisitorLocation>(LOCATION_KEY);
 
 	const headersList = await headers();
-	const city = headersList.get(CITY_HEADER_NAME);
+
+	const city = decodeHeaderValue(headersList.get(CITY_HEADER_NAME));
 	const country = headersList.get(COUNTRY_HEADER_NAME);
 
 	if (
