@@ -13,7 +13,7 @@ import { getPrototypes } from './ui/prototypes.ts';
 function Section({ title, children }: { title: string; children: ReactNode }) {
 	return (
 		<>
-			<Heading className="mb-4 mt-12" as="h2">
+			<Heading className="mt-12 mb-4" as="h2">
 				{title}
 			</Heading>
 
@@ -91,7 +91,7 @@ export default async function Home() {
 						({ slug, title, description, publishedAt }, index) => (
 							<li key={index}>
 								<Link
-									className="block select-none space-y-1 rounded-lg px-4 py-2 transition-colors hover:bg-zinc-100"
+									className="block space-y-1 rounded-lg px-4 py-2 transition-colors select-none hover:bg-zinc-100"
 									href={`/ui/${slug}`}
 								>
 									<div className="flex items-center justify-between">

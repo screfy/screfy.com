@@ -42,11 +42,11 @@ export function VinylRecord() {
 
 	return (
 		<div
-			className="relative flex size-56 shrink-0 select-none items-end justify-center overflow-hidden rounded-3xl border border-zinc-200 bg-zinc-100"
+			className="relative flex size-56 shrink-0 items-end justify-center overflow-hidden rounded-3xl border border-zinc-200 bg-zinc-100 select-none"
 			onPointerEnter={() => setIsHovered(true)}
 			onPointerLeave={() => setIsHovered(false)}
 		>
-			<motion.div className="absolute -top-1/2 flex size-56 items-center justify-center rounded-full border-2 border-zinc-800 bg-zinc-950 bg-[image:conic-gradient(from_135deg,theme(colors.zinc.50/0.15),transparent_6.25%_43.75%,theme(colors.zinc.50/0.15)_50%,transparent_56.25%_93.75%,theme(colors.zinc.50/0.15))]">
+			<motion.div className="absolute -top-1/2 flex size-56 items-center justify-center rounded-full border-2 border-zinc-800 bg-zinc-950 bg-[image:conic-gradient(from_135deg,--alpha(var(--color-zinc-50)/15%),transparent_6.25%_43.75%,--alpha(var(--color-zinc-50)/15%)_50%,transparent_56.25%_93.75%,--alpha(var(--color-zinc-50)/15%))]">
 				<div className="absolute size-52 rounded-full border border-zinc-900" />
 				<div className="absolute size-48 rounded-full border border-zinc-900" />
 				<div className="absolute size-44 rounded-full border border-zinc-900" />
@@ -79,7 +79,7 @@ export function VinylRecord() {
 				<div className="absolute size-4 rounded-full bg-zinc-100" />
 			</motion.div>
 
-			<div className="absolute -top-1/2 size-56 rounded-full shadow-[0_15px_30px_-8px_theme(colors.black/0.3)]" />
+			<div className="absolute -top-1/2 size-56 rounded-full shadow-[0_15px_30px_-8px_--alpha(var(--color-black)/30%)]" />
 
 			<div className="py-4 text-center">
 				<div className="mb-2 flex h-6 items-center justify-center gap-0.5">

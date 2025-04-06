@@ -16,7 +16,7 @@ function Content({
 	return (
 		<TooltipPrimitive.Content
 			className={cx(
-				'rounded-md border border-zinc-200 bg-white px-2 py-1 text-xs shadow-[0_4px_6px_theme(colors.black/0.05)]',
+				'rounded-md border border-zinc-200 bg-white px-2 py-1 text-xs shadow-[0_4px_6px_--alpha(var(--color-black)/5%)]',
 				className
 			)}
 			sideOffset={sideOffset}

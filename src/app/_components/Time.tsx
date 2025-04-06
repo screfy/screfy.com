@@ -59,7 +59,7 @@ export function Time() {
 	}, []);
 
 	return (
-		<div className="hidden shrink-0 select-none items-center gap-2 md:flex">
+		<div className="hidden shrink-0 items-center gap-2 select-none md:flex">
 			<svg width={20} height={20} viewBox="0 0 200 200" aria-hidden>
 				<circle
 					cx={BASE_X}

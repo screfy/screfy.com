@@ -34,7 +34,7 @@ function ProjectPreview({
 
 	return (
 		<motion.div
-			className="pointer-events-none fixed origin-top overflow-hidden rounded-lg shadow-[theme(colors.black/0.25)_0_2px_20px]"
+			className="pointer-events-none fixed origin-top overflow-hidden rounded-lg shadow-[--alpha(var(--color-black)/25%)_0_2px_20px]"
 			initial={{ opacity: 0, scale: 0.8 }}
 			animate={{
 				opacity: 1,
@@ -102,7 +102,7 @@ export function Project({
 				}}
 			>
 				<Component
-					className="flex select-none items-center gap-3 rounded-lg px-4 py-2 transition-colors hover:bg-zinc-100"
+					className="flex items-center gap-3 rounded-lg px-4 py-2 transition-colors select-none hover:bg-zinc-100"
 					href={href!}
 					rel={href ? 'noreferrer noopener' : undefined}
 				>

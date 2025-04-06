@@ -40,7 +40,7 @@ export function PrototypePreview({
 	return (
 		<div
 			className={cx(
-				'relative -mx-4 select-none border-y border-zinc-200/70 bg-zinc-100/70 md:mx-0 md:rounded-xl md:border',
+				'relative -mx-4 border-y border-zinc-200/70 bg-zinc-100/70 select-none md:mx-0 md:rounded-xl md:border',
 				className
 			)}
 		>

@@ -1,3 +1,39 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@theme {
+	--font-geist: var(--font-geist-sans), var(--font-sans);
+
+	--default-transition-duration: 200ms;
+}
+
+@layer base {
+	/* Prevent grid and flex items from spilling out of their container: */
+	* {
+		min-width: 0px;
+	}
+
+	/* Balance headings across multiple lines into an even block: */
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		text-wrap: balance;
+	}
+
+	/* Prevent single words on last line: */
+	p {
+		text-wrap: pretty;
+	}
+
+	/* Add pointer cursor to all buttons: */
+	button,
+	[role='button'] {
+		cursor: pointer;
+	}
+}
+
+@utility optimize-legibility {
+	text-rendering: optimizeLegibility;
+}

@@ -2,7 +2,8 @@
 	"files.associations": {
 		"*.css": "tailwindcss"
 	},
-	"typescript.tsdk": "node_modules/.pnpm/typescript@5.7.2/node_modules/typescript/lib",
+	"tailwindCSS.experimental.configFile": "src/styles/globals.css",
+	"typescript.tsdk": "node_modules/.pnpm/typescript@5.8.3/node_modules/typescript/lib",
 	"typescript.enablePromptUseWorkspaceTsdk": true,
 	"typescript.preferences.preferTypeOnlyAutoImports": true,
 	"javascript.preferences.importModuleSpecifierEnding": "js",

@@ -111,7 +111,7 @@ function Application({
 
 			<TooltipPrimitive.Portal>
 				<TooltipPrimitive.Content
-					className="rounded-md bg-white px-2.5 py-0.5 text-sm text-zinc-700 shadow-[0_6px_14px_theme(colors.black/0.05)]"
+					className="rounded-md bg-white px-2.5 py-0.5 text-sm text-zinc-700 shadow-[0_6px_14px_--alpha(var(--color-black)/5%)]"
 					sideOffset={10}
 				>
 					<span>{name}</span>

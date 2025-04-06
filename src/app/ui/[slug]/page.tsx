@@ -53,7 +53,7 @@ function PaginationLink({
 }) {
 	return (
 		<Link
-			className={cx('group flex select-none flex-col', className)}
+			className={cx('group flex flex-col select-none', className)}
 			href={href}
 		>
 			<span className="mb-0.5 text-sm transition-colors group-hover:text-zinc-700">
@@ -75,7 +75,7 @@ export default async function Prototype({ params }: Props) {
 
 	return (
 		<>
-			<div className="mb-8 xl:absolute xl:left-36 xl:top-[6.125rem] xl:mb-0 2xl:left-80">
+			<div className="mb-8 xl:absolute xl:top-[6.125rem] xl:left-36 xl:mb-0 2xl:left-80">
 				<Link
 					className="flex items-center gap-2 text-sm transition-colors hover:text-zinc-800"
 					href="/"
@@ -86,7 +86,7 @@ export default async function Prototype({ params }: Props) {
 			</div>
 
 			<Heading>{prototype.title}</Heading>
-			<p className="mb-12 mt-3">{prototype.description}</p>
+			<p className="mt-3 mb-12">{prototype.description}</p>
 
 			{prototype.requiresPointer && (
 				<div className="mb-6 flex w-full items-center gap-2 rounded-xl border border-orange-200 bg-orange-50 px-3 py-1.5 text-sm text-orange-600 md:hidden">
