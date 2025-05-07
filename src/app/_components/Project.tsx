@@ -104,6 +104,7 @@ export function Project({
 				<Component
 					className="flex items-center gap-3 rounded-lg px-4 py-2 transition-colors select-none hover:bg-zinc-100"
 					href={href!}
+					target={href ? '_blank' : undefined}
 					rel={href ? 'noreferrer noopener' : undefined}
 				>
 					<p className="font-medium text-zinc-900">{name}</p>
