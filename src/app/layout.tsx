@@ -2,10 +2,9 @@ import '~/styles/globals.css';
 
 import type { Metadata, Viewport } from 'next';
 import { Geist } from 'next/font/google';
-import type { ReactNode } from 'react';
+import { Suspense, type ReactNode } from 'react';
 
-import { getLastVisitorLocation } from '~/utils/visitor.ts';
-
+import { LastVisitor } from './_components/LastVisitor.tsx';
 import { Time } from './_components/Time.tsx';
 
 const DEFAULT_TITLE = 'screfy – Software Engineer';
@@ -41,11 +40,9 @@ export const viewport: Viewport = {
 	themeColor: '#FAFAFA',
 };
 
-export default async function RootLayout({
+export default function RootLayout({
 	children,
 }: Readonly<{ children: ReactNode }>) {
-	const location = await getLastVisitorLocation();
-
 	return (
 		<html className={geistSans.variable} lang="en">
 			<body className="flex min-h-dvh flex-col items-center bg-zinc-50 font-sans text-zinc-600 antialiased optimize-legibility selection:bg-zinc-200/60">
@@ -55,14 +52,9 @@ export default async function RootLayout({
 
 				<footer className="flex w-full max-w-2xl justify-between gap-4 px-4 pb-6 text-sm text-zinc-500 md:px-0">
 					<Time />
-					{location && (
-						<div className="flex items-center gap-2">
-							<div className="relative size-1.5 shrink-0 rounded-full bg-green-400" />
-							<p>
-								Last visitor from {location.city}, {location.country}
-							</p>
-						</div>
-					)}
+					<Suspense fallback={null}>
+						<LastVisitor />
+					</Suspense>
 				</footer>
 			</body>
 		</html>
